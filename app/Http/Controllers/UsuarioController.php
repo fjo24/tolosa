@@ -15,10 +15,8 @@ class UsuarioController extends Controller
 
     public function authentificate (UsuarioRequest $request) {
 
-	return view('adm.cuerpo');
-}
 
-    /*    if (Auth::attempt(['username' => $request->username, 'password' => $request->password, 'nivel' => 'administrador'])) {
+      if (Auth::attempt(['username' => $request->username, 'password' => $request->password, 'nivel' => 'administrador'])) {
             return view('adm.cuerpo')->
             with('usuario',$request);
         }
@@ -32,7 +30,7 @@ class UsuarioController extends Controller
                 return redirect()->route('usuario.login');
             }
         }
-    }*/
+    }
 
     public function logout(){
         Auth::logout();

@@ -37,3 +37,6 @@ Route::group(['prefix' => 'adm'], function(){
 	]);
 
 });
+
+/*------- Metadato-------------*/
+    Route::resource('metadatos','MetadatoController');
