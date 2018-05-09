@@ -1,0 +1,54 @@
+.titulo-calidad> p{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 46px;
+	color: #0085CC;
+}
+.subrayado{
+	width: 35px;
+	height: 1px;
+	background-color: #0099EF;
+	position: relative;
+	left: 3px;
+	bottom: 10px;
+	margin-bottom: 35px;
+}
+@media only screen and (min-width: 345px){
+	.titulo-calidad>p{
+	    margin-top: 60px;
+	}
+}
+.ficha{
+	background-color: #E9E9E9;
+	margin-top: 30px;
+	margin-left: 0px; 
+	margin-right: 0px; 
+	border-bottom: 3px solid #0085CC;
+	padding: 10px 20px;
+	padding-top: 15px;
+	border-right: 0.2px solid #C8C8C8;
+	border-top: 0.2px solid #C8C8C8;
+	border-left: 0.2px solid #C8C8C8;
+}
+.nombre{
+	text-transform: uppercase;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 15px;
+	color: #393939;
+
+}
+.titulo{
+	text-transform: uppercase;
+	font-size: 18px;
+	font-family: 'Source Sans Pro', sans-serif;
+	color: #393939;
+	margin-bottom: 20px;
+}
+.down{
+	margin-right: 15px;
+	width: 20px;
+	height: 20px;
+}
+.contenido p{
+	font-family: 'Source Sans Pro', sans-serif;
+
+}

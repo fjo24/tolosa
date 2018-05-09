@@ -1,0 +1,56 @@
+section.distribuidores h2{
+	color: #BE0000;
+	font-size: 30px;
+	font-weight: 700;
+	letter-spacing: 3px;
+	margin: 0;
+	margin-bottom: 5px;
+	text-transform: uppercase;
+}
+
+section.distribuidores h3{
+	color: #BE0000;
+	font-size: 19px;
+	letter-spacing: 2px;
+	margin: 0;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	text-transform: uppercase;
+}
+
+.enlace-dis{
+	display: inline-block;
+	/*margin-bottom: 20px;*/
+	color: #BE0000;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+section.distribuidores{
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
+
+section.distribuidores .boton{
+	height: 36px;
+	width: auto;
+	font-size: 13px;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #5A462E;
+	border: 1px solid #5A462E;
+	display: inline-block;
+	line-height: 36px;
+	padding: 0 40px;
+	cursor: pointer;
+	transition: 0.3s;
+	/*margin-top: 15px;*/
+	background-color: #fff;
+}
+
+section.distribuidores .boton:hover{
+	background-color: #5A462E;
+	color: #FDF9EB;
+	transition: 0.3s;
+}

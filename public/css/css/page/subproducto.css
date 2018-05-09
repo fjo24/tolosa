@@ -1,0 +1,310 @@
+body{
+  background-color: white !important;
+}
+.margin-row{
+  margin-top: 50px;
+}
+.letra{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 14px;
+	color: #434040;
+}
+.sidebar ul li.li-estilo, .sidebar ul li.li-width{
+	border: 0px;
+}
+a.active.letra{
+	background-color: white;
+	font-weight: bold;
+	color:black;
+}
+.li-width{
+	width: 100%;
+}
+.li-width:hover, .li-estilo:hover{
+	transform: scale(1.1);
+	transition: 0.2s;
+}
+.subrayado{
+	width: 35px;
+	height: 1px;
+	background-color: #0099EF;
+	position: relative;
+	left: 2px;
+	top: 10px;
+}
+.subrayado-sub{
+  width: 35px;
+  height: 1px;
+  background-color: #433F3F;
+  position: relative;
+  left: 3px;
+  bottom: 10px;
+}
+.titulo-subproducto{
+  color:#433F3F;
+  font-size: 17px;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.image-s{
+  width: 185px;
+  height: 240px;
+}
+.subrayado-1{
+  width: 35px;
+  height: 1px;
+  background-color: #5B5B5B;
+  position: relative;
+  left: 3px;
+  bottom: -5px;
+}
+#detalle{
+  color: #0086CD;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.contenido p{
+  font-family: 'Source Sans Pro', sans-serif;
+}
+/*--------------------------*/
+
+
+
+.breadcrumbs{
+  --cssuiBreadcrumbsTextColor: var(--breadcrumbsTextColor);
+  --cssuiBreadcrumbsTextColorActive: var(--breadcrumbsTextColorActive);
+  --cssuiBreadcrumbsDivider: var(--breadcrumbsDivider);
+  --cssuiBreadcrumbsDividerColor: var(--breadcrumbsDividerColor, inherit);
+  --cssuiBreadcrumbsDividerSize: var(--breadcrumbsDividerSize, 16px);
+  --cssuiBreadcrumbsIndent:  var(--breadcrumbsIndent, 8px);
+  
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.breadcrumbs__item{
+  display: inline-block;
+  position: relative;
+ 
+  padding-right: calc(var(--cssuiBreadcrumbsDividerSize) + var(--cssuiBreadcrumbsIndent));
+  margin-right: var(--cssuiBreadcrumbsIndent);
+  
+  color: var(--cssuiBreadcrumbsTextColor);
+}
+
+.breadcrumbs__item:after{
+  content: var(--cssuiBreadcrumbsDivider);
+  width: var(--cssuiBreadcrumbsDividerSize);
+  height: var(--cssuiBreadcrumbsDividerSize);
+
+  line-height: 1;
+  text-align: center;
+  
+  font-family: 'Open Sans', sans-serif;
+  font-size: var(--cssuiBreadcrumbsDividerSize);
+  color: var(--cssuiBreadcrumbsDividerColor);
+
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.breadcrumbs__item_active{
+  margin-right: 0;
+  padding-right: 0;
+  color: var(--cssuiBreadcrumbsTextColorActive);
+}
+
+.breadcrumbs__item_active:after{
+  display: none;
+}
+.breadcrumbs__element{
+  color: inherit;
+}
+
+/* examples */
+
+.breadcrumbs{
+  --breadcrumbsTextColor: #929292;  
+  --breadcrumbsTextColorActive: #929292;  
+}
+
+.breadcrumbs_type1{
+  --breadcrumbsDivider: "/";
+}
+
+.breadcrumbs_type1 .breadcrumbs__item:after{
+  margin-top: 2px;
+}
+
+.breadcrumbs_type2{
+  --breadcrumbsDivider: "→";
+  --breadcrumbsDividerSize: 20px;
+}
+
+.breadcrumbs_type3{
+  --breadcrumbsDivider: "•";
+  --breadcrumbsDividerSize: 2rem;
+}
+
+.breadcrumbs_type3 .breadcrumbs__item:after{
+  margin-top: 2px;
+}
+
+.breadcrumbs_type4{
+  --breadcrumbsDivider: "|";
+  --breadcrumbsDividerSize: 14px;
+}
+
+.breadcrumbs_type5{
+  --breadcrumbsDivider: "›";
+  --breadcrumbsDividerSize: 20px;
+}
+
+.breadcrumbs_type6{
+  --breadcrumbsDivider: "—";
+  --breadcrumbsDividerSize: 14px;
+}
+
+.page_section{
+	margin-top: 60px;
+  margin-left: 15px;
+  margin-bottom: 20px;
+}
+.activo{
+	font-family: 'Source Sans Pro', sans-serif;
+	color: #929292;
+	text-transform: capitalize;
+}
+
+/*subgaleria*/
+
+.margen-subgaleria{
+  padding: 0px 70px;
+}
+.producto{
+  text-transform: lowercase;
+}
+ .pro-sub{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 26.4px;
+  color:#595959;
+  font-weight: 300px;
+  text-transform: uppercase;
+  margin-top: 0px;
+  margin-bottom: 0px;
+ }
+.contenido-gal{
+  color: #525252;
+  font-size: 14px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.caja{
+    border: 1px solid #EEEEEE;
+    width: 100%;
+}
+.caja-sli{
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #EEEEEE;
+}
+.cont-img{
+  display: flex !important;
+  justify-content: center;
+    align-items: center;
+    padding: 25px;
+    display: inline-block;
+}
+#descarga{
+  padding: 12px 25px;
+  color: white;
+  background-color: #0084D0;
+  display: block;
+  width: 245px;
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+#descarga:hover{
+  background-color: white;
+  border: 2px solid #0084D0;
+  color: #0084D0;
+  transition: 0.5s;
+}
+#solicitud{
+  margin-top: 5px;
+  align-items: center;
+  padding: 12px 25px;
+  color: #0084D0;
+  background-color: white;
+  border: 2px solid #0084D0;
+  display: block;
+  width: 245px;
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+#solicitud:hover{
+  background-color: #0084D0;
+  border: 2px solid white;
+  color: white;
+  transition: 0.5s;
+}
+
+/*galeria*/
+.hide-bullets {
+    list-style:none;
+    margin-left: -40px;
+    margin-top:20px;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+    width: 100% ;
+}
+
+.li-padding{
+  padding-right: 2px !important;
+  padding-left: 2px !important;
+}
+/*aside navbar*/
+
+.navbar-default{
+  background-color: white !important;
+}
+.sidebar ul li a.active{
+  background-color: white !important;
+}
+.sidebar .arrow{
+  color:#0086CD !important;
+  font-size: 28px !important;
+}
+.nombre-subproducto{
+  font-family: 'Source Sans Pro', sans-serif !important;
+  padding-right:40px;
+  font-size: 16px;
+  color: black;
+}
+.nombre-producto{
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Source Sans Pro', sans-serif !important;
+  font-style: 13px;
+  color:black;
+}
+.sidebar ul li{
+  border-bottom: 2px solid #0086CD !important;
+}
+.nav>li>a.nombre-producto, .nav>li>a.nombre-subproducto{
+  padding-left: 0px !important;
+}

@@ -1,0 +1,31 @@
+.titulo-servicio> p{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 46px;
+	color: #0085CC;
+}
+.subrayado{
+	width: 35px;
+	height: 1px;
+	background-color: #0099EF;
+	position: relative;
+	left: 3px;
+	bottom: 10px;
+}
+@media only screen and (min-width: 345px){
+	.titulo-servicio>p{
+	    margin-top: 60px;
+	}
+}
+.contenido > p{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300px;
+	font-size: 17px;
+	color: #1F1F1F;
+}
+.contenido > .nomb-servicio{
+	font-weight: 300px;
+	font-size: 48px;
+	color: #0085CC;
+	text-transform: capitalize;
+	text-align: left;
+}

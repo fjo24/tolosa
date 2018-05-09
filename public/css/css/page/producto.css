@@ -1,0 +1,124 @@
+.margen-row{
+	margin-top: 50px;
+}
+.img-dest{
+	width: 100%;
+	height: 309px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	transition: 2s;
+}
+.img-responsive-alto{
+	width: 100%;
+	max-height: 100%;
+}
+.nombre-dest{
+	color: #0085CC;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 17px;
+	padding: 25px;
+	width: 100%;
+	height: 100px;
+	top: 100%;
+	left: 10%;
+	margin-top: 5px;
+	text-transform: uppercase;
+	border: 1px solid #DDDDDD;
+}
+
+.subrayado1{
+	width: 60px;
+	height: 1px;
+	background-color: #DDDDDD;
+	position: relative;
+	left: 3px;
+	bottom: 0px;
+	margin-top: 3px;
+}
+@media only screen and (max-width: 1200px) and (min-width: 767px)  {
+	.img-dest{
+	    height: 200px;
+	}
+}
+@media only screen and (max-width: 990px) and (min-width: 766px)  {
+	.nombre-dest{
+		font-size: 14px;
+	}
+}
+@media only screen and (max-width: 766px) and (min-width: 714px) {
+	.img-dest{
+	    height: 350px;
+	}
+	.cont-img{
+		padding-right: 150px;
+		padding-left: 150px;
+	}
+}
+@media only screen and (max-width: 713px) and (min-width: 440px){
+	.img-dest{
+	    height: 250px;
+	}
+	.cont-img{
+		padding-right: 80px;
+		padding-left: 80px;
+	}
+}
+@media only screen and (min-width: 345px){
+	.titulo-productos>p{
+	    margin-top: 60px;
+	}
+}
+@media only screen and (max-width: 440px){
+	.img-dest{
+	    height: 200px;
+	}
+	.nombre-dest{
+		font-size: 12px;
+		padding: 20px;
+	}
+}
+.img-hover{
+	background:rgba(0,0,0,0.6);
+	position: absolute;
+	top:0;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+	opacity: 0;
+}
+.img-hover:hover{
+	opacity: 1;
+}
+.cont-img:hover  {
+	transform: scale(0.9);/*Damos un ligero zoom a la imagen*/
+	transition: 1s;
+}
+.add{
+	position: relative;
+	top:40%;
+	left: 45%;
+	opacity: 0.8;
+	transition: 0.9s;
+}
+.cont-img{
+	padding-top: 5px; 
+}
+
+.titulo-productos> p{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 46px;
+	color: #0085CC;
+}
+.subrayado{
+	width: 35px;
+	height: 1px;
+	background-color: #0099EF;
+	position: relative;
+	left: 3px;
+	bottom: 10px;
+}

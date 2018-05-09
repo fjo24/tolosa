@@ -1,0 +1,54 @@
+.indicators{
+	display: none;
+}
+
+.slider h5 {
+    font-size: 2.5rem;
+    line-height: 110%;
+    margin: .6rem 0 .6rem 0;
+    font-weight: 400;
+    text-shadow: 1px 1px 2px rgba(1, 1, 1, 1);
+}
+
+.slider h3 {
+    font-size: 3.5rem;
+    line-height: 110%;
+    margin: 0.46rem 0 0.168rem 0;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(1, 1, 1, 1);
+}
+
+section.empresa{
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
+
+section.empresa h2{
+	color: #BE0000;
+	font-size: 30px;
+	font-weight: 700;
+	letter-spacing: 3px;
+	margin: 0;
+	margin-bottom: 5px;
+}
+
+section.empresa h3{
+	color: #BE0000;
+	font-size: 19px;
+	letter-spacing: 2px;
+	margin: 0;
+	margin-bottom: 30px;
+}
+
+section.empresa img{
+	margin-bottom: 30px;
+}
+
+p.aviso{
+	color: #BE0000;
+	font-size: 24px;
+	padding-top: 15px;
+	border-top: 1px solid #BE0000;
+	margin-top: 60px;
+	line-height: 32px;
+}

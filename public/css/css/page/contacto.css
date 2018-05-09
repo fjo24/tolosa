@@ -1,0 +1,57 @@
+.contenedor-contacto{
+	position: relative;
+}
+.contacto{
+	background-color: #19548F;
+	padding: 30px 35px;
+	font-family: 'Source Sans Pro', sans-serif;
+	color: white;
+	font-size: 15px;
+	position: absolute;
+	left:55%;
+	bottom: 200px;
+}
+.contacto a{
+	color: white;
+}
+.item{
+	background-color: #F3F3F3;
+	width: 100%;
+	padding: 5px;
+	padding-left: 20px;
+	font-family: 'Source Sans Pro', sans-serif;
+	margin-bottom: 10px;
+}
+.titulo-contacto{
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 36px;
+	color: #0086CD;
+}
+.subrayado{
+	width: 35px;
+	height: 1px;
+	background-color: #0099EF;
+	position: relative;
+	left: 3px;
+	bottom: 10px;
+}
+.contenedor-formulario{
+	padding: 0px 9%;
+}
+.enviar{
+	background-color: #0D90D6;
+	font-family: 'Source Sans Pro', sans-serif;
+	color:white;
+	font-size: 16px;
+	border-radius: 5px;
+}
+.enviar:hover{
+	transform: scale(1.02);
+	transition: 0.2s;
+	background-color: #00A9E9;
+}
+.checkbox-acept{
+	display: inline-block;
+	color: #999999;
+	font-weight: lighter;
+}
