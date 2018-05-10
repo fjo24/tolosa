@@ -11,32 +11,22 @@
 |
 */
 
-Route::get('/', function () {
+
+    Route::get('/', function () {
     return view('welcome');
 });
-
+Route::group(['prefix' => 'admin'], function(){
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-
-Route::group(['prefix' => 'adm'], function(){
-	/*-----------------------login administrador----------------------------*/
-
-    Route::post('usuario/authentificate', [
-		'uses' => 'UsuarioController@authentificate',
-		'as'   => 'usuario.authentificate'
-	]);
-	Route::get('/', [
-		'uses' => 'UsuarioController@login',
-		'as'   => 'usuario.login'
-	]);
-	Route::get('logout', [
-		'uses' => 'UsuarioController@logout',
-		'as'   => 'usuario.logout'
-	]);
-
-});
+/*------------usuario----------------*/
+Route::resource('user', 'UserController');
 
 /*------- Metadato-------------*/
-    Route::resource('metadatos','MetadatoController');
+//Route::resource('metadatos','MetadatoController');
+Route::resource('empresa','EmpresaController');
+/*------------Home----------------*/
+    Route::resource('home', 'HomeController');
+
+});

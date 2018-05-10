@@ -1,69 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
+    <title>Panel de administración</title>
+    
+    <link rel="icon" type="image/png" href=""/>
 
-                        <div class="form-group row">
-                            <label for="username" class="col-sm-4 col-form-label text-md-right">{{ __('Username') }}</label>
+    <link rel="stylesheet" href="{{ asset('plugins/materialize/css/materialize.min.css') }}">
 
-                            <div class="col-md-6">
-                                <input id="username" type="name" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="username" value="{{ old('email') }}" required autofocus>
+    <link type="text/css" rel="stylesheet" href="{{ asset('css/admin.css') }}" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{{ asset('css/login.css') }}" />
 
-                                @if ($errors->has('username' ))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('username') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+</head>
 
-                                @if ($errors->has('password'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+<body>
 
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
-
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    {{ __('Forgot Your Password?') }}
-                                </a>
-                            </div>
-                        </div>
-                    </form>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="logo-login">
+                    <img class="responsive-img" src="" alt="">
                 </div>
+                {!!Form::open(['route'=>'login', 'method'=>'POST', 'class' => 'col s12'])!!}
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">face</i>
+                            {!!Form::text('username',null,['class'=>'validate'])!!}
+                            {!!Form::label('Usuario')!!}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">https</i>
+                            {!!Form::password('password',['class'=>'validate'])!!}
+                            {!!Form::label('Contraseña')!!}
+                        </div>
+                    </div>
+
+                    <a class="waves-effect waves-light btn right" style="padding: 0;"><input type="submit" value="Ingresar" style="width: 100%; height: 100%; padding: 0 2rem;"><a/>
+                {!!Form::close()!!}
             </div>
         </div>
-    </div>
-</div>
-@endsection
+    </main>
+
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- Materialize Core JavaScript -->
+    <script src="{{ asset('plugins/materialize/js/materialize.min.js') }}"></script>
+</body>
+
+</html>

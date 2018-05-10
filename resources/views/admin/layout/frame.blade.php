@@ -124,7 +124,7 @@
             <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">pin_drop</i>Metadatos</a>
               <div class="collapsible-body">
                 <ul>
-                  <li><a href="">Editar Metadatos</a></li>
+                  <li><a href="{{route('empresa.index')}}">Editar Metadatos</a></li>
                 </ul>
               </div>
             </li>
