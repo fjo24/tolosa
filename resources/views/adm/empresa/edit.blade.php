@@ -1,4 +1,4 @@
-@extends('admin.layout.frame')
+@extends('adm.layout.frame')
 
 @section('titulo', 'Editar datos de empresa')
 

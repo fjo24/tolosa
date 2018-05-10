@@ -10,14 +10,14 @@ class EmpresaController extends Controller
     public function index(Request $request)
     {
         $dato  = empresa::orderBy('id','ASC')->get();
-    	return view('admin.empresa.index')
+    	return view('adm.empresa.index')
         ->with('datos',$dato);
     }
 
 	public function edit($id)
     {
         $dato = empresa::find($id);
-        return view('admin.empresa.edit')
+        return view('adm.empresa.edit')
             ->with('dato',$dato);
     }
 

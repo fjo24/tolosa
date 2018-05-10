@@ -1,6 +1,6 @@
-@extends('admin.layout.frame')
+@extends('adm.layout.frame')
 
-@section('titulo', 'Datos de la empresa')
+@section('titulo', 'Lista usuarios')
 
 @section('contenido')
 <main>
@@ -24,22 +24,29 @@
 			<div class="col s12">
 				<table class="highlight bordered">
 					<thead>
-						<td>Tipo</td>
-						<td>Descripción</td>
+						<td>Nombre</td>
+						<td>Usuario</td>
+						<td>Nivel</td>
 						<td class="text-right">Acciones</td>
 					</thead>
 					<tbody>
-					@foreach($datos as $dato)
+					@foreach($users as $user)
 						<tr>
-							<td>{{ $dato->tipo }}</td>
-							<td>{{ $dato->descripcion }}</td>
+							<td>{!!$user->name!!}</td>
+							<td>{!!$user->username!!}</td>
+							<td>{!!$user->nivel!!}</td>
 							<td class="text-right">
-								<a href="{{ route('empresa.edit', $dato->id) }}"><i class="material-icons">create</i></a>
+								<a href="{{ route('user.edit',$user->id)}}"><i class="material-icons">create</i></a>
+								{!!Form::open(['class'=>'en-linea', 'route'=>['user.destroy', $user->id], 'method' => 'DELETE'])!!}
+									<button onclick='return confirm_delete(this);' type="submit" class="submit-button">
+										<i class="material-icons red-text">cancel</i>
+									</button>
+								{!!Form::close()!!}
 							</td>
 						</tr>
 					@endforeach
 					</tbody>
-				</table>				
+				</table>			
 			</div>
 		</div>
     </div>

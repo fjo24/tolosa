@@ -1,4 +1,4 @@
-@extends('admin.layout.frame')
+@extends('adm.layout.frame')
 
 @section('titulo', 'Crear Usuario')
 
@@ -23,12 +23,12 @@
 
 		<div class="row">
 			<div class="col s12">
-			{!!Form::open(['route'=>'user.store', 'method'=>'POST', 'files' => true])!!}
+			{!!Form::model($user, ['route'=>['user.update',$user->id], 'method'=>'PUT', 'files' => true])!!}
 				{{ csrf_field() }}
 				<div class="row">
 					<div class="input-field col s12 m4">
 						{!!Form::label('Nombre:')!!}
-						{!!Form::text('nombre', null , ['class'=>'validate', 'required'])!!}
+						{!!Form::text('name', null , ['class'=>'validate', 'required'])!!}
 					</div>
 					<div class="input-field col s12 m4">
 						{!!Form::label('Username:')!!}
@@ -50,8 +50,7 @@
 						  <option value="administrador">Administrador</option>
 						  <option value="usuario">Usuario</option>
 						</select>
-						<label for="nivel">Qué tipo de usuario desea crear?</label>
-
+						<label>Qué tipo de usuario desea crear?</label>
 					</div>
 				</div>
 				<div class="col s12 no-padding">

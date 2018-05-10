@@ -61,7 +61,7 @@
                   <li><a href="">Crear slider</a></li>
                   <li><a href="">Editar slider</a></li>
                   <li><a href="">Editar destacados</a></li>
-                  <li><a href="">Editar lineas home</a></li>
+                  <li><a href="{{route('home.create')}}">Editar lineas home</a></li>
                 </ul>
               </div>
             </li>
