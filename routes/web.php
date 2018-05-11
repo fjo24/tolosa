@@ -12,12 +12,12 @@
 */
 
 
-    Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function () {
+	return view('welcome');
 });
-    Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
 
-  Auth::routes(); 
+Auth::routes(); 
 Route::middleware('auth')->prefix('adm')->group(function () {
 
 Route::get('/', function () {
@@ -32,6 +32,19 @@ Route::resource('user', 'UserController');
 //Route::resource('metadatos','MetadatoController');
 Route::resource('empresa','EmpresaController');
 /*------------Home----------------*/
-    Route::resource('home', 'HomeController');
+Route::resource('home', 'HomeController');
+/*------------productos----------------*/
+Route::resource('productos', 'ProductoController');
+/*------------sliders----------------*/
+Route::get('sliders/{id}/destroy',[
+			'uses'=>'SlidersController@destroy',
+			'as'=>'sliders.destroy'
+]);
+Route::resource('sliders', 'SlidersController');
+/*------------metadatos----------------*/
+Route::resource('metadatos', 'MetadatosController');
 
+
+//fin filtro auth
 });
+

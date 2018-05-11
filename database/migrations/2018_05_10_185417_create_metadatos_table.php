@@ -15,7 +15,7 @@ class CreateMetadatosTable extends Migration
     {
         Schema::create('metadatos', function (Blueprint $table) {
             $table->increments('id');
-            $table->enum('seccion',['home','empresa','productos','servicios,','obra','fabrica']);
+            $table->enum('seccion',['home','empresa','productos','servicios','obra','fabrica']);
             $table->string('keywords',300);
             $table->string('description',300);
             $table->timestamps();

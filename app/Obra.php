@@ -4,10 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Home extends Model
+class Obra extends Model
 {
-    protected $table = "homes";
+    protected $table = "obras";
     protected $fillable = [
-        'titulo', 'contenido', 'link'
+        'titulo', 'descripcion'
     ];
 }

@@ -58,10 +58,9 @@
             <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">home</i>Home</a>
               <div class="collapsible-body">
                 <ul>
-                  <li><a href="">Crear slider</a></li>
-                  <li><a href="">Editar slider</a></li>
-                  <li><a href="">Editar destacados</a></li>
+                  <li><a href="">Editar sliders</a></li>
                   <li><a href="{{route('home.create')}}">Editar lineas home</a></li>
+                  <li><a href="">Editar destacados</a></li>
                 </ul>
               </div>
             </li>
@@ -94,12 +93,11 @@
               </div>
             </li>
 
-            <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">comment</i>Calidad</a>
+            <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">comment</i>Sliders</a>
               <div class="collapsible-body">
                 <ul>
-                  <li><a href="">Crear descarga calidad</a></li>
-                  <li><a href="">Editar descarga calidad</a></li>
-                  <li><a href="">Editar Calidad</a></li>
+                  <li><a href="{{route('sliders.create')}}">Crear slider</a></li>
+                  <li><a href="{{route('sliders.index')}}">Editar slider</a></li>
                 </ul>
               </div>
             </li>
@@ -116,7 +114,7 @@
             <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">view_headline</i>Datos de la empresa</a>
               <div class="collapsible-body">
                 <ul>
-                  <li><a href="">Editar datos</a></li>
+                  <li><a href="{{route('empresa.index')}}">Editar datos</a></li>
                 </ul>
               </div>
             </li>
@@ -124,7 +122,7 @@
             <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">pin_drop</i>Metadatos</a>
               <div class="collapsible-body">
                 <ul>
-                  <li><a href="{{route('empresa.index')}}">Editar Metadatos</a></li>
+                  <li><a href="{{route('metadatos.index')}}">Editar Metadatos</a></li>
                 </ul>
               </div>
             </li>
@@ -149,7 +147,7 @@
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <!-- Materialize Core JavaScript -->
-    <script src="{{ asset('plugins/materialize/js/materialize.min.js') }}"></script>
+  
 
     <script>
         $(document).ready(function() {
@@ -167,6 +165,15 @@
     $('.collapsible').collapsible();
   });
         
+
+        document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.dropdown-trigger');
+      var instances = M.Dropdown.init(elems, options);
+    });
+
+  // Or with jQuery
+
+    $('.dropdown-trigger').dropdown();
     </script>
 
 

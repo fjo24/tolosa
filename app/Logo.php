@@ -4,10 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Home extends Model
+class Logo extends Model
 {
-    protected $table = "homes";
+    protected $table = "logos";
     protected $fillable = [
-        'titulo', 'contenido', 'link'
+        'ruta', 'tipo'
     ];
 }
