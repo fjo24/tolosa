@@ -28,21 +28,9 @@
 						{!!Form::label('Link :')!!}
 						{!!Form::text('link',$home->link,['class'=>'validate'])!!}
 					</div>
-					<label class="col s12" for="parrafo">Titulo</label>
-			      	<div class="input-field col s12">
-						{!!Form::textarea('titulo', $home->titulo, ['class'=>'validate', 'cols'=>'74', 'rows'=>'5'])!!}
-				    </div>
-					<label class="col s12" for="parrafo">Subtitulo</label>
-			      	<div class="input-field col s12">
-						{!!Form::textarea('subtitulo', $home->subtitulo, ['class'=>'validate', 'cols'=>'74', 'rows'=>'5'])!!}
-				    </div>
 					<label class="col s12" for="parrafo">Contenido</label>
 			      	<div class="input-field col s12">
 						{!!Form::textarea('contenido', $home->contenido, ['class'=>'validate', 'cols'=>'74', 'rows'=>'5'])!!}
-				    </div>
-					<label class="col s12" for="parrafo">Segundo contenido</label>
-			      	<div class="input-field col s12">
-						{!!Form::textarea('contenido2', $home->contenido2, ['class'=>'validate', 'cols'=>'74', 'rows'=>'5'])!!}
 				    </div>
 				</div>
 				<div class="col s12 no-padding">
@@ -56,10 +44,7 @@
 	<script src="//cdn.ckeditor.com/4.9.2/standard/ckeditor.js"></script>
 
 <script>
-	CKEDITOR.replace('titulo');
-	CKEDITOR.replace('subtitulo');
 	CKEDITOR.replace('contenido');
-	CKEDITOR.replace('contenido2');
 	CKEDITOR.config.height = '100px';
 	CKEDITOR.config.width = '100%';
 </script>

@@ -58,7 +58,6 @@
             <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">home</i>Home</a>
               <div class="collapsible-body">
                 <ul>
-                  <li><a href="">Editar sliders</a></li>
                   <li><a href="{{route('home.create')}}">Editar lineas home</a></li>
                   <li><a href="">Editar destacados</a></li>
                 </ul>
@@ -147,7 +146,7 @@
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <!-- Materialize Core JavaScript -->
-  
+    <script src="{{ asset('plugins/materialize/js/materialize.min.js') }}"></script>
 
     <script>
         $(document).ready(function() {
@@ -165,15 +164,6 @@
     $('.collapsible').collapsible();
   });
         
-
-        document.addEventListener('DOMContentLoaded', function() {
-      var elems = document.querySelectorAll('.dropdown-trigger');
-      var instances = M.Dropdown.init(elems, options);
-    });
-
-  // Or with jQuery
-
-    $('.dropdown-trigger').dropdown();
     </script>
 
 
