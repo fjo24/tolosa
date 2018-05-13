@@ -1,21 +1,30 @@
 <header>
-  <nav class="navbar navbar-default nav-ppal ">
-  <div class="container responsive-logo">
+  <nav class="header-nav">
+ 
   
   <!-- Collect the nav links, forms, and other content for toggling -->
       
-<div class="navbar-header ">
-          <a class="navbar-brand " href="">
+          <a class="logo-header" href="">
               <img class="img-responsive logo" src="{{asset('images/logo.png')}}"  />
           </a>
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Desplegar navegación</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-      <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="redes-header">
+            <a href="" class="iconos-redes"><img src="{{asset('img/redes/facebook_fb.png')}}"></a>
+            <a href="" class="iconos-redes"><img src="{{asset('img/redes/instagram_ins.png')}}"></a>
+            <a href="" class="iconos-redes"><img src="{{asset('img/redes/facebook_fb.png')}}"></a>
+            <a href="" class="iconos-redes"><img src="{{asset('img/redes/instagram_ins.png')}}"></a>
+          </div>
+          
+          <div class="links-header">
+              <a href="" > EMPRESA | </a>
+              <a href="" > PRODUCTOS | </a>
+              <a href="" > SERVICIOS | </a>
+              <a href="" > OBRA | </a>
+              <a href="" > FÁBRICA | </a>
+              <a href="" > SOLICITUD DE PRESUPUESTO</a> 
+          </div>
+
+
+      <!-- Brand and toggle get grouped for better mobile display 
      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <div class="margin-header">
         <ul class="nav navbar-nav navbar-right menu" >
@@ -27,8 +36,8 @@
           <li class=""><a href="" >SOLICITUD DE PRESUPUESTO</a></li>
         </ul>
       </div><!-- /.navbar-collapse -->
-    </div>
+ 
     
-  </div><!-- /.container-fluid -->
+<!-- /.container-fluid -->
 </nav>
 </header>

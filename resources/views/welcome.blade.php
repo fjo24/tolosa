@@ -1,13 +1,8 @@
-@extends('pages.templates.cuerpo')
+@extends('pages.templates.body')
 @section('title', 'Tolosa - Home')
 @section('contenido')
 <!-- body -->    
 
-
-
-
-
-<br><br><br><br><br><br><br><br><br>
 pizarra, el trigo disponible vale USD 250, en este sentido, el analista resaltó que son precios extraordinarios, ya que en diciembre de 2017 el valor era de USD 150.
 
 Según explicó, este incremento se da porque hay un riesgo de desabastecimiento interno del cereal. "Brasil está peleando con la molinería argentina para ver quién se queda con el trigo que aún hay. Pareciera que alcanza muy justo para los dos. Sin embargo, algunos creemos que uno de los dos podría quedar insatisfecho por eso el precio ha tenido una escalada enorme", precisó.

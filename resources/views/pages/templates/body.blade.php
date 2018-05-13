@@ -7,35 +7,25 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ asset('css/layouts/header.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/layouts/footer.css') }}">
       <!-- CSS MATERIALIZE -->
       <!-- ICONOS MATERIALIZE -->
-      <link type="text/css" rel="stylesheet" href="{{asset('plugins/materialize/css/materialize.min.css')}}"  media="screen,projection"/>
-        <link rel="stylesheet" href="{{ asset('plugins/bootstrap/css/bootstrap.min.css') }}">
-      <!-- ESTILO -->
-      <link rel="stylesheet" href="{{asset('plugins/assets/css/general.css')}}">
-      <!-- LOGO FAVICON -->
+    <link type="text/css" rel="stylesheet" href="{{asset('plugins/materialize/css/materialize.min.css')}}"  media="screen,projection"/>
+
+    <!-- ESTILO -->
+
+    <!-- LOGO FAVICON -->
 
     <link rel="icon" type="image/png" href=""/>
     <meta name="keywords" content="">
     <meta name="description" content="">
-    
-	<link href="{{ asset('plugins/vendor/metisMenu/metisMenu.min.css') }}" rel="stylesheet">
 
-    <link href="{{ asset('plugins/dist/sb-admin-2.css') }}" rel="stylesheet">
-    <!-- Morris Charts CSS -->
-    <link href="{{ asset('plugins/vendor/morrisjs/morris.css') }}" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="{{ asset('plugins/vendor/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('plugins/dist/estilos.css') }}" rel="stylesheet">
-    <!--Estilos propios-->
-    <link rel="stylesheet" href="{{ asset('css/header-footer.css') }}">
-    @yield('estilo')
-    <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
+    
 
-    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-        <link rel="stylesheet" type="text/css" href="css/demo.css" />
-        <link rel="stylesheet" type="text/css" href="css/set2.css" />
 
     <link rel="stylesheet" href="{{ asset('plugins/font-awesome/css/font-awesome.min.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet">

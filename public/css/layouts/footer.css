@@ -1,0 +1,40 @@
+.footer-box{
+	color: #000;
+	position: relative;
+	height: 280px;
+	background-color: #171B42;
+	bottom: 0px;
+	
+	box-shadow: 0 0px 0px -0px rgba(0,0,0,.0);
+}
+
+.sitemap a, h5, div, span{
+	color: white;
+}
+
+.sitemap{
+	position: absolute;
+	width: 65%;
+	top:40px;
+	left: 100px;
+}
+
+.company{
+	position: absolute;
+	width: 65%;
+	top:30px;
+	left: 500px;
+		background-color: #000;
+		padding-right: 0px;
+	margin-right: 0px;
+}
+
+.datos{
+	position: absolute;
+	width: 25%;
+	top:20px;
+	left: 900px;
+	padding-right: 0px;
+	margin-right: 0px;
+
+}
