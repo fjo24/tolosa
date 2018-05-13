@@ -30,20 +30,20 @@
         <div class="container">
             <div class="row">
                 <div class="logo-login">
-                    <img class="responsive-img" src="" alt="">
+                    <img class="center responsive-img" src="{{ asset('images/logo.png') }}" alt="">
                 </div>
                 {!!Form::open(['route'=>'login', 'method'=>'POST', 'class' => 'col s12'])!!}
                     <div class="row">
                         <div class="input-field col s12">
-                            <i class="material-icons prefix">face</i>
-                            {!!Form::text('username',null,['class'=>'validate'])!!}
+                            <i class="material-icons prefix">account_circle</i>
+                            {!!Form::text('username',null,['class'=>''])!!}
                             {!!Form::label('Usuario')!!}
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <i class="material-icons prefix">https</i>
-                            {!!Form::password('password',['class'=>'validate'])!!}
+                            <i class="material-icons prefix">vpn_key</i>
+                            {!!Form::password('password')!!}
                             {!!Form::label('Contraseña')!!}
                         </div>
                     </div>

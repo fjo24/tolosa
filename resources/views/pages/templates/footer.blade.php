@@ -29,8 +29,8 @@
                   </div>
                </div>
                <div class="company">
-                  <div class="col 10 s6">
-                     <h5>COmpañias</h5>
+                  <div class="col 8 s6">
+                     <h5>Compañias</h5>
                   <ul>
                      <li class="item-footer"><i class="material-icons">place</i><a style="text-transform: none;" href="">Plaza 3553 PB. “7” (C1430DII) CA.B.A. Buenos Aires Argentina</a></li>
                      <li class="item-footer"><i class="material-icons">phone_in_talk</i><a style="text-transform: none;" href="">+5411 4546-0300 </a></li>

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateFabricaTable extends Migration
+class AddContEmpresasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateFabricaTable extends Migration
      */
     public function up()
     {
-        Schema::create('fabrica', function (Blueprint $table) {
+        Schema::create('cont_empresas', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('titulo',100);
-            $table->string('descripcion',800);
+            $table->string('titulo');
             $table->string('imagen',300);
+            $table->string('descripcion',800);
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateFabricaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fabrica');
+        Schema::dropIfExists('cont_empresas');
     }
 }

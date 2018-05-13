@@ -1,6 +1,6 @@
 @extends('adm.layout.frame')
 
-@section('titulo', 'Crear Usuario')
+@section('titulo', 'Editar Usuario')
 
 @section('contenido')
 

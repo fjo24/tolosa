@@ -6,12 +6,13 @@
 	<title>@yield('titulo')</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{ asset('css/layouts/header.css') }}">
     <link rel="stylesheet" href="{{ asset('css/layouts/footer.css') }}">
       <!-- CSS MATERIALIZE -->
       <!-- ICONOS MATERIALIZE -->
     <link type="text/css" rel="stylesheet" href="{{asset('plugins/materialize/css/materialize.min.css')}}"  media="screen,projection"/>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 
     <!-- ESTILO -->
 
@@ -24,6 +25,9 @@
 
     <!-- Custom Fonts -->
     <link href="{{ asset('plugins/vendor/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+
+    <!-- JS MATERIALIZE -->
+      <script type="text/javascript" src="{{asset('plugins/materialize/js/materialize.min.js')}}"></script>
     
 
 

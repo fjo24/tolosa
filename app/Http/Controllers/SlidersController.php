@@ -50,7 +50,7 @@ class SlidersController extends Controller
         }
         $slider->save();
         Flash::success("Se ha registrado el slider de manera exitosa!")->important();        
-        return view('adm.sliders.index');
+        return redirect()->route('sliders.index');
         
     }
     public function edit($id)

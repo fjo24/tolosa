@@ -51,7 +51,7 @@ nav.top-nav{
 }
 
 .btn, .btn:hover, .top-nav{
-	background-color: #15B200;
+	background-color: #32398E;
 }
 
 .icono{
@@ -112,7 +112,7 @@ button:focus {
 }
 
 .pagination li.active {
-    background-color: #15B200;
+    background-color: #32398E;
 }
 
 .pagination{
@@ -121,26 +121,26 @@ button:focus {
 
 side-nav li>a>i, .side-nav li>a>[class^="mdi-"], .side-nav li>a li>a>[class*="mdi-"], .side-nav li>a>i.material-icons {
     margin: 0 5px 0 0;
-    color: #15B200;
+    color: #32398E;
     transform: translateY(-2px);
 }
 
 .side-nav .collapsible-body>ul:not(.collapsible)>li.active, .side-nav.fixed .collapsible-body>ul:not(.collapsible)>li.active {
-    background-color: #15B200;
+    background-color: #32398E;
 }
 
 /* label focus color */
  .input-field input:focus + label {
-   color: #15B200 !important;
+   color: #32398E !important;
  }
  /* label underline focus color */
  .row .input-field input:focus {
-   border-bottom: 1px solid #15B200 !important;
-   box-shadow: 0 1px 0 0 #15B200 !important
+   border-bottom: 1px solid #32398E !important;
+   box-shadow: 0 1px 0 0 #32398E !important
  }
 
 select option{
-	color: #15B200 !important;
+	color: #32398E !important;
 }
 
 .img-admin{

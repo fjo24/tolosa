@@ -26,6 +26,7 @@ class UserController extends Controller
         $usuario->name= $request->name;
         $usuario->username = $request->username;
         $usuario->email = $request->email;
+        $usuario->nivel = $request->nivel;
         $usuario->password= \Hash::make($request->password);	
         $usuario->save();
         
