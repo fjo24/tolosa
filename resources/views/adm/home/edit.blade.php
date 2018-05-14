@@ -26,12 +26,14 @@
 				<div class="row">
 					<div class="input-field col s12 m6">
 						{!!Form::label('Link :')!!}
-						{!!Form::text('link',$home->link,['class'=>'validate'])!!}
+						{!!Form::text('link',$home->link,['class'=>''])!!}
 					</div>
 					<label class="col s12" for="parrafo">Contenido</label>
-			      	<div class="input-field col s12">
-						{!!Form::textarea('contenido', $home->contenido, ['class'=>'validate', 'cols'=>'74', 'rows'=>'5'])!!}
+					<div class="input-field col s12">
+				        <textarea id="texto" name="contenido" class="materialize-textarea" required>{{$home->contenido}}</textarea>
 				    </div>
+			      	
+
 				</div>
 				<div class="col s12 no-padding">
 					{!!Form::submit('Guardar', ['class'=>'waves-effect waves-light btn right'])!!}
@@ -41,11 +43,11 @@
 			</div>
 		</div>
 	</main>
-	<script src="//cdn.ckeditor.com/4.9.2/standard/ckeditor.js"></script>
+	<script src="//cdn.ckeditor.com/4.7.3/full/ckeditor.js"></script>
 
 <script>
-	CKEDITOR.replace('contenido');
-	CKEDITOR.config.height = '100px';
+	CKEDITOR.replace('texto');
+	CKEDITOR.config.height = '200px';
 	CKEDITOR.config.width = '100%';
 </script>
 @endsection

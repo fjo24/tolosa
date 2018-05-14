@@ -17,6 +17,7 @@ class CreateServiciosTable extends Migration
             $table->increments('id');
             $table->string('titulo',100);
             $table->string('descripcion',800);
+            $table->string('orden', 10);
             $table->timestamps();
         });
     }

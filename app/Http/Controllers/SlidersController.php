@@ -66,7 +66,6 @@ class SlidersController extends Controller
 
     public function update(SliderRequest $request, $id)
     {
-
         $slider=Slider::find($id);
         $id = Slider::all()->max('id');
         $slider->texto = $request->texto;

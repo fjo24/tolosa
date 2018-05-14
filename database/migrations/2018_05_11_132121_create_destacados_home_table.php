@@ -18,6 +18,7 @@ class CreateDestacadosHomeTable extends Migration
             $table->string('imagen',300);
             $table->string('descripcion',800);
             $table->string('link',100);
+            $table->string('orden',10);
             $table->timestamps();
         });
     }

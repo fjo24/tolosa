@@ -32,19 +32,19 @@
                   <div class="col 8 s6">
                      <h5>Compañias</h5>
                   <ul>
-                     <li class="item-footer"><i class="material-icons">place</i><a style="text-transform: none;" href="">Plaza 3553 PB. “7” (C1430DII) CA.B.A. Buenos Aires Argentina</a></li>
+                     <li class="item-footer"><i class="material-icons">place</i><a style="text-transform: none;" href=""> CA.B.A. Buenos Aires Argentina</a></li>
                      <li class="item-footer"><i class="material-icons">phone_in_talk</i><a style="text-transform: none;" href="">+5411 4546-0300 </a></li>
-                     <li class="item-footer"><i class="material-icons">email</i><a style="text-transform: none;" href="">info@drimerchocolates.com.ar</a></li>
+                     <li class="item-footer"><i class="material-icons">email</i><a style="text-transform: none;" href="">info@tolosa.com.ar</a></li>
                   </ul>
                   </div>
                </div>
                <div class="datos">
                   <div class="col 8 s6">
-                     <h5>drimer chocolates</h5>
+                     <h5>Tolosa</h5>
                   <ul>
-                     <li class="item-footer"><i class="material-icons">place</i><a style="text-transform: none;" href="">Plaza 3553 PB. “7” (C1430DII) CA.B.A. Buenos Aires Argentina</a></li>
+                     <li class="item-footer"><i class="material-icons">place</i><a style="text-transform: none;" href="">(C1430DII) CA.B.A. Buenos Aires Argentina</a></li>
                      <li class="item-footer"><i class="material-icons">phone_in_talk</i><a style="text-transform: none;" href="">+5411 4546-0300 </a></li>
-                     <li class="item-footer"><i class="material-icons">email</i><a style="text-transform: none;" href="">info@drimerchocolates.com.ar</a></li>
+                     <li class="item-footer"><i class="material-icons">email</i><a style="text-transform: none;" href="">info@tolosa.com.ar</a></li>
                   </ul>
                   </div>
                </div>

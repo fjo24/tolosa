@@ -33,7 +33,7 @@
                                     <a class="right" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ Auth::user()->username }}{{ __(' / Cerrar Sesión') }}
+                                        {{ __('| Cerrar Sesión |') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -49,7 +49,7 @@
       <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons">menu</i></a></div>
       <ul id="nav-mobile" class="side-nav fixed">
         <div class="logo"><a id="logo-container" href="" class="brand-logo">
-          <img class="responsive-img" src="" alt="">
+          <img class="responsive-img" src="{{ asset('images/logo.png') }}" alt="">
         </a></div>
         <li class="no-padding">
 
@@ -59,7 +59,7 @@
               <div class="collapsible-body">
                 <ul>
                   <li><a href="{{route('home.create')}}">Editar lineas home</a></li>
-                  <li><a href="">Editar destacados</a></li>
+                  <li><a href="{{route('destacados.index')}}">Editar destacados</a></li>
                 </ul>
               </div>
             </li>
@@ -67,27 +67,25 @@
             <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">business</i>Empresa</a>
               <div class="collapsible-body">
                 <ul>
-                  <li><a href="">Editar contenido</a></li>
-                  <li><a href="">Editar Mision</a></li>
+                  <li><a href="{{route('contenidoempresa.index')}}">Editar contenido</a></li>
                 </ul>
               </div>
             </li>
             <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">shopping_cart</i>Productos</a>
               <div class="collapsible-body">
                 <ul>
-                  <li><a href="">Crear Familia</a></li>
-                  <li><a href="">Editar Familia</a></li>
-                  <li><a href="">Crear Categoria</a></li>
+                  <li><a href="{{route('productos.create')}}">Crear Producto</a></li>
+                  <li><a href="{{route('productos.index')}}">Editar Producto</a></li>
+                  <li><a href="{{route('categorias.create')}}">Crear Categoria</a></li>
                   <li><a href="">Editar Categoria</a></li>
                 </ul>
               </div>
             </li>
 
-            <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">cloud_download</i>Descargas</a>
+            <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">build</i>Servicios</a>
               <div class="collapsible-body">
                 <ul>
-                  <li><a href="">Crear descarga</a></li>
-                  <li><a href="">Editar descarga</a></li>
+                  <li><a href="{{route('servicios.index')}}">Editar servicio</a></li>
                 </ul>
               </div>
             </li>

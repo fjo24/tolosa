@@ -15,7 +15,6 @@ class AddContEmpresasTable extends Migration
     {
         Schema::create('cont_empresas', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('titulo');
             $table->string('imagen',300);
             $table->string('descripcion',800);
             $table->timestamps();

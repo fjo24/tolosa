@@ -25,8 +25,8 @@
 			{!!Form::model($dato, ['route'=>['empresa.update',$dato->id], 'method'=>'PUT', 'files' => true])!!}	
 				<div class="row">			
 					<div class="input-field col s6">
-						{!!Form::label('descripcion', 'Descripción')!!}
-						{!! Form::text('descripcion', $dato->descripcion, ['class' => 'validate', 'required'])!!}
+						{!!Form::label('descripcion',  $dato->tipo )!!}
+						{!! Form::text('descripcion', $dato->descripcion, ['class' => '', 'required'])!!}
 					</div>
 					
 				</div>

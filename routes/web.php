@@ -18,7 +18,7 @@ Route::get('/', function () {
 Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes(); 
-Route::middleware('auth')->prefix('adm')->group(function () {
+Route::prefix('adm')->group(function () {
 
 Route::get('/', function () {
     return view('/auth/login');
@@ -33,8 +33,12 @@ Route::resource('user', 'UserController');
 Route::resource('empresa','EmpresaController');
 /*------------Home----------------*/
 Route::resource('home', 'HomeController');
+/*------------categorias----------------*/
+Route::resource('categorias', 'CategoriasController');
 /*------------productos----------------*/
 Route::resource('productos', 'ProductoController');
+/*------------servicios----------------*/
+Route::resource('servicios', 'ServiciosController');
 /*------------sliders----------------*/
 Route::get('sliders/{id}/destroy',[
 			'uses'=>'SlidersController@destroy',
@@ -43,7 +47,10 @@ Route::get('sliders/{id}/destroy',[
 Route::resource('sliders', 'SlidersController');
 /*------------metadatos----------------*/
 Route::resource('metadatos', 'MetadatosController');
-
+/*------------destacados-home----------------*/
+Route::resource('destacados', 'DestacadosController');
+/*------------Contenido-empresas----------------*/
+Route::resource('contenidoempresa', 'ContenidoempresaController');
 
 //fin filtro auth
 });

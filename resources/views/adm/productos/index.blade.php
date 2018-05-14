@@ -24,12 +24,27 @@
 			<div class="col s12">
 				<table class="highlight bordered">
 					<thead>
-						<td>Tipo</td>
-						<td>Descripción</td>
+						<td>Imagen</td>
+						<td>Nombre</td>
+						<td>Categoria</td>
 						<td class="text-right">Acciones</td>
 					</thead>
 					<tbody>
-
+					@foreach($productos as $producto)
+						<tr>
+							<td><img src="{{ asset($producto->imagen) }}" alt="seccion" width="300" height="300"/></td>
+							<td>{!!$producto->nombre!!}</td>
+							<td>{!!$producto->categoria->nombre!!}</td>
+							<td class="text-right">
+								<a href="{{ route('productos.edit',$producto->id)}}"><i class="material-icons">create</i></a>
+								{!!Form::open(['class'=>'en-linea', 'route'=>['productos.destroy', $producto->id], 'method' => 'DELETE'])!!}
+									<button onclick='return confirm_delete(this);' type="submit" class="submit-button">
+										<i class="material-icons red-text">cancel</i>
+									</button>
+								{!!Form::close()!!}
+							</td>
+						</tr>
+					@endforeach
 					</tbody>
 				</table>				
 			</div>

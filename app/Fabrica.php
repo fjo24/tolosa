@@ -8,6 +8,6 @@ class Fabrica extends Model
 {
     protected $table = "fabrica";
     protected $fillable = [
-        'titulo', 'descripcion'
+        'texto', 'imagen'
     ];
 }

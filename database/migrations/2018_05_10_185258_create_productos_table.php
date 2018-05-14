@@ -20,7 +20,6 @@ class CreateProductosTable extends Migration
             $table->string('imagen',300);
             $table->text('contenido',4000);
             $table->string('orden',10);
-            $table->string('link',300);
             $table->integer('categoria_id')->unsigned();
 
             $table->foreign('categoria_id')->references('id')->on('categorias')->onDelete('cascade');

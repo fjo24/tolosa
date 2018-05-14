@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Home;
+use App\Http\Requests\HomeRequest;
 
 class HomeController extends Controller
 {
@@ -14,8 +15,8 @@ class HomeController extends Controller
     }
     public function create()
     {
-       $home = Home::all()->first();
-        return redirect()->route('home.edit', $home->id); 
+        $home = Home::all()->first();
+        return redirect()->route('home.edit', $home->id);
     } 
     public function edit($id)
     {
@@ -24,7 +25,7 @@ class HomeController extends Controller
             ->with('home',$home);
     }
 
-    public function update(Request $request, $id)
+    public function update(HomeRequest $request, $id)
     {
         $dato=Home::find($id);
         $dato->contenido=$request->contenido;
