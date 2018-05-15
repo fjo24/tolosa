@@ -29,7 +29,7 @@
 					</div>
 					<div class="input-field col s6">
 					
-						{!! Form::select('categoria_id', $categorias, null, ['class' => 'form-control', 'placeholder' => 'Categoria', 'required']) !!}
+						{!! Form::select('categoria_id', $categorias, null, ['class' => 'form-control', 'placeholder' => 'Categoria']) !!}
 					</div>
 				</div>
 				<div class="row">
