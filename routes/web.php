@@ -11,12 +11,16 @@
 |
 */
 
+//<<<<<<<<<<<<<PAGINAS>>>>>>>>>>>>>>//
 
-Route::get('/', function () {
-	return view('welcome');
-});
-Route::get('/home', 'HomeController@index')->name('home');
+//HOME
+Route::get('/', 'PaginasController@welcome');
 
+
+//Route::get('/home', 'HomeController@index')->name('home');
+
+
+//<<<<<<<<<<<<<ADMINISTRADOR>>>>>>>>>>>>>>//
 Auth::routes(); 
 Route::prefix('adm')->group(function () {
 
@@ -39,6 +43,8 @@ Route::resource('categorias', 'CategoriasController');
 Route::resource('productos', 'ProductoController');
 /*------------servicios----------------*/
 Route::resource('servicios', 'ServiciosController');
+/*------------obras----------------*/
+Route::resource('obras', 'ObrasController');
 /*------------sliders----------------*/
 Route::get('sliders/{id}/destroy',[
 			'uses'=>'SlidersController@destroy',
@@ -51,7 +57,10 @@ Route::resource('metadatos', 'MetadatosController');
 Route::resource('destacados', 'DestacadosController');
 /*------------Contenido-empresas----------------*/
 Route::resource('contenidoempresa', 'ContenidoempresaController');
+/*------------Logos----------------*/
+Route::resource('logos', 'LogosController');
+/*------------Redes----------------*/
+Route::resource('redes', 'RedesController');
 
 //fin filtro auth
 });
-

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateLogosTable extends Migration
+class CreateRedesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,13 @@ class CreateLogosTable extends Migration
      */
     public function up()
     {
-        Schema::create('logos', function (Blueprint $table) {
+        Schema::create('redes', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('imagen',500);
-            $table->enum('tipo',['header','footer','favicon']);
+            $table->string('nombre',50);
+            $table->string('link',400);
+            $table->string('logo',300);
+            $table->string('orden',10);
+            $table->enum('ubicacion',['header','footer']);
             $table->timestamps();
         });
     }
@@ -28,6 +31,6 @@ class CreateLogosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('logos');
+        Schema::dropIfExists('redes');
     }
 }

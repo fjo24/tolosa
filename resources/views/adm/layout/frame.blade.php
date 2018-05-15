@@ -26,10 +26,7 @@
           <div class="nav-wrapper"><a class="page-title">
             @yield('titulo')
           </a>
-
-
-
-          <div class="right dropdown-menu" aria-labelledby="navbarDropdown">
+            <div class="right dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="right" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -39,7 +36,7 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
-                                </div>
+            </div>
           </div>
         </div>
       </nav>
@@ -71,13 +68,13 @@
                 </ul>
               </div>
             </li>
-            <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">shopping_cart</i>Productos</a>
+            <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">watch</i>Productos</a>
               <div class="collapsible-body">
                 <ul>
                   <li><a href="{{route('productos.create')}}">Crear Producto</a></li>
                   <li><a href="{{route('productos.index')}}">Editar Producto</a></li>
                   <li><a href="{{route('categorias.create')}}">Crear Categoria</a></li>
-                  <li><a href="">Editar Categoria</a></li>
+                  <li><a href="{{route('categorias.index')}}">Editar Categoria</a></li>
                 </ul>
               </div>
             </li>
@@ -90,7 +87,16 @@
               </div>
             </li>
 
-            <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">comment</i>Sliders</a>
+            <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">work</i>Obras</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a href="{{route('obras.create')}}">Crear obra</a></li>
+                  <li><a href="{{route('obras.index')}}">Editar obra</a></li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">compare_arrows</i>Sliders</a>
               <div class="collapsible-body">
                 <ul>
                   <li><a href="{{route('sliders.create')}}">Crear slider</a></li>
@@ -99,16 +105,17 @@
               </div>
             </li>
 
-            <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">palette</i>Logos</a>
+            <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">insert_photo</i>Logos</a>
               <div class="collapsible-body">
                 <ul>
-                  <li><a href="">Editar logos</a></li>
+                  <li><a href="{{route('logos.index')}}">Editar logos</a></li>
                 </ul>
               </div>
             </li>
 
 
-            <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">view_headline</i>Datos de la empresa</a>
+
+            <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">info</i>Datos de la empresa</a>
               <div class="collapsible-body">
                 <ul>
                   <li><a href="{{route('empresa.index')}}">Editar datos</a></li>

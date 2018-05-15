@@ -1,43 +1,40 @@
 <header>
-  <nav class="header-nav">
- 
-  
-  <!-- Collect the nav links, forms, and other content for toggling -->
-      
-          <a class="logo-header" href="">
-              <img class="img-responsive logo" src="{{asset('images/logo.png')}}"  />
-          </a>
+<nav class="header-nav">
+  <div class="nav-wrapper">
+
+          <a href="" class="logo-header"><img class="responsive-img logo" src="{{asset('img/logo/logo-header.png')}}" alt=""></a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons li-ppal">menu</i></a>
+          <div class="cont">
+          <div class="right hide-on-med-and-down">
           <div class="redes-header">
-            <a href="" class="iconos-redes"><img src="{{asset('img/redes/facebook_fb.png')}}"></a>
-            <a href="" class="iconos-redes"><img src="{{asset('img/redes/instagram_ins.png')}}"></a>
-            <a href="" class="iconos-redes"><img src="{{asset('img/redes/facebook_fb.png')}}"></a>
-            <a href="" class="iconos-redes"><img src="{{asset('img/redes/instagram_ins.png')}}"></a>
+            <a href="" class="iconos-redes"><img src="{{asset('img/redes/lupa.png')}}"></a>
+            <a class="dropdown-button" href="#!" data-activates="dropdown">{{ Lang::get('general.productos') }}</a>
+            <a href="" class="iconos-redes"><img src="{{asset('img/redes/mail.png')}}"></a>
+            <a href="" class="iconos-redes"><img src="{{asset('img/redes/facebook.png')}}"></a>
+            <a href="" class="iconos-redes"><img src="{{asset('img/redes/instagram.png')}}"></a>
           </div>
           
           <div class="links-header">
-              <a href="" > EMPRESA | </a>
-              <a href="" > PRODUCTOS | </a>
-              <a href="" > SERVICIOS | </a>
-              <a href="" > OBRA | </a>
-              <a href="" > FÁBRICA | </a>
-              <a href="" > SOLICITUD DE PRESUPUESTO</a> 
+            <div class="row">
+
+              <div class="col-l2">
+                <a href="" > EMPRESA  |   </a>
+                <a href="" > PRODUCTOS   |   </a>
+                <a href="" > SERVICIOS   |  </a>
+                <a href="" > OBRA  |   </a>
+                <a href="" > FÁBRICA   |   </a>
+                <a href="" > SOLICITUD DE PRESUPUESTO</a> 
+              </div>
+            </div>
           </div>
-
-
-      <!-- Brand and toggle get grouped for better mobile display 
-     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <div class="margin-header">
-        <ul class="nav navbar-nav navbar-right menu" >
-          <li class=""><a href="" >EMPRESA</a></li>
-          <li class=""><a href="" >PRODUCTOS</a></li>
-          <li class=""><a href="" >SERVICIOS</a></li>
-          <li class=""><a href="" >OBRA</a></li>
-          <li class=""><a href="" >FÁBRICA</a></li>
-          <li class=""><a href="" >SOLICITUD DE PRESUPUESTO</a></li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
- 
-    
-<!-- /.container-fluid -->
+          </div>
+          </div>
+          <ul class="side-nav" id="mobile-demo">
+            <a href="" class="iconos-redes"><img src="{{asset('img/redes/lupa.png')}}"></a>
+            <a href="" class="iconos-redes"><img src="{{asset('img/redes/mail.png')}}"></a>
+            <a href="" class="iconos-redes"><img src="{{asset('img/redes/facebook.png')}}"></a>
+            <a href="" class="iconos-redes"><img src="{{asset('img/redes/instagram.png')}}"></a>
+          </ul>
+  </nav>
 </nav>
 </header>

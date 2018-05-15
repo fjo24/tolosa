@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<title>@yield('titulo')</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{ asset('css/layouts/header.css') }}">
     <link rel="stylesheet" href="{{ asset('css/layouts/footer.css') }}">
       <!-- CSS MATERIALIZE -->

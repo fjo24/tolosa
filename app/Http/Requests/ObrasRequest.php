@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ContenidoempresaRequest extends FormRequest
+class ObrasRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,7 +25,9 @@ class ContenidoempresaRequest extends FormRequest
     {
         return [
             'imagen'  => 'required',
-            'descripcion'   => 'required|min:0|max:1000'
+            'titulo'  => 'required',
+            'orden'  => 'required|max:5',
+            'descripcion'   => 'required'
         ];
     }
 }

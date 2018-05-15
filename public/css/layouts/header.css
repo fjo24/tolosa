@@ -1,3 +1,7 @@
+body {
+	font-style: 'Source Sans Pro';
+}
+
 .header-nav{
 	height: 130px;
 	background-color: white;
@@ -26,18 +30,21 @@
 
 .links-header a{
 	position: relative;
-	word-spacing:5px;
-	top:60px;
-	left: 600px;
-	font-size: 16px;
-	color: #000;
+	
+	top:40px;
+	left: 35%;
+	font-size: 17px;
+	color: black;
+	font-family: 'Source Sans Pro', sans-serif;
+	background-color: #fff;
+	word-spacing: 15px;
 }
 
 .links-header a:active{
-	color: blue;
+	color: #32398E;
 }
 
 .links-header a:hover{
-	color: blue;
+	color: #32398E;
 	font-weight: bold;
 }

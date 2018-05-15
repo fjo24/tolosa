@@ -8,6 +8,6 @@ class Logo extends Model
 {
     protected $table = "logos";
     protected $fillable = [
-        'ruta', 'tipo'
+        'imagen', 'tipo', 'id'
     ];
 }
