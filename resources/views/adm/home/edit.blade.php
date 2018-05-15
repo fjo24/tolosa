@@ -32,8 +32,6 @@
 					<div class="input-field col s12">
 				        <textarea id="texto" name="contenido" class="materialize-textarea" required>{{$home->contenido}}</textarea>
 				    </div>
-			      	
-
 				</div>
 				<div class="col s12 no-padding">
 					{!!Form::submit('Guardar', ['class'=>'waves-effect waves-light btn right'])!!}

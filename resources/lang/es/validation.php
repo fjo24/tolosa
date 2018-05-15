@@ -116,6 +116,10 @@ return [
     |
     */
 
-    'attributes' => [],
+    //my validations
+    
+    'attributes' => [
+        'categoria_id' => 'categoria',
+    ],
 
 ];

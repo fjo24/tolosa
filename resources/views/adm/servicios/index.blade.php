@@ -24,7 +24,9 @@
 			<div class="col s12">
 				<table class="highlight bordered">
 					<thead>
+						<td>Imagen</td>
 						<td>Titulo</td>
+						<td>Subtitulo</td>
 						<td>Descripción</td>
 						<td>Orden</td>
 						<td class="text-right">Acciones</td>
@@ -32,8 +34,10 @@
 					<tbody>
 					@foreach($servicios as $servicio)
 						<tr>
+							<td><img src="{{ asset($servicio->imagen) }}" alt="seccion" width="100" height="60"/></td>
 							<td>{{ $servicio->titulo }}</td>
-							<td>{{ $servicio->descripcion }}</td>
+							<td>{{ $servicio->subtitulo }}</td>
+							<td>{!! $servicio->descripcion !!}</td>
 							<td>{{ $servicio->orden }}</td>
 							<td class="text-right">
 								<a href="{{ route('servicios.edit', $servicio->id) }}"><i class="material-icons">create</i></a>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\CategoriaRequest;
 use App\Categoria;
 use Laracasts\Flash\Flash;
 
@@ -19,7 +20,7 @@ class CategoriasController extends Controller
         return view('adm.categorias.create');
     }
 
-    public function store(Request $request)
+    public function store(CategoriaRequest $request)
     {
         
         $categoria = new Categoria();
@@ -51,7 +52,7 @@ class CategoriasController extends Controller
         return view('adm.categorias.edit', compact('categoria'));
     }
 
-    public function update(Request $request, $id)
+    public function update(CategoriaRequest $request, $id)
     {
         $categoria=Categoria::find($id);
         $id = Categoria::all()->max('id');

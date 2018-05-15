@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Servicio;
+use App\Http\Requests\ServicioRequest;
 
 class ServiciosController extends Controller
 {
@@ -36,12 +37,21 @@ class ServiciosController extends Controller
             ->with('servicio',$servicio);
     }
 
-    public function update(Request $request, $id)
+    public function update(ServicioRequest $request, $id)
     {
         $servicio=servicio::find($id);
         $servicio->titulo=$request->titulo;
+        $servicio->subtitulo=$request->subtitulo;
         $servicio->descripcion=$request->descripcion;
         $servicio->orden=$request->orden;
+        if ($request->hasFile('imagen')) {
+            if ($request->file('imagen')->isValid()) {
+                $file = $request->file('imagen');
+                $path = public_path('img/servicio/');
+                $request->file('imagen')->move($path, $id.'_'.$file->getClientOriginalName());
+                $servicio->imagen = 'img/servicio/' . $id.'_'.$file->getClientOriginalName();
+            }
+        }
         
         $servicio->save();
         

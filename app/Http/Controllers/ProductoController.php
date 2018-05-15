@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\ProductoRequest;
 use App\Producto;
 use App\Categoria;
 use Laracasts\Flash\Flash;
+
 class ProductoController extends Controller
 {
 
@@ -22,7 +24,7 @@ class ProductoController extends Controller
         return view('adm.productos.create', compact('categorias'));
     }
 
-    public function store(Request $request)
+    public function store(ProductoRequest $request)
     {
         $producto = new Producto();
         $producto->nombre = $request->nombre;
@@ -56,7 +58,7 @@ class ProductoController extends Controller
         return view('adm.productos.edit', compact('producto', 'categorias'));
     }
 
-    public function update(Request $request, $id)
+    public function update(ProductoRequest $request, $id)
     {
         $producto = Producto::find($id);
         $producto->nombre = $request->nombre;
