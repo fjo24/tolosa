@@ -2,42 +2,56 @@ body {
 	font-style: 'Source Sans Pro';
 }
 
-.header-nav{
-	height: 130px;
+.nav-flex{
 	background-color: white;
 	border: 0px;
 	position: relative;
+	height: 150%;
+	padding-top: 0.2%;
 	color: red;
 	box-shadow: 0 0px 0px -0px rgba(0,0,0,.0);
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.header-nav{
+	height: 140%;
+	background-color: white;
+	border: 0px;
+	box-shadow: 0 0px 0px -0px rgba(0,0,0,.0);
+	margin-bottom: 80px;
 }
 
 .logo-header{
 	position: absolute;
-	top:20px;
-	left: 100px;
+	top:30%;
+	left: -10%;
+	height: 100%;
 }
 
 .redes-header{
 	position: absolute;
-	top:20px;
-	right: 100px;
+	top:40%;
+	right: -15%;
+	background-color: #fff;
 }
 
 .iconos-redes{
-	padding-left: 2px;
-	padding-right: 2px;	
+	padding-left: 0%;
+	padding-right: 0%;	
 }
 
 .links-header a{
 	position: relative;
-	
-	top:40px;
-	left: 35%;
+	top:60px;
+	left: 32%;
+	width: 400px;
 	font-size: 17px;
 	color: black;
 	font-family: 'Source Sans Pro', sans-serif;
 	background-color: #fff;
-	word-spacing: 15px;
+	word-spacing: 19px;
 }
 
 .links-header a:active{
