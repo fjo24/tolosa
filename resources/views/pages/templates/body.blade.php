@@ -8,6 +8,7 @@
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{ asset('css/layouts/header.css') }}">
     <link rel="stylesheet" href="{{ asset('css/layouts/footer.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/pages/slider.css') }}">
       <!-- CSS MATERIALIZE -->
       <!-- ICONOS MATERIALIZE -->
     <link type="text/css" rel="stylesheet" href="{{asset('plugins/materialize/css/materialize.min.css')}}"  media="screen,projection"/>
@@ -39,14 +40,18 @@
     @include('pages.templates.header')
         @yield('contenido')
     @include('pages.templates.footer')
-    <script src="{{ asset('plugins/bootstrap/js/jquery.min.js') }}"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="{{ asset('plugins/bootstrap/js/bootstrap.min.js') }}"></script>
-     <!-- Metis Menu Plugin JavaScript -->
-    <script src="{{ asset('plugins/vendor/metisMenu/metisMenu.min.js') }}"></script>
-    <!-- Morris Charts JavaScript -->
-    <script src="{{ asset('plugins/vendor/raphael/raphael.min.js') }}"></script>
-    <script src="{{ asset('plugins/vendor/morrisjs/morris.min.js') }}"></script>
-    <script src="{{ asset('plugins/dist-js/sb-admin-2.js') }}"></script>
+    <script src="{{ asset('plugins/jQuery/jquery.js') }}"></script>
+    <script src="{{ asset('plugins/materialize/js/materialize.min.js') }}"></script>
+    <script type="text/javascript">
+         $(document).ready(function(){
+    $('.slider').slider({
+        indicators: true
+
+    });
+  });
+     
+      
+
+    </script>
 </body>
 </html>
