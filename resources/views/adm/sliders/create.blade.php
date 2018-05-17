@@ -27,7 +27,7 @@
 				<div class="row">
 					<div class="input-field col s6">
 						{!!Form::label('Link:')!!}
-						{!!Form::text('link', null , ['class'=>'validate', 'required'])!!}
+						{!!Form::text('link', null , ['class'=>'', 'required'])!!}
 					</div>
 					<div class="file-field input-field col s6">
 						<div class="btn">
@@ -35,7 +35,7 @@
 						    {!! Form::file('imagen') !!}
 						</div>
 						<div class="file-path-wrapper">
-						    {!! Form::text('imagen',null, ['class'=>'file-path validate']) !!}
+						    {!! Form::text('imagen',null, ['class'=>'file-path ']) !!}
 						</div>
 					</div>
 				</div>
@@ -45,7 +45,7 @@
 					</div>
 					<div class="input-field col s6">
 						{!!Form::label('Orden:')!!}
-						{!!Form::text('orden', null , ['class'=>'validate', 'required'])!!}
+						{!!Form::text('orden', null , ['class'=>'', 'required'])!!}
 					</div>
 				</div>
 				<div class="row">

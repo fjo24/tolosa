@@ -8,7 +8,8 @@
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{ asset('css/layouts/header.css') }}">
     <link rel="stylesheet" href="{{ asset('css/layouts/footer.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/pages/slider.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/page/slider.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/page/home.css') }}">
       <!-- CSS MATERIALIZE -->
       <!-- ICONOS MATERIALIZE -->
     <link type="text/css" rel="stylesheet" href="{{asset('plugins/materialize/css/materialize.min.css')}}"  media="screen,projection"/>
@@ -27,10 +28,7 @@
     <!-- Custom Fonts -->
     <link href="{{ asset('plugins/vendor/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
 
-    <!-- JS MATERIALIZE -->
-      <script type="text/javascript" src="{{asset('plugins/materialize/js/materialize.min.js')}}"></script>
-    
-
+   
 
     <link rel="stylesheet" href="{{ asset('plugins/font-awesome/css/font-awesome.min.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet">
