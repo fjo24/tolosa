@@ -8,8 +8,8 @@
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{ asset('css/layouts/header.css') }}">
     <link rel="stylesheet" href="{{ asset('css/layouts/footer.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/page/slider.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/page/home.css') }}">
+    @yield('css')
+    
       <!-- CSS MATERIALIZE -->
       <!-- ICONOS MATERIALIZE -->
     <link type="text/css" rel="stylesheet" href="{{asset('plugins/materialize/css/materialize.min.css')}}"  media="screen,projection"/>
@@ -40,16 +40,6 @@
     @include('pages.templates.footer')
     <script src="{{ asset('plugins/jQuery/jquery.js') }}"></script>
     <script src="{{ asset('plugins/materialize/js/materialize.min.js') }}"></script>
-    <script type="text/javascript">
-         $(document).ready(function(){
-    $('.slider').slider({
-        indicators: true
-
-    });
-  });
-     
-      
-
-    </script>
+        @yield('js')
 </body>
 </html>

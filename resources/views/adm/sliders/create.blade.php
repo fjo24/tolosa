@@ -50,10 +50,14 @@
 				</div>
 				<div class="row">
 					<div class="col s12">
-				        <label for="texto">Texto</label>
-				     </div>
-					<div class="input-field col s12">
-				        <textarea id="texto" name="texto" class="materialize-textarea" required></textarea>
+					     <div class="input-field col s6">
+							{!!Form::label('texto:')!!}
+							{!!Form::text('texto', null , ['class'=>'', 'required'])!!}
+						</div>
+						<div class="input-field col s6">
+							{!!Form::label('texto2:')!!}
+							{!!Form::text('texto2', null , ['class'=>'', 'required'])!!}
+						</div>
 				    </div>
 				</div>
 				<div class="col s12 no-padding">
@@ -64,10 +68,5 @@
 		</div>
 	</div>
 </main>
-<script src="//cdn.ckeditor.com/4.7.3/full/ckeditor.js"></script>
-<script>
-	CKEDITOR.replace('texto');
-	CKEDITOR.config.height = '200px';
-	CKEDITOR.config.width = '100%';
-</script>
+
 @endsection

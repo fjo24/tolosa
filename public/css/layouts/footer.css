@@ -31,10 +31,11 @@
     margin-bottom: 10px;
 }
 
-.sitemap a, h5, div, span{
+.sitemap a, h5, div{
 	color: white;
 	font-size: 16px;
 }
+
 .sitemap a{
 	padding-top: -50%;
 	padding-bottom: -30%;
@@ -106,6 +107,8 @@ table{
 	color: white;
 }
 
-span{
+footer span{
 	font-weight: bold;
+	color: white;
+	font-size: 16px;
 }

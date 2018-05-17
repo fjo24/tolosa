@@ -1,12 +1,10 @@
 .div-product{
 	margin-top: 2%;
-	border: 1px solid #CBCBCB;
-	border-bottom: 0px; 
 	display: flex;
     position: relative;
     justify-content: center;
     align-items: center;
-    height: 384px;
+    height: 412px;
 }
 .div-nombre{
 	background-color: rgba(51,51,51,0.86); 
@@ -27,12 +25,28 @@
 		font-size: 90%;
 	}
 }
-.contenido{
-	background-color: rgba(238,238,238);
-	font-family: 'Source Sans Pro', sans-serif;
-	padding: 5% 20%;
-	color: black;
-    text-align: center;
-    margin-top: 5%;
-    margin-bottom: 0px;
+
+.home{
+	padding:5px 300px;
+	height: 110%;
+
+}
+
+.home div{
+	line-height: 25px;
+}
+
+.home hr{
+	position: relative;
+	bottom: 15px;
+	width: 10%;
+	margin-top: 10px;
+	height: 4px;
+	border: 3px;
+	border-radius:10px;
+	background-color: #32398C;
+}
+
+.destacados{
+	padding-bottom: 10px;
 }

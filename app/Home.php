@@ -8,6 +8,6 @@ class Home extends Model
 {
     protected $table = "homes";
     protected $fillable = [
-        'contenido', 'link'
+        'titulo' ,'contenido', 'link'
     ];
 }

@@ -30,7 +30,10 @@
 					</div>
 					<label class="col s12" for="parrafo">Contenido</label>
 					<div class="input-field col s12">
-				        <textarea id="texto" name="contenido" class="materialize-textarea" required>{{$home->contenido}}</textarea>
+				        <textarea id="texto" name="titulo" class="materialize-textarea" required>{{$home->titulo}}</textarea>
+				    </div>
+				    <div class="input-field col s12">
+				        <textarea id="texto2" name="contenido" class="materialize-textarea" required>{{$home->contenido}}</textarea>
 				    </div>
 				</div>
 				<div class="col s12 no-padding">
@@ -45,7 +48,8 @@
 
 <script>
 	CKEDITOR.replace('texto');
-	CKEDITOR.config.height = '200px';
+	CKEDITOR.replace('texto2');
+	CKEDITOR.config.height = '150px';
 	CKEDITOR.config.width = '100%';
 </script>
 @endsection

@@ -1,7 +1,7 @@
 <header>
 <nav class="header-nav">
   <div class="container nav-flex">
-          <a href="" class="logo-header"><img class="responsive-img logo" src="{{asset('img/logo/logo-header.png')}}" alt=""></a>
+          <a href="/" class="logo-header"><img class="responsive-img logo" src="{{asset('img/logo/logo-header.png')}}" alt=""></a>
           <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons li-ppal">menu</i></a>
           <div class="right hide-on-med-and-down">
             <div class="redes-header">
@@ -11,9 +11,9 @@
               <a href="" class="iconos-redes"><img src="{{asset('img/redes/instagram.png')}}"></a>
             </div>      
             <div class="links-header" style="width: 1200px">
-                  <a href="" > EMPRESA  |   </a>
-                  <a href="" > PRODUCTOS   |   </a>
-                  <a href="" > SERVICIOS   |  </a>
+                  <a href="/empresa" > EMPRESA  |   </a>
+                  <a href="/categorias" > PRODUCTOS   |   </a>
+                  <a href="/servicios" > SERVICIOS   |  </a>
                   <a href="" > OBRA  |   </a>
                   <a href="" > FÁBRICA   |   </a>
                   <a href="" > SOLICITUD DE PRESUPUESTO</a> 

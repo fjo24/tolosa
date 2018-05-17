@@ -16,6 +16,14 @@
 //HOME
 Route::get('/', 'PaginasController@welcome');
 
+//EMPRESA
+Route::get('/empresa', 'PaginasController@empresa');
+
+//CATEGORIAS
+Route::get('/categorias', 'PaginasController@categorias');
+
+//PRODUCTOS
+Route::get('/productos', 'PaginasController@productos');
 
 Route::get('/home', 'HomeController@index')->name('home');
 

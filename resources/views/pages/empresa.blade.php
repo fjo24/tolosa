@@ -22,32 +22,6 @@
       @endforeach
       </ul>
    </div>
-   <div class="home col s12">
-      <div class="row titulo">
-         {!! $home->titulo !!}
-      </div>
-      <hr>
-      <div class="row contenido">
-         {!! $home->contenido !!}
-      </div>
-   </div>
-   <div class="destacados">   
-      <div style="margin: 7% 7%;">
-         <div class="row">
-            <div class="col s12">
-               @foreach($destacados as $destacado)  
-                     <div class="col s6 m6" style="margin-top: 4%;">
-                        <div class="div-product">
-                           <img style="width: 100%;" class="responsive-img" src="{{asset($destacado->imagen)}}" alt="">
-                           <div class="div-nombre">{!!$destacado->descripcion !!}</div>
-                        </div>
-                     </div>
-               @endforeach
-            </div>
-         </div>
-      </div>
-   </div>
-
 </div>
 @endsection
 

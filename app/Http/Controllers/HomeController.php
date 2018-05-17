@@ -28,6 +28,7 @@ class HomeController extends Controller
     public function update(HomeRequest $request, $id)
     {
         $dato=Home::find($id);
+        $dato->titulo=$request->titulo;
         $dato->contenido=$request->contenido;
         $dato->link=$request->link;
         $dato->save();
