@@ -15,7 +15,10 @@ class CreateFabricaTable extends Migration
     {
         Schema::create('fabrica', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('texto',5000);
+            $table->string('titulo',500);
+            $table->string('contenido',2000);
+            $table->string('titulo2',500)->nullable();
+            $table->string('contenido2',2000)->nullable();
             $table->string('imagen',300);
             $table->timestamps();
         });

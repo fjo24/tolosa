@@ -46,7 +46,7 @@
       <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons">menu</i></a></div>
       <ul id="nav-mobile" class="side-nav fixed">
         <div class="logo"><a id="logo-container" href="" class="brand-logo">
-          <img class="responsive-img" src="{{ asset('images/logo.png') }}" alt="">
+          <img class="responsive-img" src="{{ asset('img/logo/logo-header.png') }}" alt="">
         </a></div>
         <li class="no-padding">
 
@@ -92,6 +92,13 @@
                 <ul>
                   <li><a href="{{route('obras.create')}}">Crear obra</a></li>
                   <li><a href="{{route('obras.index')}}">Editar obra</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">business</i>Fabrica</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a href="{{route('fabrica.index')}}">Editar fabrica</a></li>
                 </ul>
               </div>
             </li>

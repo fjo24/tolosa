@@ -6,6 +6,7 @@ use App\Destacado;
 use App\Categoria;
 use App\Contenidoempresa;
 use App\Home;
+use App\Fabrica;
 use Illuminate\Http\Request;
 
 class PaginasController extends Controller
@@ -23,9 +24,13 @@ class PaginasController extends Controller
         return view('pages.empresa', compact('sliders', 'contenido'));
     }
 
+    public function servicios(){
+        $sliders  = Slider::orderBy('orden','ASC')->Where('seccion', 'servicios')->get();
+        return view('pages.servicios', compact('sliders'));
+    }
+
     public function categorias(){
     	$categorias = Categoria::OrderBy('id', 'ASC')->get();
-    	$destacados = Destacado::OrderBy('id', 'ASC')->get();
         return view('pages.categorias', compact('categorias'));
     }
 
@@ -35,4 +40,10 @@ class PaginasController extends Controller
     	$destacados = Destacado::OrderBy('id', 'ASC')->get();
         return view('pages.productos', compact('sliders', 'destacados'));
     }
+
+    public function fabrica(){
+        $fabrica = Fabrica::all()->first();
+        return view('pages.fabrica', compact('fabrica'));
+    }
+
 }

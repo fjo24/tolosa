@@ -1,22 +1,4 @@
-img{
-          
-} 
-
-.empresa hr{
-	border: solid 1px #32398E;
-}
-
-.empresa div{
-	line-height: 22px;
-	padding :52px;
-}
-
-.empresa p{
-	margin-top:12px; 
-	margin-bottom:12px;
-}
-
-.empresa_slider_dif{
+.servicio_slider_dif{
 	text-align: left; 
 	position: absolute;
 	top: 20%;
@@ -29,10 +11,9 @@ img{
 	font-family: 'Source Sans Pro', sans-serif!important;
 }
 
-.empresa_slider_dif span{
+.servicio_slider_dif span{
 	text-align: left; 
 	padding: 3%;
 	font-size: 50px; 
 	font-family: 'Source Sans Pro', sans-serif;
 }
-

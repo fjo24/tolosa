@@ -19,11 +19,17 @@ Route::get('/', 'PaginasController@welcome');
 //EMPRESA
 Route::get('/empresa', 'PaginasController@empresa');
 
+//SERVICIOS
+Route::get('/servicios', 'PaginasController@servicios');
+
 //CATEGORIAS
 Route::get('/categorias', 'PaginasController@categorias');
 
 //PRODUCTOS
 Route::get('/productos', 'PaginasController@productos');
+
+//FABRICA
+Route::get('/fabrica', 'PaginasController@fabrica');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
