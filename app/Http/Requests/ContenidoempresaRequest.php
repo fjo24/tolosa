@@ -25,7 +25,9 @@ class ContenidoempresaRequest extends FormRequest
     {
         return [
             'imagen'  => 'required',
-            'descripcion'   => 'required|min:0|max:1000'
+            'titulo'   => 'required|min:0|max:200',
+            'contenido'   => 'required|min:0|max:1000',
+
         ];
     }
 }

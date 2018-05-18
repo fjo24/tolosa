@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Slider;
 use App\Destacado;
 use App\Categoria;
+use App\Contenidoempresa;
 use App\Home;
 use Illuminate\Http\Request;
 
@@ -17,10 +18,9 @@ class PaginasController extends Controller
     }
 
     public function empresa(){
-    	$sliders  = Slider::orderBy('id','ASC')->Where('seccion', 'empresa')->get();
-    	$home = Home::all()->first();
-    	$destacados = Destacado::OrderBy('id', 'ASC')->get();
-        return view('welcome', compact('sliders', 'destacados', 'home'));
+    	$sliders  = Slider::orderBy('orden','ASC')->Where('seccion', 'empresa')->get();
+        $contenido = Contenidoempresa::all()->first();
+        return view('pages.empresa', compact('sliders', 'contenido'));
     }
 
     public function categorias(){

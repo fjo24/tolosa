@@ -18,7 +18,7 @@
                   <hr style="position: absolute; left: 20px; bottom: 25px ;width: 80%">
                </div>
             </div>
-            </li>
+         </li>
       @endforeach
       </ul>
    </div>

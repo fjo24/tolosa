@@ -2,7 +2,7 @@
 @section('title', 'Tolosa - Home')
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/page/slider.css') }}">
-<link rel="stylesheet" href="{{ asset('css/page/home.css') }}">
+<link rel="stylesheet" href="{{ asset('css/page/empresas.css') }}">
 @endsection
 @section('contenido')
 <div class="container-fluid">
@@ -18,9 +18,18 @@
                   <hr style="position: absolute; left: 20px; bottom: 25px ;width: 80%">
                </div>
             </div>
-            </li>
+          </li>
       @endforeach
       </ul>
+   </div>
+   <div class="home col s12">
+      <div class="row titulo">
+        {!! $contenido->titulo !!}
+      </div>
+      <hr>
+      <div class="row contenido">
+        {!! $contenido->contenido !!}
+      </div>
    </div>
 </div>
 @endsection
@@ -29,7 +38,7 @@
 <script type="text/javascript">
     $('.slider').slider({
         indicators: true,
-        height: 549
+        height: 350
     });
   
 </script>

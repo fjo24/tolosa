@@ -16,9 +16,8 @@ class ContenidoempresaController extends Controller
      */
     public function index()
     {
-        $contenidos  = Contenidoempresa::orderBy('id','ASC')->get();
-        return view('adm.contenidoempresa.index')
-        ->with('contenidos',$contenidos);
+        $contenidoempresa  = Contenidoempresa::all()->first();
+        return redirect()->route('contenidoempresa.edit', $contenidoempresa->id);
     }
 
     /**
@@ -61,16 +60,19 @@ class ContenidoempresaController extends Controller
      */
     public function edit($id)
     {
-        $contenido = Contenidoempresa::find($id);
+        $contenidoempresa = Contenidoempresa::find($id);
         return view('adm.contenidoempresa.edit')
-            ->with('contenido',$contenido);
+            ->with('contenidoempresa',$contenidoempresa);
     }
 
     public function update(ContenidoempresaRequest $request, $id)
     {
-        $contenido=Contenidoempresa::find($id);
+        $contenidoempresa=Contenidoempresa::find($id);
         $id = Contenidoempresa::all()->max('id');
-        $contenido->descripcion = $request->descripcion;
+        $contenidoempresa->titulo = $request->titulo;
+        $contenidoempresa->contenido = $request->contenido;
+        $contenidoempresa->contenido2 = $request->contenido2;
+
         $id++;
 
         if ($request->hasFile('imagen')) {
@@ -78,12 +80,12 @@ class ContenidoempresaController extends Controller
                 $file = $request->file('imagen');
                 $path = public_path('img/contenidoempresas/');
                 $request->file('imagen')->move($path, $id.'_'.$file->getClientOriginalName());
-                $contenido->imagen = 'img/contenidoempresas/' . $id.'_'.$file->getClientOriginalName();
+                $contenidoempresa->imagen = 'img/contenidoempresas/' . $id.'_'.$file->getClientOriginalName();
             }
         }
 
-        $contenido->update();
-        return redirect()->route('contenidoempresa.index');
+        $contenidoempresa->update();
+        return redirect()->route('home');
     }
 
     /**

@@ -28,10 +28,11 @@
 						{!!Form::label('Link :')!!}
 						{!!Form::text('link',$home->link,['class'=>''])!!}
 					</div>
-					<label class="col s12" for="parrafo">Contenido</label>
+					<label class="col s12" for="parrafo">Titulo</label>
 					<div class="input-field col s12">
 				        <textarea id="texto" name="titulo" class="materialize-textarea" required>{{$home->titulo}}</textarea>
 				    </div>
+				    <label class="col s12" for="parrafo">Contenido</label>
 				    <div class="input-field col s12">
 				        <textarea id="texto2" name="contenido" class="materialize-textarea" required>{{$home->contenido}}</textarea>
 				    </div>

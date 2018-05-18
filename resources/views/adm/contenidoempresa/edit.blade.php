@@ -23,7 +23,7 @@
 
 		<div class="row">
 			<div class="col s12">
-			{!!Form::model($contenido, ['route'=>['contenidoempresa.update',$contenido->id], 'method'=>'PUT', 'files' => true])!!}
+			{!!Form::model($contenidoempresa, ['route'=>['contenidoempresa.update',$contenidoempresa->id], 'method'=>'PUT', 'files' => true])!!}
 				<div class="row">
 					<div class="file-field input-field col s12">
 						<div class="btn">
@@ -34,10 +34,18 @@
 						    {!! Form::text('imagen',null, ['class'=>'file-path']) !!}
 						</div>
 					</div>
-					<div class="input-field col s12">
+					<div class="row">
+						<label class="col s12" for="parrafo">Titulo</label>
 						<div class="input-field col s12">
-						<label for="texto">Texto</label>
-					        <textarea id="texto" name="descripcion" class="materialize-textarea" required>{{ $contenido->descripcion }}</textarea>
+					        <textarea id="texto" name="titulo" class="materialize-textarea" required>{{$contenidoempresa->titulo}}</textarea>
+					    </div>
+					    <label class="col s12" for="parrafo">Contenido</label>
+						<div class="input-field col s12">
+					        <textarea id="texto1" name="contenido" class="materialize-textarea" required>{{$contenidoempresa->contenido}}</textarea>
+					    </div>
+					    <label class="col s12" for="parrafo">Contenido 2</label>
+					    <div class="input-field col s12">
+					        <textarea id="texto2" name="contenido2" class="materialize-textarea" required>{{$contenidoempresa->contenido2}}</textarea>
 					    </div>
 					</div>
 				</div>
@@ -51,8 +59,11 @@
 </main>
 <script src="//cdn.ckeditor.com/4.7.3/full/ckeditor.js"></script>
 <script>
+
 	CKEDITOR.replace('texto');
-	CKEDITOR.config.height = '200px';
+	CKEDITOR.replace('texto1');
+	CKEDITOR.replace('texto2');
+	CKEDITOR.config.height = '150px';
 	CKEDITOR.config.width = '100%';
 </script>
 @endsection
