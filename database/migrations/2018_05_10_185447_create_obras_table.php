@@ -19,6 +19,7 @@ class CreateObrasTable extends Migration
             $table->string('imagen',300);
             $table->string('orden',10);
             $table->string('descripcion',800);
+            $table->string('materiales',800);
             $table->timestamps();
         });
     }

@@ -26,8 +26,7 @@ class ObrasRequest extends FormRequest
         return [
             'imagen'  => 'required',
             'titulo'  => 'required',
-            'orden'  => 'required|max:5',
-            'descripcion'   => 'required'
+            'orden'  => 'required|max:5'
         ];
     }
 }

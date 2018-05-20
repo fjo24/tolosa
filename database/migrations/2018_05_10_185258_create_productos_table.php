@@ -18,7 +18,11 @@ class CreateProductosTable extends Migration
             $table->increments('id');
             $table->string('nombre');
             $table->string('imagen',300);
-            $table->text('contenido',4000);
+            $table->text('texto_principal',4000)->nullable();
+            $table->text('titulo1')->nullable();
+            $table->text('contenido1',2000)->nullable();
+            $table->text('titulo2')->nullable();
+            $table->text('contenido2',2000)->nullable();
             $table->string('orden',10);
             $table->integer('categoria_id')->unsigned();
 
@@ -27,7 +31,7 @@ class CreateProductosTable extends Migration
         });
     }
 
-    /**
+    /**->nullable()
      * Reverse the migrations.
      *
      * @return void

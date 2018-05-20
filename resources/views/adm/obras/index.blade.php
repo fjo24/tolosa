@@ -26,7 +26,6 @@
 					<thead>
 						<td>Imagen</td>
 						<td>Titulo</td>
-						<td>Descripción</td>
 						<td>Orden</td>
 						<td class="text-right">Acciones</td>
 					</thead>
@@ -35,7 +34,6 @@
 						<tr>
 							<td><img src="{{ asset($obra->imagen) }}" alt="seccion" width="300" height="300"/></td>
 							<td>{{ $obra->titulo }}</td>
-							<td>{!! $obra->descripcion !!}</td>
 							<td>{{ $obra->orden }}</td>
 							<td class="text-right">
 								<a href="{{ route('obras.edit',$obra->id)}}"><i class="material-icons">create</i></a>

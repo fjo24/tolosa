@@ -26,6 +26,7 @@ class ObrasController extends Controller
         $obra->titulo = $request->titulo;
         $obra->orden = $request->orden;
         $obra->descripcion = $request->descripcion;
+        $obra->materiales = $request->materiales;
         $id = obra::all()->max('id');
         $id++;
         if ($request->hasFile('imagen')) {
@@ -53,6 +54,7 @@ class ObrasController extends Controller
         $obra->titulo = $request->titulo;
         $obra->orden = $request->orden;
         $obra->descripcion = $request->descripcion;
+        $obra->materiales = $request->materiales;
         if ($request->hasFile('imagen')) {
             if ($request->file('imagen')->isValid()) {
                 $file = $request->file('imagen');

@@ -26,7 +26,6 @@ class ServicioRequest extends FormRequest
         return [
             'titulo' => 'min:5|required',
             'subtitulo' => 'min:5|required',
-            'imagen' => 'image',
             'descripcion' => 'required|min:10',
             'orden' => 'required'
         ];

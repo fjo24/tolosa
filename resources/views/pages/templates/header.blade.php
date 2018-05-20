@@ -14,9 +14,9 @@
                   <a href="/empresa" > EMPRESA  |   </a>
                   <a href="/categorias" > PRODUCTOS   |   </a>
                   <a href="/servicios" > SERVICIOS   |  </a>
-                  <a href="" > OBRA  |   </a>
-                  <a href="" > FÁBRICA   |   </a>
-                  <a href="" > SOLICITUD DE PRESUPUESTO</a> 
+                  <a href="/obra" > OBRA  |   </a>
+                  <a href="/fabrica" > FÁBRICA   |   </a>
+                  <a href="/presupuesto" > SOLICITUD DE PRESUPUESTO</a> 
             </div>
           </div>
           <ul class="side-nav" id="mobile-demo">

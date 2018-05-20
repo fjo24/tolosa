@@ -29,7 +29,11 @@ class ProductoController extends Controller
         $producto = new Producto();
         $producto->nombre = $request->nombre;
         $producto->orden = $request->orden;
-        $producto->contenido = $request->contenido;
+        $producto->texto_principal = $request->texto_principal;
+        $producto->titulo1 = $request->titulo1;
+        $producto->contenido1 = $request->contenido1;
+        $producto->titulo2 = $request->titulo2;
+        $producto->contenido2 = $request->contenido2;
         $producto->categoria_id = $request->categoria_id;
         $id = Producto::all()->max('id');
         $id++;
@@ -63,7 +67,11 @@ class ProductoController extends Controller
         $producto = Producto::find($id);
         $producto->nombre = $request->nombre;
         $producto->orden = $request->orden;
-        $producto->contenido = $request->contenido;
+        $producto->texto_principal = $request->texto_principal;
+        $producto->titulo1 = $request->titulo1;
+        $producto->contenido1 = $request->contenido1;
+        $producto->titulo2 = $request->titulo2;
+        $producto->contenido2 = $request->contenido2;
         $producto->categoria_id = $request->categoria_id;
         if ($request->hasFile('imagen')) {
             if ($request->file('imagen')->isValid()) {

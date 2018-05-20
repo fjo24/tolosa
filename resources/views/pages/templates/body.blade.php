@@ -6,9 +6,9 @@
 	<title>@yield('titulo')</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+    @yield('css')
     <link rel="stylesheet" href="{{ asset('css/layouts/header.css') }}">
     <link rel="stylesheet" href="{{ asset('css/layouts/footer.css') }}">
-    @yield('css')
     
       <!-- CSS MATERIALIZE -->
       <!-- ICONOS MATERIALIZE -->
@@ -35,11 +35,14 @@
 
 </head>
 <body>
+    <div class="container-flex">
+        
     @include('pages.templates.header')
         @yield('contenido')
     @include('pages.templates.footer')
     <script src="{{ asset('plugins/jQuery/jquery.js') }}"></script>
     <script src="{{ asset('plugins/materialize/js/materialize.min.js') }}"></script>
         @yield('js')
+    </div>
 </body>
 </html>

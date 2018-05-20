@@ -34,7 +34,7 @@
 					<tbody>
 					@foreach($servicios as $servicio)
 						<tr>
-							<td><img src="{{ asset($servicio->imagen) }}" alt="seccion" width="100" height="60"/></td>
+							<td><img src="{{ asset($servicio->imagen) }}" style="background-color: #32398E"  alt="seccion" width="100" height="60"/></td>
 							<td>{{ $servicio->titulo }}</td>
 							<td>{{ $servicio->subtitulo }}</td>
 							<td>{!! $servicio->descripcion !!}</td>

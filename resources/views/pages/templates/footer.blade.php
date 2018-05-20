@@ -1,7 +1,7 @@
       <footer class="footer-box">
          <div class="container">   
             <div class="row">
-               <div class="sitemap">
+               <div class="sitemap hide-on-med-and-down">
                   <div class="col l6 s12">
                      <div class="s6">
                         <span style="padding-left: 12px">SITEMAP</span>
@@ -61,7 +61,7 @@
                      </div>
                   </div>
                </div>
-               <div class="datos">
+               <div class="datos hide-on-med-and-down">
                   <div class="col 22 s12">
                      <span style="padding-left: 25px">ABERTURAS TOLOSA</span>
                   <ul>

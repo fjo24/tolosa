@@ -45,7 +45,7 @@
 					    </div>
 					    <label class="col s12" for="parrafo">Segundo Titulo</label>
 					    <div class="input-field col s12">
-					        <textarea id="texto2" name="titulo2" class="materialize-textarea" required>{{$fabrica->contenido2}}</textarea>
+					        <textarea id="texto2" name="titulo2" class="materialize-textarea" required>{{$fabrica->titulo2}}</textarea>
 					    </div>
 					    <label class="col s12" for="parrafo">Segundo Contenido</label>
 					    <div class="input-field col s12">

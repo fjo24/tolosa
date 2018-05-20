@@ -26,10 +26,20 @@ Route::get('/servicios', 'PaginasController@servicios');
 Route::get('/categorias', 'PaginasController@categorias');
 
 //PRODUCTOS
-Route::get('/productos', 'PaginasController@productos');
+Route::get('/productos/{producto_id}',  'PaginasController@productos')->name('productos');
+//show producto
+Route::get('/producto-info/{producto_id}',  'PaginasController@productoinfo')->name('productoinfo');
 
 //FABRICA
 Route::get('/fabrica', 'PaginasController@fabrica');
+
+//OBRAS
+Route::get('/obra', 'PaginasController@obra');
+//show producto
+Route::get('/obra-info/{obra_id}',  'PaginasController@obrainfo')->name('obrainfo');
+
+//PRESUPUESTO
+Route::get('/presupuesto', 'PaginasController@presupuesto');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -59,6 +69,8 @@ Route::resource('productos', 'ProductoController');
 Route::resource('servicios', 'ServiciosController');
 /*------------obras----------------*/
 Route::resource('obras', 'ObrasController');
+/*------------fabrica----------------*/
+Route::resource('fabrica', 'FabricaController');
 /*------------sliders----------------*/
 Route::get('sliders/{id}/destroy',[
 			'uses'=>'SlidersController@destroy',

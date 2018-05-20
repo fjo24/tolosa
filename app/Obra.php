@@ -8,6 +8,6 @@ class Obra extends Model
 {
     protected $table = "obras";
     protected $fillable = [
-        'titulo', 'imagen', 'descripcion', 'orden'
+        'titulo', 'imagen', 'materiales', 'descripcion', 'orden'
     ];
 }

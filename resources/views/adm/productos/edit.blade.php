@@ -49,10 +49,34 @@
 				</div>
 				<div class="row">
 					<div class="col s12">
-				        <label for="texto">Texto</label>
+				        <label for="texto_principal">Texto principal</label>
 				     </div>
 					<div class="input-field col s12">
-				        <textarea id="texto" name="contenido" class="materialize-textarea" required>{{$producto->contenido}}</textarea>
+				        <textarea id="texto_principal" name="texto_principal" class="materialize-textarea" required>{!! $producto->texto_principal !!}</textarea>
+				    </div>
+				    <div class="col s12">
+				        <label for="titulo1">Primer subtitulo</label>
+				     </div>
+					<div class="input-field col s12">
+				        <textarea id="titulo1" name="titulo1" class="materialize-textarea" required>{!! $producto->titulo1 !!}</textarea>
+				    </div>
+				    <div class="col s12">
+				        <label for="contenido1">Primer contenido</label>
+				     </div>
+					<div class="input-field col s12">
+				        <textarea id="contenido1" name="contenido1" class="materialize-textarea" required>{!! $producto->contenido1 !!}</textarea>
+				    </div>
+				    <div class="col s12">
+				        <label for="titulo2">Segundo subtitulo</label>
+				     </div>
+					<div class="input-field col s12">
+				        <textarea id="titulo2" name="titulo2" class="materialize-textarea" required>{!! $producto->titulo2 !!}</textarea>
+				    </div>
+				    <div class="col s12">
+				        <label for="contenido2">Segundo contenido</label>
+				     </div>
+					<div class="input-field col s12">
+				        <textarea id="contenido2" name="contenido2" class="materialize-textarea" required>{!! $producto->contenido2 !!}</textarea>
 				    </div>
 				</div>
 				<div class="col s12 no-padding">
@@ -65,7 +89,11 @@
 </main>
 <script src="//cdn.ckeditor.com/4.7.3/full/ckeditor.js"></script>
 <script>
-	CKEDITOR.replace('texto');
+	CKEDITOR.replace('texto_principal');
+	CKEDITOR.replace('titulo1');
+	CKEDITOR.replace('contenido1');
+	CKEDITOR.replace('titulo2');
+	CKEDITOR.replace('contenido2');
 	CKEDITOR.config.height = '200px';
 	CKEDITOR.config.width = '100%';
 </script>

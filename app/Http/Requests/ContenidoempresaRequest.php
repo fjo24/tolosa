@@ -27,7 +27,6 @@ class ContenidoempresaRequest extends FormRequest
             'imagen'  => 'required',
             'titulo'   => 'required|min:0|max:200',
             'contenido'   => 'required|min:0|max:1000',
-
         ];
     }
 }
