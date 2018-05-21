@@ -40,14 +40,29 @@ Route::get('/obra-info/{obra_id}',  'PaginasController@obrainfo')->name('obrainf
 
 //PRESUPUESTO
 Route::get('/presupuesto', 'PaginasController@presupuesto');
+Route::post('enviar-presupuesto',[
+	'uses'=>'PaginasController@enviarpresupuesto',
+	'as'=>'enviarpresupuesto'
+]);
+
+Route::get('/pages/enviar_presupuesto', function () {
+    return view('/pages/enviarpresupuesto');
+});
+
 
 //CONTACTO
-Route::get('/contacto', 'PaginasController@contacto');
+Route::get('contacto', 'ContactoController@index');
+Route::post('enviar-mail',[
+	'uses'=>'PaginasController@enviarmail',
+	'as'=>'enviarmail'
+]);
+
+/*
 Route::post('enviar-mail',[
 		'uses'=>'PaginasController@mail',
 		'as'=>'mail'
 	]);
-
+*/
 Route::get('/home', 'HomeController@index')->name('home');
 
 

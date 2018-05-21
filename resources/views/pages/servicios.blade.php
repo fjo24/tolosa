@@ -1,5 +1,5 @@
 @extends('pages.templates.body')
-@section('title', 'Tolosa - Home')
+@section('title', 'Tolosa - Servicio')
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/page/slider.css') }}">
 <link rel="stylesheet" href="{{ asset('css/page/servicios.css') }}">

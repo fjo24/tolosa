@@ -12,6 +12,8 @@ use App\Fabrica;
 use App\Servicio;
 use App\Http\Requests\ContactoRequest;
 use Illuminate\Http\Request;
+use App\Mail\sendmail;
+use Mail;
 
 class PaginasController extends Controller
 {
@@ -77,12 +79,28 @@ class PaginasController extends Controller
         return view('pages.presupuesto', compact('sliders'));
     }
 
+    public function enviarpresupuesto(Request $request){
+        $correo = Dato::where('tipo','mail')->first();
+        $nombre = $request->nombre;
+        $apellido = $request->apellido;
+        $empresa = $request->empresa;
+        $email = $request->email; 
+        $mensaje = $request->mensaje;
+        Mail::to('fjo224@gmail.com')->send(new sendmail($nombre, $apellido, $empresa, $email, $mensaje));
+
+        if(Mail::failures()){
+            flash('Ha ocurrido un error')->error()->important();
+            return redirect()->route('contacto');
+        }
+        flash('El mensaje se ha enviado exitosamente')->success()->important();
+            return redirect()->route('contacto');
+    }
+
     public function contacto(){
         return view('pages.contacto');
     }
 
-    public function mail(ContactoRequest $request){
-        dd($request);
+    public function enviarmail(ContactoRequest $request){
         $correo = Dato::where('tipo','mail')->first();
         $nombre = $request->nombre;
         $apellido = $request->apellido;

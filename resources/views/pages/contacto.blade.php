@@ -1,5 +1,5 @@
 @extends('pages.templates.body')
-@section('title', 'Tolosa - Home')
+@section('title', 'Tolosa - Contacto')
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/page/slider.css') }}">
 <link rel="stylesheet" href="{{ asset('css/page/fabrica.css') }}">
@@ -13,60 +13,48 @@
 			
 		<section class="contacto">
 			<div class="container">
-				<div class="row">
-					<div class="col s12">
-											
-					</div>
-				</div>
-			</div>
-			<div class="container">
-				<h2>Contacto</h2>
-<input type="radio" class="filled-in" id="terminos" />
+				<h1 class="naranja mayus fs36" style="color: #32398E">Contacto</h1>
+				<div class="linea"></div>
+				<div style="margin-top: 50px; margin-bottom: 20px; color: #6F6F6F;">Contáctanos y te brindaremos toda la información que necesites</div>
+
 				<div class="row">
 					<div class="col s12 l12">
-						{!!Form::open(['route'=>'mail', 'method'=>'POST', 'files' => true])!!}
-						
+						{!!Form::open(['route'=>'enviarmail', 'method'=>'POST'])!!}
 					      	<div class="row">
-					        	<div class="input-field col s12 l6">
-					          		<input class="" name="nombre" type="text" style="color: black">
-					          		<label for="nombre">Nombre</label>
+					        	<div class="input-field col m6 s12" style="color: black">
+					          		{!!Form::text('nombre',null,['class'=>'', 'placeholder'=>'Nombre'])!!}
+					          		<label for="nombre"></label>
 					        	</div>
-					        	<div class="input-field col s12 l6">
-					          		<input class="" name="apellido" type="text" style="color: black">
-					          		<label for="apellido">Apellido</label>
+					        	<div class="input-field col m6 s12" style="color: black">
+					          		{!!Form::text('apellido',null,['class'=>'', 'placeholder'=>'Apellido'])!!}
+					          		<label for="apellido"></label>
 					        	</div>
 					      	</div>
 					      	<div class="row">
-					        	<div class="input-field col s12 l6">
-					          		<input class="" name="email" type="email" style="color: black">
-					          		<label for="email">Correo electronico</label>
+					        	<div class="input-field col m6 s12" style="color: black">
+					          		{!!Form::email('email',null,['class'=>'', 'placeholder'=>'Correo electronico'])!!}
+					          		<label for="email"></label>
 					        	</div>
-					        	<div class="input-field col s12 l6">
-					          		<input class="" name="empresa" type="text" style="color: black">
-					          		<label for="empresa">Empresa</label>
+					        	<div class="input-field col m6 s12" style="color: black">
+					          		{!!Form::text('empresa',null,['class'=>'', 'placeholder'=>'Empresa'])!!}
+					          		<label for="empresa"></label>
 					        	</div>
 					      	</div>
 					      	<div class="row no-margin">
-					        	<div class="input-field col s12 l6">
-			          				<label for="mensaje">Mensaje</label>
-			          				<textarea class="materialize-textarea" name="mensaje" cols="50" rows="10" style="color: black"></textarea>
+					        	<div class="input-field col m6 s12" style="color: black">
+			          				<label for="mensaje"></label>
+			          				{!!Form::textarea('mensaje', null, ['class'=>'materialize-textarea', 'placeholder'=>'Mensaje'])!!}
 					        	</div>
-					        	<div class="col s12 l6">
-								   
-							      	
-
-								    <div class="col s12">
-								    	{!!Form::submit('Enviar', ['class'=>'boton'])!!}
-									</div>
-					        	</div>
-							</div>
-					    </div>
-					    </form>
+							    <div class="col s6">
+							      	<button class="btn waves-effect waves-light z-depth-0" type="submit" name="action" style="background-color: #32398E; color:white;">Enviar
+									</button>
+								</div>
+					      	</div>
 					</div>
 				</div>
+				{!!Form::close()!!}
 			</div>
-		</section>
-	</main>
+	</section>
 
 
 @endsection
@@ -76,7 +64,7 @@
 
 	<script type="text/javascript">
         $('.logo').click(() => {
-            window.location.href = "/drimer";
+            window.location.href = "";
         });
     </script>
 @endsection
