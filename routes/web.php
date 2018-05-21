@@ -41,6 +41,13 @@ Route::get('/obra-info/{obra_id}',  'PaginasController@obrainfo')->name('obrainf
 //PRESUPUESTO
 Route::get('/presupuesto', 'PaginasController@presupuesto');
 
+//CONTACTO
+Route::get('/contacto', 'PaginasController@contacto');
+Route::post('enviar-mail',[
+		'uses'=>'PaginasController@mail',
+		'as'=>'mail'
+	]);
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 

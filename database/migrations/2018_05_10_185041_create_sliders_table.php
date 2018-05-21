@@ -20,7 +20,7 @@ class CreateSlidersTable extends Migration
             $table->string('texto2',300)->nullable();
             $table->string('link',300)->nullable();
             $table->string('orden',10);
-            $table->enum('seccion',['home','empresa','servicios','obras','fabrica']);
+            $table->enum('seccion',['home','empresa','servicios','obras','fabrica','presupuesto']);
             $table->timestamps();
         });
     }

@@ -1,4 +1,4 @@
-.servicio_slider_dif{
+.obras_slider_dif{
 	text-align: left; 
 	position: absolute;
 	top: 20%;
@@ -11,7 +11,7 @@
 	font-family: 'Source Sans Pro', sans-serif!important;
 }
 
-.servicio_slider_dif span{
+.obras_slider_dif span{
 	text-align: left; 
 	padding: 3%;
 	font-size: 50px; 

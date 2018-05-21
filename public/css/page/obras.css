@@ -1,3 +1,23 @@
+.obras_slider_dif{
+	text-align: left; 
+	position: absolute;
+	top: 20%;
+	left: 70%;
+	font-size:50px!important; 
+	background-color: rgba(23, 27, 66, 0.9); 
+	width: 467px!important; 
+	height: 200px; 
+	line-height: 100%; 
+	font-family: 'Source Sans Pro', sans-serif!important;
+}
+
+.obras_slider_dif span{
+	text-align: left; 
+	padding: 3%;
+	font-size: 50px; 
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
 .div-product{
 	margin-top: 2%;
 	display: flex;
@@ -8,8 +28,8 @@
 
 .div-product img{
     top: 0%;
-    height: 357px;
-    width: 357px;
+    height: 286px;
+    width: 377px;
     margin: 20px;
 }
 
@@ -24,7 +44,7 @@
 	font-size: 19px;
 	position: absolute;
     width: 100%;
-    bottom: 8%;
+    bottom: 0%;
     padding-top: 20px;
 
 }
@@ -44,7 +64,7 @@
 	line-height: 25px;
 }
 
-.obras hr{
+.categorias hr{
 	position: relative;
 	bottom: 1%;
 	width: 48px;
@@ -54,16 +74,23 @@
 	background-color: #32398C;
 }
 
-.obras span{
+.servicios span{
 	font-family: 'Source Sans Pro', sans-serif;
-	color: #32398C; 
-	font-size: 47px;
+	color: white; 
+	font-size: 18px;
 	padding-left: 37px;
 	padding-top: 20px;
 	position: relative;
 	top: 10px;
 }
 
-.obras{
-	
+.servicios hr{
+	position: relative;
+	bottom: -5%;
+	width: 40px;
+	height: 1px;
+	border: 1px;
+	border-radius:10px;
+	background-color: white;
 }
+
