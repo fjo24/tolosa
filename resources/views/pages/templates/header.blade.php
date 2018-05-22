@@ -6,9 +6,9 @@
           <div class="right hide-on-med-and-down">
             <div class="redes-header">
               <a href="" class="iconos-redes"><img src="{{asset('img/redes/lupa.png')}}"></a>
-              <a href="" class="iconos-redes"><img src="{{asset('img/redes/mail.png')}}"></a>
-              <a href="" class="iconos-redes"><img src="{{asset('img/redes/facebook.png')}}"></a>
-              <a href="" class="iconos-redes"><img src="{{asset('img/redes/instagram.png')}}"></a>
+              <a href="/contacto" class="iconos-redes"><img src="{{asset('img/redes/mail.png')}}"></a>
+              <a href="https://www.facebook.com/tolosaaberturassanjusto/" class="iconos-redes"><img src="{{asset('img/redes/facebook.png')}}"></a>
+              <a href="https://www.facebook.com/tolosaaberturassanjusto/" class="iconos-redes"><img src="{{asset('img/redes/instagram.png')}}"></a>
             </div>      
             <div class="links-header" style="width: 1200px">
                   <a href="/empresa" > EMPRESA  |   </a>
@@ -21,9 +21,9 @@
           </div>
           <ul class="side-nav" id="mobile-demo">
             <a href="" class="iconos-redes"><img src="{{asset('img/redes/lupa.png')}}"></a>
-            <a href="" class="iconos-redes"><img src="{{asset('img/redes/mail.png')}}"></a>
-            <a href="" class="iconos-redes"><img src="{{asset('img/redes/facebook.png')}}"></a>
-            <a href="" class="iconos-redes"><img src="{{asset('img/redes/instagram.png')}}"></a>
+            <a href="/contacto" class="iconos-redes"><img src="{{asset('img/redes/mail.png')}}"></a>
+            <a href="https://www.facebook.com/tolosaaberturassanjusto/" class="iconos-redes"><img src="{{asset('img/redes/facebook.png')}}"></a>
+            <a href="https://www.facebook.com/tolosaaberturassanjusto/" class="iconos-redes"><img src="{{asset('img/redes/instagram.png')}}"></a>
           </ul>
   </div>
 </nav>

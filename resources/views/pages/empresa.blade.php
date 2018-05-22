@@ -22,6 +22,7 @@
       @endforeach
       </ul>
    </div>
+   <div class="container">
 <div class="empresa">  
   <div class="row" style="">
       <div class="col l4 s12 hide-on-med-and-down" >
@@ -36,7 +37,7 @@
       </div>
   </div>
 </div>
-
+</div>
 </div>
 @endsection
 

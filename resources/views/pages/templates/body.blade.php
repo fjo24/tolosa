@@ -8,13 +8,12 @@
 
 
     
-    <script type="text/javascript" src="{{ asset('js/jquery-2.2.0.min.js') }}"></script> 
+    <script type="text/javascript" src="{{ asset('plugins/jQuery/jquery.js') }}"></script> 
  <!-- Bootstrap-->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/pages/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/page/style.css') }}">
     
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/pages/russo-styles.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{asset('css/pages/presupuesto.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/page/russo-styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/page/presupuesto.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script> 
@@ -25,6 +24,7 @@
     @yield('css')
     <link rel="stylesheet" href="{{ asset('css/layouts/header.css') }}">
     <link rel="stylesheet" href="{{ asset('css/layouts/footer.css') }}">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
     
       <!-- CSS MATERIALIZE -->
       <!-- ICONOS MATERIALIZE -->

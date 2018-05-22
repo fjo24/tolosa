@@ -31,6 +31,9 @@
          {!! $home->contenido !!}
       </div>
    </div>
+   <div class="containter">
+      
+<div class="container-fluid">
    <div class="destacados">   
       <div style="margin: 7% 7%;">
          <div class="row">
@@ -38,7 +41,7 @@
                @foreach($destacados as $destacado)  
                      <div class="col s6 m6" style="margin-top: 4%;">
                         <div class="div-product">
-                           <img style="width: 100%;" class="responsive-img" src="{{asset($destacado->imagen)}}" alt="">
+                           <img style="width: 100%;height: 413px" class="responsive-img" src="{{asset($destacado->imagen)}}" alt="">
                            <div class="div-nombre">{!!$destacado->descripcion !!}</div>
                         </div>
                      </div>
@@ -47,7 +50,8 @@
          </div>
       </div>
    </div>
-
+   </div>
+   </div>
 </div>
 @endsection
 

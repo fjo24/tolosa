@@ -4,6 +4,7 @@
 <link rel="stylesheet" href="{{ asset('css/page/slider.css') }}">
 <link rel="stylesheet" href="{{ asset('css/page/fabrica.css') }}">
 <link rel="stylesheet" href="{{ asset('css/page/contacto.css') }}">
+
 @endsection
 @section('contenido')
 <!-- body -->        
@@ -20,6 +21,7 @@
 				<div class="row">
 					<div class="col s12 l12">
 						{!!Form::open(['route'=>'enviarmail', 'method'=>'POST'])!!}
+						{{ csrf_field() }}
 					      	<div class="row">
 					        	<div class="input-field col m6 s12" style="color: black">
 					          		{!!Form::text('nombre',null,['class'=>'', 'placeholder'=>'Nombre'])!!}

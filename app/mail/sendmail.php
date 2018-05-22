@@ -11,24 +11,23 @@ class sendmail extends Mailable
 {
     use Queueable, SerializesModels;
 
+    public $nombre;
+    public $email;
+    public $empresa;
+    public $mensaje;
+    public $apellido;
+
     /**
      * Create a new message instance.
      *
      * @return void
      */
-   
-    public $nombre;
-    public $apellido;
-    public $email;
-    public $empresa;
-    public $mensaje;
-
-    public function __construct($nombre, $apellido, $empresa, $email, $mensaje)
+    public function __construct($nombre,$apellido,$empresa,$mensaje,$email)
     {
         $this->nombre = $nombre;
-        $this->empresa = $empresa;
+        $this->apellido = $apellido;
         $this->email = $email;
-        $this->provincia = $apellido;
+        $this->empresa = $empresa;
         $this->mensaje = $mensaje;
     }
 
@@ -39,14 +38,9 @@ class sendmail extends Mailable
      */
     public function build()
     {
-        return $this->view('pages.mail')
-            ->with([
-                'nombre' => $this->nombre,
-                'apellido' => $this->apellido,
-                'empresa' => $this->empresa,
-                'email' => $this->email,
-                'mensaje' => $this->mensaje,
-            ]);
-
+        return $this->view('pages.emails.contactomail')
+            
+            ->from('visitors@tolosa.com', 'Visita')
+            ->subject('Contacto - cliente');
     }
 }

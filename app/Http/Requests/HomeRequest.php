@@ -15,8 +15,9 @@ class HomeRequest extends FormRequest
     public function rules()
     {
         return [
-            'link' => 'min:5|required',
-            'contenido' => 'min:5|required'
+            'link' => 'min:1|required',
+            'contenido' => 'min:5|required',
+            'titulo' => 'required'
         ];
 
     }

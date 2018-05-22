@@ -15,9 +15,9 @@ class DestacadosRequest extends FormRequest
     public function rules()
     {
         return [
-            'titulo'  => 'min:4|max:70',
             'descripcion'   => 'min:0|max:500',
-            'orden'  => 'required'
+            'orden'  => 'required',
+            'imagen' => 'required'
         ];
     }
 }

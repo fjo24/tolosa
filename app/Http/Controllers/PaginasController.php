@@ -1,26 +1,29 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Mail\Message;
 use App\Slider;
 use App\Destacado;
 use App\Categoria;
 use App\Producto;
 use App\Contenidoempresa;
 use App\Home;
+use App\Empresa;
 use App\Obra;
 use App\Fabrica;
 use App\Servicio;
 use App\Http\Requests\ContactoRequest;
 use Illuminate\Http\Request;
 use App\Mail\sendmail;
-use Mail;
+//use Mail;
 
 class PaginasController extends Controller
 {
     public function welcome(){
     	$sliders  = Slider::orderBy('id','ASC')->Where('seccion', 'home')->get();
     	$home = Home::all()->first();
-    	$destacados = Destacado::OrderBy('id', 'ASC')->get();
+    	$destacados = Destacado::OrderBy('orden', 'ASC')->get();
         return view('welcome', compact('sliders', 'destacados', 'home'));
     }
 
@@ -80,41 +83,70 @@ class PaginasController extends Controller
     }
 
     public function enviarpresupuesto(Request $request){
-        $correo = Dato::where('tipo','mail')->first();
-        $nombre = $request->nombre;
-        $apellido = $request->apellido;
-        $empresa = $request->empresa;
-        $email = $request->email; 
-        $mensaje = $request->mensaje;
-        Mail::to('fjo224@gmail.com')->send(new sendmail($nombre, $apellido, $empresa, $email, $mensaje));
+        $sliders  = Slider::orderBy('id','ASC')->Where('seccion', 'presupuesto')->get();
+        $nombre= $request->nombre;
+        $mail= $request->mail;
+        $localidad= $request->localidad;
+        $tel= $request->tel;
+        $detalle= $request->detalle;
+        $medida= $request->medida;
 
-        if(Mail::failures()){
-            flash('Ha ocurrido un error')->error()->important();
-            return redirect()->route('contacto');
+        
+        $newid = producto::all()->max('id');
+        $newid++;
+
+        if ($request->hasFile('archivo')) {
+            if ($request->file('archivo')->isValid()) {
+                $file = $request->file('archivo');
+                $path = public_path('img/archivos/');
+                $request->file('archivo')->move($path, $newid.'_'.$file->getClientOriginalName());
+                $archivo = 'img/archivos/' . $newid.'_'.$file->getClientOriginalName();
+                
+            }
         }
-        flash('El mensaje se ha enviado exitosamente')->success()->important();
-            return redirect()->route('contacto');
+
+         Mail::send('pages.emails.presupuestomail', ['nombre' => $nombre, 'tel' => $tel, 'mail' => $mail, 'localidad' => $localidad, 'detalle' => $detalle, 'medida' => $medida], function ($message) use ($archivo){
+
+         $dato= Empresa::where('tipo','mail')->first();
+            $message->from($dato->descripcion, 'Aberturas Tolosa');
+
+            $message->to($dato->descripcion);
+
+            //Attach file
+            $message->attach($archivo);
+
+            //Add a subject
+            $message->subject("Presupuesto");
+
+        });
+        if (Mail::failures()) {
+            flash('Ha ocurrido un error.')->error()->important();
+            return view('pages.presupuesto');
+        }
+        flash('El mensaje se ha enviado exitosamente.')->success()->important();
+        return view('pages.presupuesto', compact('sliders'));
     }
 
     public function contacto(){
         return view('pages.contacto');
     }
 
-    public function enviarmail(ContactoRequest $request){
-        $correo = Dato::where('tipo','mail')->first();
-        $nombre = $request->nombre;
-        $apellido = $request->apellido;
-        $empresa = $request->empresa;
-        $email = $request->email; 
-        $mensaje = $request->mensaje;
-        Mail::to('fjo224@gmail.com')->send(new sendmail($nombre, $apellido, $empresa, $email, $mensaje));
+    public function enviarmail(Request $request){
+        
+        $dato= Empresa::where('tipo','mail')->first();
+        $nombre= $request->nombre;
+        $apellido= $request->apellido;
+        $empresa= $request->empresa;
+        $email= $request->email;
+        $mensaje= $request->mensaje;
 
-        if(Mail::failures()){
-            flash('Ha ocurrido un error')->error()->important();
-            return redirect()->route('contacto');
+        Mail::to($dato->descripcion)->send(new sendmail($nombre,$apellido,$empresa,$mensaje,$email));
+        if (Mail::failures()) {
+            flash('Ha ocurrido un error.')->error()->important();
+            return view('pages.contacto');
         }
-        flash('El mensaje se ha enviado exitosamente')->success()->important();
-            return redirect()->route('contacto');
-    }
+        flash('El mensaje se ha enviado exitosamente.')->success()->important();
+        return view('pages.contacto');
+        }
 
 }
