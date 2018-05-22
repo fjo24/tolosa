@@ -1,6 +1,7 @@
 @extends('pages.templates.body')
 @section('title', 'Tolosa - Presupuesto')
 @section('css')
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="{{ asset('css/page/slider.css') }}">
 <link rel="stylesheet" href="{{ asset('css/page/estilos.css') }}">
 <link rel="stylesheet" href="{{ asset('css/page/empresa.css') }}">
@@ -34,13 +35,13 @@
                         <img style="align-items: center;" src="{{asset('img/presupuesto/solicitud-datos.fw.png')}}">
                       <div class="paso datos active col-xs-12 col-sm-2 col-md-2 col-lg-2 col-md-offset-1" id="elDiv1">
                           <span></span>
-                          <p class="fuenteRC" style="position: absolute; right: 22px; color: #32398E; font-weight: bold; width: 100px;">TUS DATOS</p>
+                          <p class="fuenteRC" style="position: absolute; right: 542px; top:150px; color: #32398E; font-weight: bold; width: 100px;">TUS DATOS</p>
                          
                       </div>
                       
                       <div class="paso obra col-xs-12 col-sm-4 col-md-4 col-lg-4" id="elDiv2">
                           <span></span>
-                          <p class="fuenteRC" style="color: #32398E; position: absolute; left: 342px; top: 20px;">TU PIEZA</p>
+                          <p class="fuenteRC" style="width: 80px;color: #32398E; position: absolute; left: 499px; top: 14px;">TU OBRA</p>
                           
                       </div>
                   </div>
@@ -61,6 +62,7 @@
                         <input type="text" name="tel" id="tel" class="form-control" value="" placeholder="Teléfono" title="">
                     </p>
                 </div>
+                <br><br>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cont-btn">
                     <!-- <a href="presupuesto.php">Paso anterior</a> -->
                     <button type="button" class="btn btn-default pull-right anima2 boton-siguiente" id="botonSiguienteEstado" style="background-color: #32398E">Siguiente</button>
@@ -79,7 +81,7 @@
                         
                       <div class="paso datos active col-xs-12 col-sm-2 col-md-2 col-lg-2 col-md-offset-1" id="elDiv1">
                           <span></span>
-                          <p class="fuenteRC" style="position: absolute; right:30px;top: 150px; color: #32398E; font-weight: lighter; width: 100px;">TUS DATOS</p>
+                          <p class="fuenteRC" style="position: absolute; right:538px;top: 150px; color: #32398E; font-weight: lighter; width: 100px;">TUS DATOS</p>
                         
                       </div>
                       <div class=" col-xs-12 col-sm-3 col-md-3 col-lg-3 re-padding">
@@ -87,7 +89,7 @@
                       <img style="align-items: center;" src="{{asset('img/presupuesto/solicitud-obras.fw.png')}}">
                       <div class="paso obra col-xs-12 col-sm-4 col-md-4 col-lg-4" id="elDiv2">
                           <span></span>
-                          <p class="fuenteRC" style="position: absolute; width: 100%;left: 500px;top:15px;color: #32398E; font-weight: bold;">TU PIEZA</p>
+                          <p class="fuenteRC" style="position: absolute; width: 100%;left: 500px;top:8px;color: #32398E; font-weight: bold;">TU OBRA</p>
                       </div>
                   </div>
 
@@ -126,7 +128,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cont-btn">
                     <button type="submit" class="btn btn-default pull-right anima2 boton-enviar fuenteRC" style="background-color: #32398E;">Enviar</button>
-                    <button type="button" class="btn btn-default pull-right anima2 boton-atras fuenteRC" id="botonEstadoAnterior" style="background-color: #32398E;">Anterior</button>
+                    <button type="button" class="btn btn-default pull-right anima2 boton-atras fuenteRC" id="botonEstadoAnterior" style="background-color: white!important; border:2px solid #32398E;color: #32398E; margin: 0px 5px;">Anterior</button>
                 </div>
             </div>
             

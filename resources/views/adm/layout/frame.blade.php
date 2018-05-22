@@ -9,7 +9,7 @@
 
     <title>Panel de administración - @yield('titulo')</title>
 
-    <link rel="icon" type="image/png" href=""/>
+    <link rel="icon" type="image/png" href="{{asset('img/favicon.png')}}"/>
     
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('plugins/materialize/css/materialize.min.css') }}">
@@ -71,10 +71,12 @@
             <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">watch</i>Productos</a>
               <div class="collapsible-body">
                 <ul>
-                  <li><a href="{{route('productos.create')}}">Crear Producto</a></li>
-                  <li><a href="{{route('productos.index')}}">Editar Producto</a></li>
                   <li><a href="{{route('categorias.create')}}">Crear Categoria</a></li>
                   <li><a href="{{route('categorias.index')}}">Editar Categoria</a></li>
+                  <li><a href="{{route('productos.create')}}">Crear Producto</a></li>
+                  <li><a href="{{route('productos.index')}}">Editar Producto</a></li>
+                  <li><a href="{{route('modelos.create')}}">Crear Modelo</a></li>
+                  <li><a href="{{route('modelos.index')}}">Editar Modelo</a></li>
                 </ul>
               </div>
             </li>

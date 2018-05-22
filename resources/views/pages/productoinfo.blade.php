@@ -24,13 +24,13 @@
                       <div class="col l6 s12 hide-on-med-and-down" style="">
                           <img class="" style="" src="{{asset($producto->imagen)}}">
                       </div>
-                      <div class="col l6 s12">
+                      <div class="col l6 s12" >
                           <p style="font-size: 39px; font-weight: bold; color: #858585!important;">{!! $producto->nombre !!}</p>
-                          <p>{!! $producto->texto_principal !!}</p>
-                          <p>{!! $producto->titulo1 !!}</p>
-                          <p>{!! $producto->contenido1 !!}</p>
-                          <p>{!! $producto->titulo2 !!}</p>
-                          <p>{!! $producto->contenido2 !!}</p>
+                          <p style="font-family: 'Source Sans Pro', sans-serif!important;">{!! $producto->texto_principal !!}</p>
+                          <p style="font-family: 'Source Sans Pro', sans-serif!important;">{!! $producto->titulo1 !!}</p>
+                          <p style="font-family: 'Source Sans Pro', sans-serif!important;">{!! $producto->contenido1 !!}</p>
+                          <p style="font-family: 'Source Sans Pro', sans-serif!important;">{!! $producto->titulo2 !!}</p>
+                          <p style="font-family: 'Source Sans Pro', sans-serif!important;">{!! $producto->contenido2 !!}</p>
                       </div>
                   </div>
                 </div>

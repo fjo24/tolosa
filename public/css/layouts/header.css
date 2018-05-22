@@ -45,14 +45,14 @@ body {
 
 .links-header a{
 	position: relative;
-	top:60px;
+	top:42px;
 	left: 32%;
 	width: 400px;
 	font-size: 17px;
 	color: black;
 	font-family: 'Source Sans Pro', sans-serif;
 	background-color: #fff;
-	word-spacing: 19px;
+	padding: 0px 24px;
 }
 
 .links-header a:active{

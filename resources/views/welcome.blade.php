@@ -5,7 +5,6 @@
 <link rel="stylesheet" href="{{ asset('css/page/home.css') }}">
 @endsection
 @section('contenido')
-<div class="container-fluid">
    <div class="slider" >
       <ul class="slides">
       @foreach($sliders as $slider)
@@ -22,6 +21,7 @@
       @endforeach
       </ul>
    </div>
+  <div class="contenedor-flex-center">
    <div class="home col s12">
       <div class="row titulo">
          {!! $home->titulo !!}
@@ -31,26 +31,28 @@
          {!! $home->contenido !!}
       </div>
    </div>
-   <div class="containter">
-      
-<div class="container-fluid">
+     </div>
+     <div class="contenedor-flex-center">
    <div class="destacados">   
       <div style="margin: 7% 7%;">
          <div class="row">
             <div class="col s12">
                @foreach($destacados as $destacado)  
+                  
                      <div class="col s6 m6" style="margin-top: 4%;">
                         <div class="div-product">
-                           <img style="width: 100%;height: 413px" class="responsive-img" src="{{asset($destacado->imagen)}}" alt="">
+                        <a href="{{$destacado->link}}">
+                           <img style="width: 550px;height: 413px" class="responsive-img" src="{{asset($destacado->imagen)}}" alt="">
                            <div class="div-nombre">{!!$destacado->descripcion !!}</div>
+                        </a>
                         </div>
                      </div>
                @endforeach
             </div>
          </div>
-      </div>
-   </div>
-   </div>
+  
+  </div>
+ 
    </div>
 </div>
 @endsection

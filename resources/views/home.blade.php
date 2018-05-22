@@ -4,7 +4,6 @@
 
 @section('contenido')
 <main>
-dashboard
 </main>
 
 @endsection

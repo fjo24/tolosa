@@ -30,7 +30,7 @@
         <div class="container">
             <div class="row">
                 <div class="logo-login">
-                    <img class="center responsive-img" src="{{ asset('images/logo.png') }}" alt="">
+                    <img class="center responsive-img" src="{{ asset('img/logo/logo-header.png') }}" alt="">
                 </div>
                 {!!Form::open(['route'=>'login', 'method'=>'POST', 'class' => 'col s12'])!!}
                     <div class="row">

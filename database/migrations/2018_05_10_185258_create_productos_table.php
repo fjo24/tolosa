@@ -17,7 +17,6 @@ class CreateProductosTable extends Migration
 
             $table->increments('id');
             $table->string('nombre');
-            $table->string('imagen',300);
             $table->text('texto_principal',4000)->nullable();
             $table->text('titulo1')->nullable();
             $table->text('contenido1',2000)->nullable();

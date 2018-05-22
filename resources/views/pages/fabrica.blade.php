@@ -15,7 +15,7 @@
             @if(isset($slider->texto)||isset($slider->texto2))
             <div class="caption servicio_slider_dif" style="">
                <div style="padding-top: 25px">  
-                  <span style="text-align: left; padding: 3%;font-weight: lighter;font-size: 50px; font-family: 'Source Sans Pro', sans-serif; font-weight: lighter;">{!! $slider->texto !!}</span><br>
+                  <span style="text-align: left; padding: 3%;font-weight: lighter;font-size: 50px; font-family: 'Source Sans Pro', sans-serif;">{!! $slider->texto !!}</span><br>
                   <span style="padding: 3%;font-size: 50px; font-family: 'Source Sans Pro', sans-serif; font-weight: bold;">{!! $slider->texto2 !!}</span>
                   <hr style="position: absolute; left: 20px; bottom: 25px ;width: 80%">
                </div>
@@ -25,6 +25,7 @@
       @endforeach
       </ul>
    </div>
+<div class="contenedor-flex-center">
   <div class="fabrica">
     <div class="row" style="">
         <div class="col l7 s12 hide-on-med-and-down" style="width: 52%">
@@ -32,12 +33,13 @@
         </div>
         <div class="col l5 s12" style="width: 570px;padding-top: 15px;">
             <p>{!! $fabrica->titulo !!}</p>
-            <p>{!! $fabrica->contenido !!}</p>
+            <p style="font-family: 'Source Sans Pro', sans-serif; ">{!! $fabrica->contenido !!}</p>
             <p>{!! $fabrica->titulo2 !!}</p>
             <p>{!! $fabrica->contenido2 !!}</p>
         </div>
     </div>
   </div>
+</div>
 
 
 

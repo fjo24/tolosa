@@ -7,7 +7,7 @@
 @endsection
 @section('contenido')
 
-<div class="flex-containter">
+<div class="contenedor-flex-center">
    <div class="categorias" style="align-items: center">   
       <div style="margin: 7% 7%;">
          <div class="row"  style="align-items: center">

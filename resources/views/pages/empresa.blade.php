@@ -5,7 +5,6 @@
 <link rel="stylesheet" href="{{ asset('css/page/empresa.css') }}">
 @endsection
 @section('contenido')
-<div class="container-fluid">
    <div class="slider" >
       <ul class="slides">
       @foreach($sliders as $slider)
@@ -22,23 +21,25 @@
       @endforeach
       </ul>
    </div>
-   <div class="container">
+  <div class="contenedor-flex-center">
 <div class="empresa">  
+
   <div class="row" style="">
-      <div class="col l4 s12 hide-on-med-and-down" >
-          <img class="responsive-img" src="{!! $contenido->imagen !!}">
+      <div class="col l5 s12 hide-on-med-and-down" >
+          <img class="responsive-img" style="width: 470px; height: 419px" src="{!! $contenido->imagen !!}">
       </div>
-      <div class="col l8 s9">
+      <br>
+      <div class="col l7 s9">
           <p>{!! $contenido->titulo !!}</p>
-          <p>{!! $contenido->contenido !!}</p>
+          <p style="padding:  5px">{!! $contenido->contenido !!}</p>
           <hr>
-          <p>{!! $contenido->contenido2 !!}</p>
+          <p >{!! $contenido->contenido2 !!}</p>
           <hr>
       </div>
   </div>
 </div>
 </div>
-</div>
+
 @endsection
 
 @section('js')

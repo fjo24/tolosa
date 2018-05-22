@@ -45,8 +45,7 @@
 			</div>
 		</div>
 	</main>
-	<script src="//cdn.ckeditor.com/4.7.3/full/ckeditor.js"></script>
-
+<script src="//cdn.ckeditor.com/4.9.2/full/ckeditor.js"></script>
 <script>
 	CKEDITOR.replace('texto');
 	CKEDITOR.replace('texto2');

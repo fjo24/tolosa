@@ -35,7 +35,8 @@ Route::get('/fabrica', 'PaginasController@fabrica');
 
 //OBRAS
 Route::get('/obra', 'PaginasController@obra');
-//show producto
+
+//show obra
 Route::get('/obra-info/{obra_id}',  'PaginasController@obrainfo')->name('obrainfo');
 
 //PRESUPUESTO
@@ -66,7 +67,7 @@ Route::post('enviar-mail',[
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-//<<<<<<<<<<<<<ADMINISTRADOR>>>>>>>>>>>>>>//
+//<<<<<<<<<<<<<ADMINISTRADOR>>>>>>>>>>>>>>//middleware('auth')->
 Auth::routes(); 
 Route::prefix('adm')->group(function () {
 
@@ -87,6 +88,8 @@ Route::resource('home', 'HomeController');
 Route::resource('categorias', 'CategoriasController');
 /*------------productos----------------*/
 Route::resource('productos', 'ProductoController');
+/*------------modelos----------------*/
+Route::resource('modelos', 'ModelosController');
 /*------------servicios----------------*/
 Route::resource('servicios', 'ServiciosController');
 /*------------obras----------------*/

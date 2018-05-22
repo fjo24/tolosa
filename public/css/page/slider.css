@@ -9,3 +9,9 @@
 	bottom: 60px;
 	z-index: 7;
 }
+
+.contenedor-flex-center{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

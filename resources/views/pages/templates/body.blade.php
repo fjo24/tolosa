@@ -6,7 +6,7 @@
 	<title>@yield('titulo')</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-
+<link rel="icon" type="image/png" href="{{asset('img/favicon.png')}}"/>
     
     <script type="text/javascript" src="{{ asset('plugins/jQuery/jquery.js') }}"></script> 
  <!-- Bootstrap-->
@@ -24,7 +24,7 @@
     @yield('css')
     <link rel="stylesheet" href="{{ asset('css/layouts/header.css') }}">
     <link rel="stylesheet" href="{{ asset('css/layouts/footer.css') }}">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('plugins/css/bootstrap/css/bootstrap.css') }}">
     
       <!-- CSS MATERIALIZE -->
       <!-- ICONOS MATERIALIZE -->
@@ -51,7 +51,7 @@
 
 </head>
 <body>
-    <div class="container-flex">
+
         
     @include('pages.templates.header')
         @yield('contenido')
@@ -59,6 +59,6 @@
     <script src="{{ asset('plugins/jQuery/jquery.js') }}"></script>
     <script src="{{ asset('plugins/materialize/js/materialize.min.js') }}"></script>
         @yield('js')
-    </div>
+
 </body>
 </html>

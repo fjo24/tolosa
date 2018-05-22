@@ -28,21 +28,21 @@
 				<div class="row">
 					<div class="input-field col s12 m4">
 						{!!Form::label('Nombre:')!!}
-						{!!Form::text('name', null , ['class'=>'validate', 'required'])!!}
+						{!!Form::text('name', null , ['class'=>'', 'required'])!!}
 					</div>
 					<div class="input-field col s12 m4">
 						{!!Form::label('Username:')!!}
-						{!!Form::text('username', null , ['class'=>'validate', 'required'])!!}
+						{!!Form::text('username', null , ['class'=>'', 'required'])!!}
 					</div>
 					<div class="input-field col s12 m4">
 						{!!Form::label('Correo electronico:')!!}
-						{!!Form::text('email', null , ['class'=>'validate', 'required'])!!}
+						{!!Form::text('email', null , ['class'=>'', 'required'])!!}
 					</div>
 				</div>
 				<div class="row">
 					<div class="input-field col s12 m6">
                         <i class="material-icons prefix">https</i>
-                        {!!Form::password('password',['class'=>'validate', 'required'])!!}
+                        {!!Form::password('password',['class'=>'', 'required'])!!}
                         {!!Form::label('Contraseña')!!}
                     </div>
 					<div class="input-field col s12 m6">
