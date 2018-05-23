@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\ModeloRequest;
 use App\Modelo;
 use App\Producto;
-
+use Laracasts\Flash\Flash;
 class ModelosController extends Controller
 {
     public function index()
@@ -38,8 +38,8 @@ class ModelosController extends Controller
                 $producto->imagen = 'img/producto/' . $id.'_'.$file->getClientOriginalName();
             }
         }*/
-        $producto->save();
-        Flash::success("Se ha registrado la producto de manera exitosa!")->important();        
+        $modelo->save();
+        Flash::success("Se ha registrado el modelo de manera exitosa!")->important();        
         return redirect()->route('modelos.index');
     }
 
@@ -63,9 +63,9 @@ class ModelosController extends Controller
         $modelo->texto = $request->texto;
         $modelo->producto_id = $request->producto_id;
 
-        $producto->save();
-        Flash::success("Se ha registrado la producto de manera exitosa!")->important();        
-        return redirect()->route('productos.index');
+        $modelo->save();
+        Flash::success("Se ha registrado el modelo de manera exitosa!")->important();        
+        return redirect()->route('modelos.index');
     }
 
     public function destroy($id)

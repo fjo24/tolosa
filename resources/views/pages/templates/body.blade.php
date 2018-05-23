@@ -24,7 +24,7 @@
     @yield('css')
     <link rel="stylesheet" href="{{ asset('css/layouts/header.css') }}">
     <link rel="stylesheet" href="{{ asset('css/layouts/footer.css') }}">
-    <link rel="stylesheet" href="{{ asset('plugins/css/bootstrap/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('plugins/bootstrap/css/bootstrap.css') }}">
     
       <!-- CSS MATERIALIZE -->
       <!-- ICONOS MATERIALIZE -->
@@ -58,6 +58,7 @@
     @include('pages.templates.footer')
     <script src="{{ asset('plugins/jQuery/jquery.js') }}"></script>
     <script src="{{ asset('plugins/materialize/js/materialize.min.js') }}"></script>
+    <script type="text/css" rel="stylesheet" href="{{asset('plugins/bootstrap/js/bootstrap.min.js')}}"  media="screen,projection"/></script>
         @yield('js')
 
 </body>

@@ -11,6 +11,7 @@ use App\Contenidoempresa;
 use App\Home;
 use App\Empresa;
 use App\Obra;
+use App\Modelo;
 use App\Fabrica;
 use App\Servicio;
 use App\Http\Requests\ContactoRequest;
@@ -51,6 +52,24 @@ class PaginasController extends Controller
         $idc = $producto->categoria_id;
         $categoria = Categoria::find($idc);
         return view('pages.productoinfo', compact('producto', 'categoria'));
+    }
+
+    public function modelos($id)
+    {
+        $producto = Producto::find($id);
+        $categoria=Categoria::find($producto->categoria_id);
+        $modelos = Modelo::OrderBy('orden', 'asc')->where('producto_id', $id)->get();
+        return view('pages.modelos', compact('producto', 'modelos', 'categoria'));
+    }
+
+    public function modeloinfo($id)
+    {
+        $modelo = Modelo::find($id);
+        $categorias = Categoria::OrderBy('orden', 'asc')->get();
+        $producto = Producto::find($modelo->producto_id);
+        $idc = $producto->categoria_id;
+        $categoria = Categoria::find($idc);
+        return view('pages.modeloinfo', compact('producto', 'categoria', 'modelo', 'categorias'));
     }
 
     public function servicios(){

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\ProductoRequest;
 use App\Producto;
+use App\Imgproducto;
 use App\Categoria;
 use Laracasts\Flash\Flash;
 
@@ -93,4 +94,21 @@ class ProductoController extends Controller
         //flash('Se ha eliminado correctamente.')->success()->important();
         return redirect()->route('productos.index');
     }
+
+    /*public function imagen($id)
+    {
+        $producto = Producto::find($id);
+        return view('adm.productos.imagenes')->with(compact('producto'));
+    }
+
+    public function upload($id, Request $request)
+    {
+
+
+     $path = public_path().'/uploads/';
+            $files = $request->file('file');
+            foreach($files as $file){
+                $fileName = $file->getClientOriginalName();
+                $file->move($path, $fileName);
+            }*/
 }

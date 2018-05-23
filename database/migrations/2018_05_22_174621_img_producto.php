@@ -15,7 +15,6 @@ class ImgProducto extends Migration
     {
         Schema::create('img_producto', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nombre');
             $table->string('ubicacion');
             $table->integer('producto_id')->unsigned();
 

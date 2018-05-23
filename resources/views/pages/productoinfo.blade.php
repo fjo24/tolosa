@@ -22,7 +22,7 @@
                 <div class="producto">
                   <div class="row" style="">
                       <div class="col l6 s12 hide-on-med-and-down" style="">
-                          <img class="" style="" src="{{asset($producto->imagen)}}">
+                          <img class="" style="" src="{{asset('img/producto/6_otras6.png')}}">
                       </div>
                       <div class="col l6 s12" >
                           <p style="font-size: 39px; font-weight: bold; color: #858585!important;">{!! $producto->nombre !!}</p>
@@ -31,7 +31,9 @@
                           <p style="font-family: 'Source Sans Pro', sans-serif!important;">{!! $producto->contenido1 !!}</p>
                           <p style="font-family: 'Source Sans Pro', sans-serif!important;">{!! $producto->titulo2 !!}</p>
                           <p style="font-family: 'Source Sans Pro', sans-serif!important;">{!! $producto->contenido2 !!}</p>
+                          <a class="waves-effect waves-light btn" href="{{ route('modelos', $producto->id)}}">Ver modelos</a>
                       </div>
+
                   </div>
                 </div>
               </div>

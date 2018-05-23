@@ -30,6 +30,14 @@ Route::get('/productos/{producto_id}',  'PaginasController@productos')->name('pr
 //show producto
 Route::get('/producto-info/{producto_id}',  'PaginasController@productoinfo')->name('productoinfo');
 
+//MODELOS
+Route::get('/modelos', 'PaginasController@modelos');
+//show modelos
+Route::get('/modelo-info/{modelo_id}',  'PaginasController@modeloinfo')->name('modeloinfo');
+
+//PRODUCTOS
+Route::get('/modelos/{producto_id}',  'PaginasController@modelos')->name('modelos');
+
 //FABRICA
 Route::get('/fabrica', 'PaginasController@fabrica');
 
@@ -88,6 +96,10 @@ Route::resource('home', 'HomeController');
 Route::resource('categorias', 'CategoriasController');
 /*------------productos----------------*/
 Route::resource('productos', 'ProductoController');
+/*-------imagenes productos----------*/
+//Route::get('/producto/{id}/imagenes', 'ProductoController@imagen')->name('filestore');
+//Route::post('/producto/{id}/imagenes', 'ProductoController@upload');
+//Route::resource('file', 'ImgproductoController');
 /*------------modelos----------------*/
 Route::resource('modelos', 'ModelosController');
 /*------------servicios----------------*/

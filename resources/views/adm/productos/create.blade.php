@@ -38,13 +38,7 @@
 						{!!Form::text('orden', null , ['class'=>'', 'required'])!!}
 					</div>
 					<div class="file-field input-field col s6">
-						<div class="btn">
-						    <span>Imagen</span>
-						    {!! Form::file('imagen') !!}
-						</div>
-						<div class="file-path-wrapper">
-						    {!! Form::text('imagen',null, ['class'=>'file-path']) !!}
-						</div>
+						
 					</div>
 				</div>
 				<div class="row">
@@ -83,7 +77,9 @@
 				<div class="col s12 no-padding">
 					{!!Form::submit('Crear', ['class'=>'waves-effect waves-light btn right'])!!}
 				</div>
+			
 			{!!Form::close()!!} 
+
 			</div>
 		</div>
 	</div>
@@ -97,5 +93,24 @@
 	CKEDITOR.replace('contenido2');
 	CKEDITOR.config.height = '200px';
 	CKEDITOR.config.width = '100%';
-</script>
+
+// "myAwesomeDropzone" es el ID de nuestro formulario usando la notación camelCase
+Dropzone.options.myAwesomeDropzone = {
+    paramName: "file", // Las imágenes se van a usar bajo este nombre de parámetro
+    maxFilesize: 2 // Tamaño máximo en MB
+};
+        //SERVICES (Lista dinamica)  formgroup2
+ /*       //SERVICES (Lista dinamica)  formgroup2
+*/
+        //Fin SERVICES
+
+        //Si cambian el precio hora de la orden, se calculan los numeros nuevamente
+
+
+        //PRODUCTS (lista dinamica)
+        //select for products
+      
+    </script>
+
 @endsection
+

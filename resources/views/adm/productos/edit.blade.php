@@ -1,6 +1,6 @@
 @extends('adm.layout.frame')
 
-@section('titulo', 'Nuevo producto')
+@section('titulo', 'Editar producto')
 
 @section('contenido')
 <main>
@@ -38,13 +38,7 @@
 						{!!Form::text('orden', null , ['class'=>'', 'required'])!!}
 					</div>
 					<div class="file-field input-field col s6">
-						<div class="btn">
-						    <span>Imagen</span>
-						    {!! Form::file('imagen') !!}
-						</div>
-						<div class="file-path-wrapper">
-						    {!! Form::text('imagen',null, ['class'=>'file-path']) !!}
-						</div>
+						
 					</div>
 				</div>
 				<div class="row">

@@ -1,5 +1,5 @@
 @extends('pages.templates.body')
-@section('title', 'Tolosa - Producto')
+@section('title', 'Tolosa - Modelos')
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/page/slider.css') }}">
 <link rel="stylesheet" href="{{ asset('css/page/productos.css') }}">
@@ -13,17 +13,18 @@
          	<div class="row">
          		<h7>
             		<a href="/categorias" style="color: gray";>productos • </a>
-            		<a href="" style= "color: gray;text-transform: lowercase">{!!$categoria->nombre !!}</a>
+            		<a href="{{ route('productos', $categoria->id)}}" style= "color: gray;text-transform: lowercase">{!!$categoria->nombre !!} • </a>
+            		<a href="" style= "color: gray;text-transform: lowercase">{!!$producto->nombre !!}</a>
             	</h7>
 	            <div class="col l12 s12 m12">
-	               @foreach($productos as $producto)  
+	               @foreach($modelos as $modelo)  
 	                    <div class="col l4 s4 m4">
 	                        <div class="div-product">
-	                           	<a href="{{ route('productoinfo', $producto->id)}}">
+	                           	<a href="{{ route('modeloinfo', $modelo->id)}}">
 	                             	<img style="width: 100%;" class="responsive-img" src="{{asset('img/producto/6_otras6.png')}}" alt="">
 	                              	<hr align="left">
 	                                <div class="div-nombre">
-	                                	{!!$producto->nombre !!}
+	                                	{!!$modelo->nombre !!}
 	                                </div>
 	                           	</a>
 	                        </div>

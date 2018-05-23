@@ -10,7 +10,7 @@
     <title>Panel de administración - @yield('titulo')</title>
 
     <link rel="icon" type="image/png" href="{{asset('img/favicon.png')}}"/>
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/min/dropzone.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('plugins/materialize/css/materialize.min.css') }}">
     
@@ -157,6 +157,7 @@
     </header>  
     @yield('contenido')                                 
         </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/min/dropzone.min.js"></script>
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <!-- Materialize Core JavaScript -->
