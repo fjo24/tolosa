@@ -34,11 +34,13 @@
                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 floatInherit slider-detalle">
                         <div id="latestwork-sidebar" class="carousel slide">
                             <div class="carousel-inner">
-                                                            <div class="active item"><img src="{{asset('img/producto/ventana1.png')}}"></div>
-                                                                                                <div class="item"><img src="{{asset('img/producto/6_otras6.png')}}" alt="photo"></div>
-                                                                                                <div class="item"><img src="{{asset('img/producto/6_otras6.png')}}" alt="photo"></div>
-                                                                                                <div class="item"><img src="http://www.aberturasezeiza.com.ar/app/adm/ezeiza/fileUpload/server/php/files/ProductoPropio/imagen4At-p%20pf%20%281%29.png" alt="photo"></div>
-                                                                                                <div class="item"><img src="http://www.aberturasezeiza.com.ar/app/adm/ezeiza/fileUpload/server/php/files/ProductoPropio/imagen5At-p%20puerta%20%281%29.png" alt="photo"></div>
+          
+
+
+          <div class="item"><img src="{{asset('img/producto/ventana1.png')}}"></div>
+          <div class="item"><img src="{{asset('img/producto/6_otras6.png')}}" alt="photo"></div>
+          <div class="active item"><img src="{{asset('img/producto/6_otras6.png')}}" alt="photo"></div>
+                                                                                               
                                                                                                                                                                                                                                                                                                                                                     </div>
                             <a class="carousel-control left" href="#latestwork-sidebar" data-slide="prev"></a>
                             <a class="carousel-control right" href="#latestwork-sidebar" data-slide="next"></a>
@@ -51,6 +53,13 @@
                             </script>
                         <!-- CARRUSEL -->
                         </div>
+
+
+
+
+
+
+
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 floatInherit main-desc">
                         <h2>At-Premium</h2>
