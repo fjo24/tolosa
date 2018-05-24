@@ -49,10 +49,11 @@ class PaginasController extends Controller
 
     public function productoinfo($id)
     {
+        $imagenes = Imgproducto::OrderBy('ubicacion', 'ASC')->where('producto_id', '$id')->get();
         $producto = Producto::find($id);
         $idc = $producto->categoria_id;
         $categoria = Categoria::find($idc);
-        return view('pages.productoinfo', compact('producto', 'categoria'));
+        return view('pages.productoinfo', compact('producto', 'categoria', 'imagenes'));
     }
 
     public function modelos($id)

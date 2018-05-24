@@ -23,7 +23,7 @@
                   <div class="row" style="">
                       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 floatInherit slider-detalle">
                         <div class="slider hide-on-med-and-down"  >
-                          <ul class="slides" style="background-color: red">
+                          <ul class="slides" style="background-color: white">
                              <li>
                                 <img src="{{asset('img/producto/ventana1.png')}}" style="width: 380px; height: 380px">
                                 
@@ -49,6 +49,8 @@
                               </li>
                           </ul>
                        </div> 
+
+
                     </div>
                       <div class="col l6 s12" >
                           <p style="font-size: 39px; font-weight: bold; color: #858585!important;">{!! $producto->nombre !!}</p>
@@ -71,5 +73,11 @@
 @endsection
 
 @section('js')
-
+<script type="text/javascript">
+    $('.slider').slider({
+        indicators: true,
+        height: 334
+    });
+  
+</script>
 @endsection

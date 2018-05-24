@@ -20,6 +20,7 @@
 .responsive-slider .slides ul li {
   display: inline-block;
   max-width: 100%;
+  opacity: 7!important;
   
 }
 .responsive-slider .slides ul li .slide-body {
