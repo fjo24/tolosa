@@ -16,6 +16,7 @@ class TiposVentana extends Migration
         Schema::create('tipos_ventana', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nombre');
+            $table->string('orden');
             $table->text('info');
             $table->timestamps();
         });

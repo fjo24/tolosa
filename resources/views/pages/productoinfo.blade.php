@@ -21,9 +21,35 @@
               <div class="col l12 s12 m12">
                 <div class="producto">
                   <div class="row" style="">
-                      <div class="col l6 s12 hide-on-med-and-down" style="">
-                          <img class="" style="" src="{{asset('img/producto/6_otras6.png')}}">
-                      </div>
+                      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 floatInherit slider-detalle">
+                        <div class="slider hide-on-med-and-down"  >
+                          <ul class="slides" style="background-color: red">
+                             <li>
+                                <img src="{{asset('img/producto/ventana1.png')}}" style="width: 380px; height: 380px">
+                                
+                              </li>
+                              <li>
+                                <img src="{{asset('img/producto/ventana2.png')}}" style="width: 380px; height: 380px">
+                                
+                              </li>
+                              <li>
+                                <img src="{{asset('img/producto/ventana1.png')}}" style="width: 380px; height: 380px">
+                                
+                                
+                              </li>
+                              <li>
+                                <img src="{{asset('img/producto/ventana2.png')}}" style="width: 380px; height: 380px">
+                                
+                                
+                              </li>
+                              <li>
+                                <img src="{{asset('img/producto/ventana1.png')}}" style="width: 380px; height: 380px">
+                                
+                                
+                              </li>
+                          </ul>
+                       </div> 
+                    </div>
                       <div class="col l6 s12" >
                           <p style="font-size: 39px; font-weight: bold; color: #858585!important;">{!! $producto->nombre !!}</p>
                           <p style="font-family: 'Source Sans Pro', sans-serif!important;">{!! $producto->texto_principal !!}</p>

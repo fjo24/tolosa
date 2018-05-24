@@ -82,7 +82,22 @@
                 </ul>
               </div>
             </li>
-
+            <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">chrome_reader_mode</i>Tipos de Ventanas</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a href="{{route('tiposventana.create')}}">Crear Tipo de ventana</a></li>
+                  <li><a href="{{route('tiposventana.index')}}">Editar Tipo de ventana</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">check_box_outline_blank</i>Tipos de Vidrios</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a href="{{route('tiposvidrio.create')}}">Crear Tipo de vidrio</a></li>
+                  <li><a href="{{route('tiposvidrio.index')}}">Editar Tipo de vidrio</a></li>
+                </ul>
+              </div>
+            </li>
             <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">build</i>Servicios</a>
               <div class="collapsible-body">
                 <ul>

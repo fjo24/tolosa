@@ -3,18 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Imgproducto;
 
-class ImgproductoController extends Controller
+class ImagenesController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-         return view('adm.productos.imagenes');
+   
     }
 
     /**
@@ -35,12 +29,7 @@ class ImgproductoController extends Controller
      */
     public function store(Request $request)
     {
-         $path = public_path().'/uploads/';
-            $files = $request->file('file');
-            foreach($files as $file){
-                $fileName = $file->getClientOriginalName();
-                $file->move($path, $fileName);
-            }
+
     }
 
     /**
@@ -83,11 +72,12 @@ class ImgproductoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroyimagenp($id)
     {
-        $imagen= imgproducto::find($id);
+        $imagen= Slider::find($id);
         $imagen -> delete();
         //flash('Se ha eliminado correctamente.')->success()->important();
         return redirect()->route('imagenpro');
     }
+
 }

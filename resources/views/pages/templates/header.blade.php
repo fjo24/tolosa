@@ -10,13 +10,19 @@
               <a href="/contacto" class="iconos-redes"><img src="{{asset('img/redes/mail.png')}}"></a>
               <a href="https://www.facebook.com/tolosaaberturassanjusto/" class="iconos-redes"><img src="{{asset('img/redes/facebook.png')}}"></a>
               <a href="https://www.facebook.com/tolosaaberturassanjusto/" class="iconos-redes"><img src="{{asset('img/redes/instagram.png')}}"></a>
-            </div>      
+            </div>  
+
             <div class="links-header" style="width: 1200px">
                   <a href="/empresa" > EMPRESA     </a>
+                  <a href="" > |</a>
                   <a href="/categorias" > PRODUCTOS      </a>
+                  <a href="" > |</a>
                   <a href="/servicios" > SERVICIOS     </a>
+                  <a href="#" > |</a>
                   <a href="/obra" > OBRA     </a>
+                  <a> |</a>
                   <a href="/fabrica" > FÁBRICA      </a>
+                  <a> |</a>
                   <a href="/presupuesto" > SOLICITUD DE PRESUPUESTO</a> 
             </div>
           </div>

@@ -15,7 +15,7 @@ class ImgVidrio extends Migration
     {
         Schema::create('img_vidrio', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nombre');
+         
             $table->string('ubicacion');
             $table->integer('vidrio_id')->unsigned();
 

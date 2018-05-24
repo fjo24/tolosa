@@ -43,12 +43,12 @@ class ProductoController extends Controller
         $producto->categoria_id = $request->categoria_id;
         $producto->save();
         $id = Producto::all()->max('id');
-        $id++;
+        
 
         if ($request->HasFile('file')){
             foreach($request->file as $file){
                 $filename = $file->getClientOriginalName();
-                $path = public_path('img/test2/');
+                $path = public_path('img/producto/');
                 $file->move($path, $id.'_'.$file->getClientOriginalName());
                 $imagen = new Imgproducto;
                 $imagen->ubicacion='img/producto/' . $id.'_'.$file->getClientOriginalName();
@@ -85,14 +85,6 @@ class ProductoController extends Controller
         $producto->titulo2 = $request->titulo2;
         $producto->contenido2 = $request->contenido2;
         $producto->categoria_id = $request->categoria_id;
-        if ($request->hasFile('imagen')) {
-            if ($request->file('imagen')->isValid()) {
-                $file = $request->file('imagen');
-                $path = public_path('img/producto/');
-                $request->file('imagen')->move($path, $id.'_'.$file->getClientOriginalName());
-                $producto->imagen = 'img/producto/' . $id.'_'.$file->getClientOriginalName();
-            }
-        }
         $producto->save();
         Flash::success("Se ha registrado la producto de manera exitosa!")->important();        
         return redirect()->route('productos.index');
@@ -106,9 +98,10 @@ class ProductoController extends Controller
         return redirect()->route('productos.index');
     }
 
+//listado de imagenes
     public function imagen($id)
     {
-        $imagenes = Imgproducto::orderBy('id', 'asc')->Where('producto_id', $id)->get();
+        $imagenes = Imgproducto::orderBy('id', 'ASC')->Where('producto_id', $id)->get();
 
         $producto=producto::find($id);
         return view('adm.productos.imagenes')->with(compact('imagenes', 'producto'));
@@ -121,9 +114,11 @@ class ProductoController extends Controller
         return redirect()->route('imagenpro');
     }
 
-    public function deleteimagen($id)
+    
+    public function delete($id)
     {
         $imagen = Imgproducto::find($id);
+
         dd($imagen);
         $imagen ->delete();
         return redirect()->route('imagenpro');

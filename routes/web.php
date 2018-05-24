@@ -98,8 +98,14 @@ Route::resource('categorias', 'CategoriasController');
 Route::resource('productos', 'ProductoController');
 /*-------imagenes productos----------*/
 Route::get('/producto/imagenes/{producto_id}', 'ProductoController@imagen')->name('imagenpro');
-//Borrar imagen de productos
-Route::get('productos/deleteimagen/{imagen_id}',  'ProductoController@deleteimagen')->name('deleteimgpro');
+//imagen de productos
+Route::resource('imgproductos', 'ImgProductoController');
+/*------------Imagen----------------*/
+Route::get('imagen/{id}/destroy',[
+			'uses'=>'ImgProductoController@destroy',
+			'as'=>'imgproducto.destroy'
+]);
+//Route::get('productos/deleteimagen/{imagen_id}',  'ProductoController@deleteimagen')->name('deleteimgpro');
 //agregar nuevas imagenes de productos
 Route::get('productos/nuevaimagen/{imagen_id}',  'ProductoController@nuevaimagen')->name('nuevaimagen');
 //Route::post('/producto/{id}/imagenes', 'ProductoController@upload');
@@ -113,7 +119,7 @@ Route::resource('obras', 'ObrasController');
 /*------------fabrica----------------*/
 Route::resource('fabrica', 'FabricaController');
 /*------------sliders----------------*/
-Route::get('sliders/{id}/destroy',[
+Route::post('sliders/{id}/destroy',[
 			'uses'=>'SlidersController@destroy',
 			'as'=>'sliders.destroy'
 ]);
@@ -128,6 +134,10 @@ Route::resource('contenidoempresa', 'ContenidoempresaController');
 Route::resource('logos', 'LogosController');
 /*------------Redes----------------*/
 Route::resource('redes', 'RedesController');
+/*------------tiposventana----------------*/
+Route::resource('tiposventana', 'TiposventanaController');
+/*------------tiposventana----------------*/
+Route::resource('tiposvidrio', 'TiposvidrioController');
 
 //fin filtro auth
 });

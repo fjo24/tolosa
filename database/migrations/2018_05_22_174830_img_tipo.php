@@ -15,7 +15,7 @@ class ImgTipo extends Migration
     {
         Schema::create('img_tipo', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nombre');
+            
             $table->string('ubicacion');
             $table->integer('tipo_id')->unsigned();
 

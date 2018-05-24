@@ -22,26 +22,7 @@
 
         <div class="row">
             <div class="row">
-            <div class="col s12">
-            {!!Form::open(['route'=>['nuevaimagen', $producto->id], 'method'=>'POST', 'files' => true])!!}
-
-                <div class="row">
-                    
-                    <div class="btn col s6">
-                        <input type="file" name="file[]" multiple="true">
-                        {!!Form::label('Agregue imagenes:')!!}
-                    
-                    </div>
-
-                </div>
-    
-                <div class="col s12 no-padding">
-                    {!!Form::submit('Agregar', ['class'=>'waves-effect waves-light btn right'])!!}
-                </div>
-            
-            {!!Form::close()!!} 
-
-            </div>
+         
         </div>
             <div class="col s12">
                 <table class="highlight bordered">
@@ -54,8 +35,8 @@
                         <tr>
                             <td><img src="{{ asset($imagen->ubicacion) }}" alt="seccion" width="300" height="300"/></td>
                             <td class="text-right">
-                                {!!Form::open(['class'=>'en-linea', 'route'=>['deleteimgpro', $imagen->id], 'method' => 'DELETE'])!!}
-                                    <button onclick='return confirm_delete(this);' type="submit" class="submit-button">
+                                   {!!Form::open(['class'=>'en-linea', 'route'=>['imgproducto.destroy', $imagen->id], 'method' => 'DELETE'])!!}
+                                    <button onclick="return confirm('¿Realmente deseas borrar la imagen?')" type="submit" class="submit-button">
                                         <i class="material-icons red-text">cancel</i>
                                     </button>
                                 {!!Form::close()!!}
@@ -68,6 +49,7 @@
         </div>
     </div>
 </main>
+
 <script type="text/javascript" src="{{ asset('js/eliminar.js') }}"></script>
 
 @endsection

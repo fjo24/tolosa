@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\ModeloRequest;
+use App\Imgmodelo;
 use App\Modelo;
 use App\Producto;
 use Laracasts\Flash\Flash;
@@ -28,6 +29,20 @@ class ModelosController extends Controller
         $modelo->orden = $request->orden;
         $modelo->texto = $request->texto;
         $modelo->producto_id = $request->producto_id;
+        $modelo->save();
+        $id = Modelo::all()->max('id');
+        if ($request->HasFile('file')){
+            foreach($request->file as $file){
+                $filename = $file->getClientOriginalName();
+                $path = public_path('img/modelo/');
+                $file->move($path, $id.'_'.$file->getClientOriginalName());
+                $imagen = new Imgmodelo;
+                $imagen->ubicacion='img/modelo/' . $id.'_'.$file->getClientOriginalName();
+                $imagen->modelo_id = $id;
+                $imagen->save();
+            }
+
+        }
         /*$id = Modelo::all()->max('id');
         $id++;
         if ($request->hasFile('imagen')) {
@@ -38,7 +53,7 @@ class ModelosController extends Controller
                 $producto->imagen = 'img/producto/' . $id.'_'.$file->getClientOriginalName();
             }
         }*/
-        $modelo->save();
+
         Flash::success("Se ha registrado el modelo de manera exitosa!")->important();        
         return redirect()->route('modelos.index');
     }

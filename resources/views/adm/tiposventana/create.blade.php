@@ -1,6 +1,6 @@
 @extends('adm.layout.frame')
 
-@section('titulo', 'Nuevo modelo')
+@section('titulo', 'Registrar Tipo de Ventana')
 
 @section('contenido')
 <main>
@@ -21,34 +21,28 @@
 		@endif
 		<div class="row">
 			<div class="col s12">
-			{!!Form::open(['route'=>'modelos.store', 'method'=>'POST', 'files' => true])!!}
+			{!!Form::open(['route'=>'tiposventana.store', 'method'=>'POST', 'files' => true])!!}
 				<div class="row">
-					<div class="row">
-						<div class="input-field col s6">
-							{!!Form::label('Nombre:')!!}
-							{!!Form::text('nombre', null , ['class'=>'', 'required'])!!}
-						</div>
-						<div class="input-field col s6">
+					<div class="input-field col s6">
+						{!!Form::label('Nombre:')!!}
+						{!!Form::text('nombre', null , ['class'=>'', 'required'])!!}
+					</div>
+					<div class="input-field col s6">
 						{!!Form::label('Orden:')!!}
 						{!!Form::text('orden', null , ['class'=>'', 'required'])!!}
 					</div>
-						<div class="input-field col s6">
-							{!! Form::select('producto_id', $productos, null, ['class' => 'form-control', 'placeholder' => 'Grupo']) !!}
-						</div>
-						<div class="btn col s6">
+					<div class="btn col s6">
 						<input type="file" name="file[]" multiple="true">
 						{!!Form::label('Agregue imagenes:')!!}
-					
 					</div>
-					</div>
-					<div class="row">
-					    <div class="col s12">
-					        <label for="texto">Primer contenido</label>
-					     </div>
-						<div class="input-field col s12">
-					        <textarea id="texto" name="texto" class="materialize-textarea" required></textarea>
-					    </div>
-					</div>
+				</div>
+				<div class="row">
+				    <div class="col s12">
+				        <label for="info">Información</label>
+				     </div>
+					<div class="input-field col s12">
+				        <textarea id="info" name="info" class="materialize-textarea" required></textarea>
+				    </div>
 				</div>
 				<div class="col s12 no-padding">
 					{!!Form::submit('Crear', ['class'=>'waves-effect waves-light btn right'])!!}
@@ -60,7 +54,7 @@
 </main>
 <script src="//cdn.ckeditor.com/4.9.2/full/ckeditor.js"></script>
 <script>
-	CKEDITOR.replace('texto');
+	CKEDITOR.replace('info');
 	CKEDITOR.config.height = '200px';
 	CKEDITOR.config.width = '100%';
 </script>

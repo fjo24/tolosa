@@ -16,6 +16,7 @@ class TiposVidrio extends Migration
         Schema::create('tipos_vidrio', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nombre');
+            $table->string('orden');
             $table->text('info');
             $table->timestamps();
         });

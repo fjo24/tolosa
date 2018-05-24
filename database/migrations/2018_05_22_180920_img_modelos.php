@@ -15,7 +15,7 @@ class ImgModelos extends Migration
     {
         Schema::create('img_modelos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nombre');
+
             $table->string('ubicacion');
             $table->integer('modelo_id')->unsigned();
 
