@@ -1,65 +1,67 @@
 @extends('pages.templates.body')
 @section('title', 'Tolosa - Producto')
 @section('css')
-<link rel="stylesheet" type="text/css" href="{{ asset('app/scripts/bootstrap.css') }}" media="all" /> <!-- llamado al CSS de BOOTSTRAP -->
+
 <link rel="stylesheet" type="text/css" href="{{ asset('app/scripts/russo-styles.css') }}" media="all" />
 <link rel="stylesheet" type="text/css" href="{{ asset('app/scripts/reset.css') }}" media="all" />
 <link rel="stylesheet" href="{{ asset('css/page/slider.css') }}">
 <link rel="stylesheet" href="{{ asset('css/page/productos.css') }}">
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script> <!-- llamado a jQuery (lo tire aca porque sino el slider no anda) -->
 @endsection
 @section('contenido')
-         
+    
+
       
       <div id="cuerpo">
         <div>
         <link rel="stylesheet" type="text/css" href="{{ asset('app/scripts/slider-home.css') }}" media="all" /><!-- css del slider -->
         <link rel="stylesheet" type="text/css" href="{{ asset('app/scripts/jssor.js') }}" media="all" /> <!-- js para que ande el slider -->
         <link rel="stylesheet" type="text/css" href="{{ asset('app/scripts/jssor.slider.js') }}" media="all" /><!-- js para que ande el slider -->
-
     <!-- Jssor Slider Finish --> 
 
 <section class="aberturas">
    <!--  <div class="container">-->
+    <div class="container">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cont-miga">
         <div class="miga">
-        <div>
+        <div style="margin-left: -115px;float: left;width: 130%;">
             <a href="aberturas.php?categoriaId=10" class="arrow">Ventanas</a>
             <a href="aberturas_productos.php?subcategoriaId=19" class="arrow">Aluminio</a>
             <a>At-Premium</a>
         </div>
         </div>
     </div>
-    <div class="cont-aberturas">
+    <br><br><br>
+    <div class="cont-aberturas" style="margin-left: -125px;float: left;width: 130%;">
                 <div class="item-detalle table">
                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 floatInherit slider-detalle">
-                        <div id="latestwork-sidebar" class="carousel slide">
-                            <div class="carousel-inner">
-          
-
-
-          <div class="item"><img src="{{asset('img/producto/ventana1.png')}}"></div>
-          <div class="item"><img src="{{asset('img/producto/6_otras6.png')}}" alt="photo"></div>
-          <div class="active item"><img src="{{asset('img/producto/6_otras6.png')}}" alt="photo"></div>
-                                                                                               
-                                                                                                                                                                                                                                                                                                                                                    </div>
-                            <a class="carousel-control left" href="#latestwork-sidebar" data-slide="prev"></a>
-                            <a class="carousel-control right" href="#latestwork-sidebar" data-slide="next"></a>
-                            <script type="text/javascript">
-                                $(document).ready(function(){
-                                    $('.carousel').carousel({
-                                        interval: 5000
-                                    })
-                                });
-                            </script>
-                        <!-- CARRUSEL -->
-                        </div>
-
-
-
-
-
-
-
+                        <div class="slider hide-on-med-and-down"  >
+                          <ul class="slides" style="background-color: white">
+                             <li>
+                                <img src="{{asset('img/producto/ventana1.png')}}" style="width: 380px; height: 380px">
+                                
+                              </li>
+                              <li>
+                                <img src="{{asset('img/producto/ventana2.png')}}" style="width: 380px; height: 380px">
+                                
+                              </li>
+                              <li>
+                                <img src="{{asset('img/producto/ventana1.png')}}" style="width: 380px; height: 380px">
+                                
+                                
+                              </li>
+                              <li>
+                                <img src="{{asset('img/producto/ventana2.png')}}" style="width: 380px; height: 380px">
+                                
+                                
+                              </li>
+                              <li>
+                                <img src="{{asset('img/producto/ventana1.png')}}" style="width: 380px; height: 380px">
+                                
+                                
+                              </li>
+                          </ul>
+                       </div> 
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 floatInherit main-desc">
                         <h2>At-Premium</h2>
@@ -90,9 +92,13 @@
                     <ul class="nav nav-tabs nav-justified">
                         <li id="liTipos"><a data-toggle="tab" href="#tipos">tipos</a></li>
                         <li id="liLineas"><a data-toggle="tab" href="#lineas">tipología de vidrio</a></li>
-                        <li id="liVentajas"><a data-toggle="tab" href="#ventajas">ventajas</a></li>
+                        
+
                     </ul>
                     <div class="tab-content">
+
+
+
                         <div id="tipos" class="tab-pane fade">
                                             <div class="cont-item-tipos">
                                 <div class="item-tipo">
@@ -167,25 +173,45 @@
                 </div>
                                                             </div>
                         </div>
+
+
+
+
+
+
+
                         <div id="lineas" class="tab-pane fade">
                             <div class="cont-item-lineas">
-                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 slider">
-                                    <div id="latestwork-sidebar-2">
-                                        
-                                            <div class="item">
-                                                        
-                           <img class="li1 li" style="width:100%;display: none" src="http://www.aberturasezeiza.com.ar/app/adm/ezeiza/fileUpload/server/php/files/LineaProductoPropio/imagenvidrio-float_04%20%281%29.jpg" alt="photo">
 
-                                                    
-                           <img class="li2 li" style="width:100%;display: none" src="http://www.aberturasezeiza.com.ar/app/adm/ezeiza/fileUpload/server/php/files/LineaProductoPropio/imagendvh%20para%20pag.png" alt="photo">
 
-                                                                       </div>
-                                        
-                                        <a class="carousel-control left" href="javascript:passLiL()" data-slide="prev"></a>
-                                        <a class="carousel-control right" href="javascript:passLiR()" data-slide="next"></a>
-                                       
-                                    <!-- CARRUSEL -->
-                                    </div>
+                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                        <div class="slider hide-on-med-and-down"  >
+                          <ul class="slides" style="background-color: white">
+                             <li>
+                                <img src="{{asset('img/producto/ventana1.png')}}" style="width: 380px; height: 380px">
+                                
+                              </li>
+                              <li>
+                                <img src="{{asset('img/producto/ventana2.png')}}" style="width: 380px; height: 380px">
+                                
+                              </li>
+                              <li>
+                                <img src="{{asset('img/producto/ventana1.png')}}" style="width: 380px; height: 380px">
+                                
+                                
+                              </li>
+                              <li>
+                                <img src="{{asset('img/producto/ventana2.png')}}" style="width: 380px; height: 380px">
+                                
+                                
+                              </li>
+                              <li>
+                                <img src="{{asset('img/producto/ventana1.png')}}" style="width: 380px; height: 380px">
+                                
+                                
+                              </li>
+                          </ul>
+                       </div>
                                 </div>
                                                 
                 <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 desc-lineas li1 li" style="display: none">
@@ -235,38 +261,19 @@ El vidrio laminado no reduce la trasmisi&oacute;n lum&iacute;nica pero si se qui
 
                                             </div>
                         </div>
-                                                <div id="ventajas" class="tab-pane fade">
-                            <div class="cont-item-ventajas">
-                                                <a href="javascript:openFicha('v', 2)" class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                                    <img src="http://www.aberturasezeiza.com.ar/images/ico-aberturas-ventajas-2.jpg" class="img-responsive centeredX" alt="Image">
-                                    <div class="clear"></div>
-                                    <span id="v-tit-2" class="anima2">Aislamiento t&eacute;rmico</span>
-                                    <span id="v-desc-2" class="anima2" style="display: none">Reduce no s&oacute;lo el consumo de energ&iacute;a, sino tambi&eacute;n el dimensionamiento de los equipos de refrigeraci&oacute;n necesarios para brindar un confort adecuado.</span>
-                                </a>
-                                                                <a href="javascript:openFicha('v', 3)" class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                                    <img src="http://www.aberturasezeiza.com.ar/images/ico-aberturas-ventajas-3.jpg" class="img-responsive centeredX" alt="Image">
-                                    <div class="clear"></div>
-                                    <span id="v-tit-3" class="anima2">Inversi&oacute;n en calidad</span>
-                                    <span id="v-desc-3" class="anima2" style="display: none">Utilizando maquinarias de ultima generaci&oacute;n, perfiles 100 % virgen, accesorios y herrajes de primera linea.</span>
-                                </a>
-                                                                <a href="javascript:openFicha('v', 4)" class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                                    <img src="http://www.aberturasezeiza.com.ar/images/ico-aberturas-ventajas-4.jpg" class="img-responsive centeredX" alt="Image">
-                                    <div class="clear"></div>
-                                    <span id="v-tit-4" class="anima2">Aislamiento ac&uacute;stico</span>
-                                    <span id="v-desc-4" class="anima2" style="display: none">El control de ruidos urbanos es vital para el confort ac&uacute;stico.</br>
-Optar por DVH, utilizando vidrios laminados con PVB de mayor espesor, se reduce notoriamente la transmisi&oacute;n del sonido a trav&eacute;s de las superficies vidriadas, aumentando la aislaci&oacute;n con respecto a vidriados simples o Doble Vidriado con vidrio com&uacute;n.</br>
 
-</span>
-                                </a>
-                                                               
-                            </div>
-                        </div>
+
+
+
+
+
                       </div>
                 </div>
             </div>
     <div class="cont-aberturas">
             </div>
     </div>
+    </div>       
 </section>
 <script>
     function openFicha(type, id){
@@ -337,6 +344,12 @@ Optar por DVH, utilizando vidrios laminados con PVB de mayor espesor, se reduce 
         indicators: true,
       });
   });
+     $('.slider').slider({
+        indicators: true,
+        height: 380,
+        width: 400
+    });
+  
 </script> 
 <script>
   function openFicha(type, id){

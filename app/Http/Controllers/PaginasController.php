@@ -13,6 +13,7 @@ use App\Empresa;
 use App\Obra;
 use App\Modelo;
 use App\Fabrica;
+use App\Imgproducto;
 use App\Servicio;
 use App\Http\Requests\ContactoRequest;
 use Illuminate\Http\Request;

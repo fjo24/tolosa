@@ -97,7 +97,11 @@ Route::resource('categorias', 'CategoriasController');
 /*------------productos----------------*/
 Route::resource('productos', 'ProductoController');
 /*-------imagenes productos----------*/
-//Route::get('/producto/{id}/imagenes', 'ProductoController@imagen')->name('filestore');
+Route::get('/producto/imagenes/{producto_id}', 'ProductoController@imagen')->name('imagenpro');
+//Borrar imagen de productos
+Route::get('productos/deleteimagen/{imagen_id}',  'ProductoController@deleteimagen')->name('deleteimgpro');
+//agregar nuevas imagenes de productos
+Route::get('productos/nuevaimagen/{imagen_id}',  'ProductoController@nuevaimagen')->name('nuevaimagen');
 //Route::post('/producto/{id}/imagenes', 'ProductoController@upload');
 //Route::resource('file', 'ImgproductoController');
 /*------------modelos----------------*/

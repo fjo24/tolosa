@@ -16,9 +16,7 @@ class ImgProducto extends Migration
         Schema::create('img_producto', function (Blueprint $table) {
             $table->increments('id');
             $table->string('ubicacion');
-            $table->integer('producto_id')->unsigned();
-
-            $table->foreign('producto_id')->references('id')->on('productos')->onDelete('cascade');
+            $table->string('producto_id');
             $table->timestamps();
         });
     }

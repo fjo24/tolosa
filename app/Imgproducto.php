@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Imgproducto extends Model
 {
-    protected $table = "img_productos";
+    protected $table = "img_producto";
     protected $fillable = [
-        'nombre', 'ubicacion', 'producto_id'
+         'ubicacion', 'producto_id'
     ];
 }

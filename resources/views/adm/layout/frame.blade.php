@@ -15,7 +15,9 @@
     <link rel="stylesheet" href="{{ asset('plugins/materialize/css/materialize.min.css') }}">
     
     <link type="text/css" rel="stylesheet" href="{{ asset('css/admin.css') }}"  media="screen,projection"/>
-
+    <link type="text/css" rel="stylesheet" href="{{ asset('css/drop.css') }}"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="{{ asset('plugins/multipleform/multiple.css') }}"  media="screen,projection"/>
+   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
@@ -162,8 +164,8 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <!-- Materialize Core JavaScript -->
     <script src="{{ asset('plugins/materialize/js/materialize.min.js') }}"></script>
-
-    <script>
+    <script src="{{ asset('js/drop.js') }}"></script>
+    <script type="text/javascript">
         $(document).ready(function() {
           $('select').material_select();
         });

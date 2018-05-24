@@ -26,6 +26,7 @@
 					<thead>
 						<td>Nombre</td>
 						<td>Categoria</td>
+						<td>Administrar imagenes</td>
 						<td class="text-right">Acciones</td>
 					</thead>
 					<tbody>
@@ -33,7 +34,7 @@
 						<tr>
 							<td>{!!$producto->nombre!!}</td>
 							<td>{!!$producto->categoria->nombre!!}</td>
-							
+							<td><a href="{{ route('imagenpro',$producto->id)}}"><i class="material-icons">image</i></a></td>
 							<td class="text-right">
 								<a href="{{ route('productos.edit',$producto->id)}}"><i class="material-icons">create</i></a>
 								{!!Form::open(['class'=>'en-linea', 'route'=>['productos.destroy', $producto->id], 'method' => 'DELETE'])!!}

@@ -99,7 +99,7 @@ img {
 
 .centeredY{
 	position: relative;
-	top: 50%;
+	top: 50% !important;
 	-webkit-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
@@ -735,13 +735,13 @@ section.aberturas .item-tipo .img img{}
 section.aberturas .item-tipo a span{
 	text-align: center;
     padding: 20px 0;
-    color: #F09021;
+    color: #32398D;
     font-size: 18px;
     line-height: 21px;
     display: block;
 }
 section.aberturas .item-tipo .img .overlay{
-	background: rgba(255, 129, 0, 0.8);
+	background: #32398D;
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -788,7 +788,7 @@ section.aberturas .cont-aberturas .item-ficha .pop-up-ficha button{
 	border: 0;
 }
 section.aberturas .cont-aberturas .item-ficha .pop-up-ficha h4{
-	color: #FF8000;
+	color: #32398D;
 	font-size: 34px;
 	line-height: 44px;
 	font-weight: 400;

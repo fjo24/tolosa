@@ -2,8 +2,10 @@
 
 @section('titulo', 'Nuevo producto')
 
+    
 @section('contenido')
 <main>
+
 	<div class="container">
 		@if(count($errors) > 0)
 		<div class="col s12 card-panel red lighten-4 red-text text-darken-4">
@@ -25,7 +27,7 @@
 				<div class="row">
 					<div class="input-field col s6">
 						{!!Form::label('Nombre:')!!}
-						{!!Form::text('nombre', null , ['class'=>'', 'required'])!!}
+						{!!Form::text('nombre', null , ['class'=>'', ''])!!}
 					</div>
 					<div class="input-field col s6">
 					
@@ -35,11 +37,19 @@
 				<div class="row">
 					<div class="input-field col s6">
 						{!!Form::label('Orden:')!!}
-						{!!Form::text('orden', null , ['class'=>'', 'required'])!!}
+						{!!Form::text('orden', null , ['class'=>'', ''])!!}
 					</div>
-					<div class="file-field input-field col s6">
-						
+					<div class="btn col s6">
+						<input type="file" name="file[]" multiple="true">
+						{!!Form::label('Agregue imagenes:')!!}
+					
 					</div>
+
+
+
+
+
+
 				</div>
 				<div class="row">
 					<div class="col s12">
@@ -84,6 +94,7 @@
 		</div>
 	</div>
 </main>
+
 <script src="//cdn.ckeditor.com/4.7.3/full/ckeditor.js"></script>
 <script>
 	CKEDITOR.replace('texto_principal');
@@ -95,10 +106,7 @@
 	CKEDITOR.config.width = '100%';
 
 // "myAwesomeDropzone" es el ID de nuestro formulario usando la notación camelCase
-Dropzone.options.myAwesomeDropzone = {
-    paramName: "file", // Las imágenes se van a usar bajo este nombre de parámetro
-    maxFilesize: 2 // Tamaño máximo en MB
-};
+
         //SERVICES (Lista dinamica)  formgroup2
  /*       //SERVICES (Lista dinamica)  formgroup2
 */
@@ -109,8 +117,89 @@ Dropzone.options.myAwesomeDropzone = {
 
         //PRODUCTS (lista dinamica)
         //select for products
-      
-    </script>
 
+
+        //select for products
+              
+    </script>
+<script type="text/javascript">
+$(function()
+{
+    $(document).on('click', '.btn-add', function(e)
+    {
+        e.preventDefault();
+
+        var controlForm = $('.controls:first'),
+            currentEntry = $(this).parents('.entry:first'),
+            newEntry = $(currentEntry.clone()).appendTo(controlForm);
+
+        newEntry.find('input').val('');
+        controlForm.find('.entry:not(:last) .btn-add')
+            .removeClass('btn-add').addClass('btn-remove')
+            .removeClass('btn-success').addClass('btn-danger')
+            .html('<span class="glyphicon glyphicon-minus"></span>');
+    }).on('click', '.btn-remove', function(e)
+    {
+      $(this).parents('.entry:first').remove();
+
+		e.preventDefault();
+		return false;
+	});
+});
+/*
+$(function()
+{
+    $(document).on('click', '.green', function(e)
+    {
+        e.preventDefault();
+
+        var controlForm = $('.controls:first'),
+            currentEntry = $(this).parents('.entry:first'),
+            newEntry = $(currentEntry.clone()).appendTo(controlForm);
+
+        newEntry.find('input').val('');
+        controlForm.find('.entry:not(:last) .green')
+            .removeClass('green').addClass('btn-remove')
+            .removeClass('btn-success').addClass('btn-danger')
+            .html('<span class="glyphicon glyphicon-minus"></span>');
+    }).on('click', '.btn-remove', function(e)
+    {
+      $(this).parents('.entry:first').remove();
+
+		e.preventDefault();
+		return false;
+	});
+});
+
+
+     <div class="col-md-12">
+      <div class="row">
+      <div class="control-group" id="fields">
+          <label class="control-label" for="field1">
+            Nice Multiple Form Fields
+          </label>
+          <div class="controls">
+           
+              <div class="entry input-group col-xs-3">
+                
+             
+                <input class="btn btn-primary" name="fields[]" type="file">
+                <span class="input-group-btn">
+              <button class="btn-floating green" type="button">
+              	
+                                <i class="material-icons">add</i>
+                </button>
+                </span>
+              </div>
+           
+          </div>
+          
+        </div>
+      </div>
+    </div>
+<i class="material-icons">insert_chart</i>
+
+*/
+    
 @endsection
 

@@ -1,6 +1,7 @@
 @extends('pages.templates.body')
 @section('title', 'Tolosa - Contacto')
 @section('css')
+
 <link rel="stylesheet" href="{{ asset('css/page/slider.css') }}">
 <link rel="stylesheet" href="{{ asset('css/page/fabrica.css') }}">
 <link rel="stylesheet" href="{{ asset('css/page/contacto.css') }}">
