@@ -43,8 +43,9 @@ class PaginasController extends Controller
     public function productos($id)
     {
         $categoria = Categoria::find($id);
+        $ready = 0;
         $productos = Producto::OrderBy('orden', 'asc')->where('categoria_id', $id)->get();
-        return view('pages.productos', compact('productos', 'categoria'));
+        return view('pages.productos', compact('productos', 'categoria', 'ready'));
     }
 
     public function productoinfo($id)
@@ -53,7 +54,20 @@ class PaginasController extends Controller
         $producto = Producto::find($id);
         $idc = $producto->categoria_id;
         $categoria = Categoria::find($idc);
-        return view('pages.productoinfo', compact('producto', 'categoria', 'imagenes'));
+        $guia = 0;
+        $modelos = Modelo::OrderBy('orden', 'ASC')->Where('producto_id', $id)->get();
+        $imgmodelos = Imgproducto::OrderBy('ubicacion', 'ASC')->get();
+        foreach ($modelos as $modelo) {
+            if (isset($modelo)) {
+                $guia = 1;
+                break;
+            }
+        }
+        if ($guia == 0) {
+            return view('pages.productoinfo', compact('producto', 'categoria', 'imagenes'));
+        }else{
+            return view('pages.modelos', compact('producto', 'categoria', 'modelos', 'imgmodelos'));
+        }
     }
 
     public function modelos($id)
@@ -112,7 +126,6 @@ class PaginasController extends Controller
         $detalle= $request->detalle;
         $medida= $request->medida;
 
-        
         $newid = producto::all()->max('id');
         $newid++;
 

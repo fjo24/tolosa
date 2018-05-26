@@ -32,7 +32,7 @@
 						{!!Form::text('orden', null , ['class'=>'', 'required'])!!}
 					</div>
 					<div class="input-field col s6">
-						{!! Form::select('producto_id', $productos, null, ['class' => 'form-control', 'placeholder' => 'Grupo']) !!}
+						{!!Form::select('producto_id', $productos, null, ['class' => 'form-control', 'placeholder' => 'Grupo']) !!}
 					</div>
 				</div>
 				<div class="row">

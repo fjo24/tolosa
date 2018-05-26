@@ -76,7 +76,7 @@ class CategoriasController extends Controller
     {
         $categoria= categoria::find($id);
         $categoria -> delete();
-        //flash('Se ha eliminado correctamente.')->success()->important();
+       // flash('Se ha eliminado '.$categoria->nombre.' correctamente.')->success()->important();
         return redirect()->route('categorias.index');
     }
 }

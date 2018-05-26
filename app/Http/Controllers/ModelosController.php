@@ -43,16 +43,6 @@ class ModelosController extends Controller
             }
 
         }
-        /*$id = Modelo::all()->max('id');
-        $id++;
-        if ($request->hasFile('imagen')) {
-            if ($request->file('imagen')->isValid()) {
-                $file = $request->file('imagen');
-                $path = public_path('img/producto/');
-                $request->file('imagen')->move($path, $id.'_'.$file->getClientOriginalName());
-                $producto->imagen = 'img/producto/' . $id.'_'.$file->getClientOriginalName();
-            }
-        }*/
 
         Flash::success("Se ha registrado el modelo de manera exitosa!")->important();        
         return redirect()->route('modelos.index');
@@ -65,7 +55,7 @@ class ModelosController extends Controller
 
     public function edit($id)
     {
-        $productos = Producto::orderBy('nombre', 'ASC')->pluck('nombre', 'id')->all();
+        $productos = Producto::orderBy('categoria_id', 'ASC')->pluck('nombre', 'id')->all();
         $modelo = Modelo::find($id);
         return view('adm.modelos.edit', compact('modelo', 'productos'));
     }

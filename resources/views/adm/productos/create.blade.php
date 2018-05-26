@@ -2,7 +2,6 @@
 
 @section('titulo', 'Nuevo producto')
 
-    
 @section('contenido')
 <main>
 
@@ -42,11 +41,7 @@
 					<div class="btn col s6">
 						<input type="file" name="file[]" multiple="true">
 						{!!Form::label('Agregue imagenes:')!!}
-					
 					</div>
-
-
-
 
 
 

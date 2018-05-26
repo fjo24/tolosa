@@ -22,8 +22,20 @@
 
         <div class="row">
             <div class="row">
+                {!!Form::open(['route'=>['nuevaimagen', $producto->id], 'method'=>'POST', 'files' => true])!!}
+                <div class="row">
+                    <div class="btn col s6">
+                        <input type="file" name="file[]" multiple="true">
+                        {!!Form::label('Agregue imagenes:')!!}
+                    </div>
+                </div>
+                <div class="col s12 no-padding">
+                    {!!Form::submit('Agregar', ['class'=>'waves-effect waves-light btn right'])!!}
+                </div>
+            
+            {!!Form::close()!!} 
          
-        </div>
+            </div>
             <div class="col s12">
                 <table class="highlight bordered">
                     <thead>

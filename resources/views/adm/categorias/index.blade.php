@@ -22,6 +22,7 @@
 
 		<div class="row">
 			<div class="col s12">
+
 				<table class="highlight bordered">
 					<thead>
 						<td>Imagen</td>

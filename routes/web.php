@@ -34,6 +34,8 @@ Route::get('/producto-info/{producto_id}',  'PaginasController@productoinfo')->n
 Route::get('/modelos', 'PaginasController@modelos');
 //show modelos
 Route::get('/modelo-info/{modelo_id}',  'PaginasController@modeloinfo')->name('modeloinfo');
+//select dinamico
+Route::post('select-ajax', ['as'=>'select-ajax','uses'=>'VehiculoController@selectAjax']);
 
 //PRODUCTOS
 Route::get('/modelos/{producto_id}',  'PaginasController@modelos')->name('modelos');
@@ -101,13 +103,13 @@ Route::get('/producto/imagenes/{producto_id}', 'ProductoController@imagen')->nam
 //imagen de productos
 Route::resource('imgproductos', 'ImgProductoController');
 /*------------Imagen----------------*/
-Route::get('imagen/{id}/destroy',[
-			'uses'=>'ImgProductoController@destroy',
+Route::delete('imagen/{id}/destroy',[
+			'uses'=>'ProductoController@destroyimg',
 			'as'=>'imgproducto.destroy'
 ]);
 //Route::get('productos/deleteimagen/{imagen_id}',  'ProductoController@deleteimagen')->name('deleteimgpro');
 //agregar nuevas imagenes de productos
-Route::get('productos/nuevaimagen/{imagen_id}',  'ProductoController@nuevaimagen')->name('nuevaimagen');
+Route::post('productos/{id}/nuevaimagen/',  'ProductoController@nuevaimagen')->name('nuevaimagen');
 //Route::post('/producto/{id}/imagenes', 'ProductoController@upload');
 //Route::resource('file', 'ImgproductoController');
 /*------------modelos----------------*/

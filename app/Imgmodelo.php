@@ -10,4 +10,9 @@ class Imgmodelo extends Model
     protected $fillable = [
         'nombre', 'ubicacion', 'modelo_id'
     ];
+
+    public function modelo()
+    {
+    	return $this->belongsTo('App\Modelo');
+    }
 }

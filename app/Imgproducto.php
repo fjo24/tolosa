@@ -10,4 +10,9 @@ class Imgproducto extends Model
     protected $fillable = [
          'ubicacion', 'producto_id'
     ];
+
+    public function categoria()
+    {
+    	return $this->belongsTo('App\Producto');
+    }
 }
