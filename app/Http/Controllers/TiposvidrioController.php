@@ -34,9 +34,9 @@ class TiposvidrioController extends Controller
                 $filename = $file->getClientOriginalName();
                 $path = public_path('img/tiposvidrio/');
                 $file->move($path, $id.'_'.$file->getClientOriginalName());
-                $imagen = new Imgtipo;
+                $imagen = new Imgvidrio;
                 $imagen->ubicacion='img/tiposvidrio/' . $id.'_'.$file->getClientOriginalName();
-                $imagen->vidrio_id = $id;
+                $imagen->tipos_vidrio_id = $id;
                 $imagen->save();
             }
         }
@@ -47,7 +47,8 @@ class TiposvidrioController extends Controller
     public function edit($id)
     {
         $tipo = Tipovidrio::find($id);
-        return view('adm.tiposvidrio.edit', compact('tipo'));
+        $imagen = Imgvidrio::Where('tipos_vidrio_id', $id)->first();
+        return view('adm.tiposvidrio.edit', compact('tipo', 'imagen'));
     }
 
     public function update(Request $request, $id)
@@ -57,6 +58,19 @@ class TiposvidrioController extends Controller
         $tipo->info = $request->info;
         $tipo->orden = $request->orden;
         $tipo->save();
+        $id = $tipo->id;
+   
+        if ($request->HasFile('file')){
+            foreach($request->file as $file){
+                $filename = $file->getClientOriginalName();
+                $path = public_path('img/tiposventana/');
+                $file->move($path, $id.'_'.$file->getClientOriginalName());
+                $imagen = new Imgtipo;
+                $imagen->ubicacion='img/tiposventana/' . $id.'_'.$file->getClientOriginalName();
+                $imagen->tipos_ventana_id = $id;
+                $imagen->save();
+            }
+        }
         Flash::success("Se ha editado la obra de manera exitosa!")->important();        
         return redirect()->route('tiposvidrio.index');
     }

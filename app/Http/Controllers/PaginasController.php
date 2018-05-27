@@ -7,6 +7,10 @@ use App\Slider;
 use App\Destacado;
 use App\Categoria;
 use App\Producto;
+use App\Tipoventana;
+use App\Tipovidrio;
+use App\Imgtipo;
+use App\Imgvidrio;
 use App\Contenidoempresa;
 use App\Home;
 use App\Empresa;
@@ -55,6 +59,7 @@ class PaginasController extends Controller
         $idc = $producto->categoria_id;
         $categoria = Categoria::find($idc);
         $guia = 0;
+        $ready = 0;
         $modelos = Modelo::OrderBy('orden', 'ASC')->Where('producto_id', $id)->get();
         $imgmodelos = Imgproducto::OrderBy('ubicacion', 'ASC')->get();
         foreach ($modelos as $modelo) {
@@ -66,16 +71,17 @@ class PaginasController extends Controller
         if ($guia == 0) {
             return view('pages.productoinfo', compact('producto', 'categoria', 'imagenes'));
         }else{
-            return view('pages.modelos', compact('producto', 'categoria', 'modelos', 'imgmodelos'));
+            return view('pages.modelos', compact('producto', 'categoria', 'modelos', 'imgmodelos', 'ready'));
         }
     }
 
     public function modelos($id)
     {
         $producto = Producto::find($id);
+        $ready = 0;
         $categoria=Categoria::find($producto->categoria_id);
         $modelos = Modelo::OrderBy('orden', 'asc')->where('producto_id', $id)->get();
-        return view('pages.modelos', compact('producto', 'modelos', 'categoria'));
+        return view('pages.modelos', compact('producto', 'modelos', 'categoria', 'ready'));
     }
 
     public function modeloinfo($id)
@@ -84,8 +90,14 @@ class PaginasController extends Controller
         $categorias = Categoria::OrderBy('orden', 'asc')->get();
         $producto = Producto::find($modelo->producto_id);
         $idc = $producto->categoria_id;
+        $ready = 0;
+        $vidrio1 = Tipovidrio::find(1);
+        $vidrio2 = Tipovidrio::find(2);
+        $imgtipos = Imgtipo::OrderBy('id', 'asc')->get();
+        $imgvidrio = Imgvidrio::OrderBy('id', 'asc')->get();
         $categoria = Categoria::find($idc);
-        return view('pages.modeloinfo', compact('producto', 'categoria', 'modelo', 'categorias'));
+        $tipos_ventana = Tipoventana::OrderBy('orden', 'asc')->get();
+        return view('pages.modeloinfo', compact('producto', 'categoria', 'modelo', 'categorias', 'tipos_ventana', 'ready', 'imgtipos', 'vidrio1', 'vidrio2', 'imgvidrio'));
     }
 
     public function servicios(){

@@ -34,8 +34,6 @@ Route::get('/producto-info/{producto_id}',  'PaginasController@productoinfo')->n
 Route::get('/modelos', 'PaginasController@modelos');
 //show modelos
 Route::get('/modelo-info/{modelo_id}',  'PaginasController@modeloinfo')->name('modeloinfo');
-//select dinamico
-Route::post('select-ajax', ['as'=>'select-ajax','uses'=>'VehiculoController@selectAjax']);
 
 //PRODUCTOS
 Route::get('/modelos/{producto_id}',  'PaginasController@modelos')->name('modelos');
@@ -112,8 +110,22 @@ Route::delete('imagen/{id}/destroy',[
 Route::post('productos/{id}/nuevaimagen/',  'ProductoController@nuevaimagen')->name('nuevaimagen');
 //Route::post('/producto/{id}/imagenes', 'ProductoController@upload');
 //Route::resource('file', 'ImgproductoController');
+
 /*------------modelos----------------*/
 Route::resource('modelos', 'ModelosController');
+/*-------imagenes modelos----------*/
+Route::get('/modelos/imagenes/{modelo_id}', 'ModelosController@imagenes')->name('imagenmod');
+//agregar nuevas imagenes de productos
+Route::post('modelos/{id}/imagen/',  'ModelosController@nuevaimagen')->name('newimagenmodelo');
+//select dinamico
+Route::post('select-ajax', ['as'=>'select-ajax','uses'=>'ModelosController@selectAjax']);
+/*------------Borrar imagen del modelo----------------*/
+Route::delete('imagen_mod/{id}/destroy',[
+			'uses'=>'ModelosController@destroyimg',
+			'as'=>'imgmodelo.destroy'
+]);
+
+
 /*------------servicios----------------*/
 Route::resource('servicios', 'ServiciosController');
 /*------------obras----------------*/

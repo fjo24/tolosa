@@ -21,7 +21,13 @@
 	                    <div class="col l4 s4 m4">
 	                        <div class="div-product">
 	                           	<a href="{{ route('modeloinfo', $modelo->id)}}">
-	                             	<img style="width: 100%;" class="responsive-img" src="{{asset('img/producto/6_otras6.png')}}" alt="">
+	                           		@foreach($modelo->imagenes as $imagen)
+	                             		<img style="width: 373px;height: 284px;" class="responsive-img" src="{{asset($imagen->ubicacion)}}" alt="">
+	                             		@if($ready == 0)	
+	                             		@break;
+	                             	@endif
+	                             	@endforeach
+
 	                              	<hr align="left">
 	                                <div class="div-nombre">
 	                                	{!!$modelo->nombre !!}

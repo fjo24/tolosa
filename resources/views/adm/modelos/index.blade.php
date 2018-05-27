@@ -26,6 +26,7 @@
 					<thead>
 						<td>Nombre</td>
 						<td>Grupo</td>
+						<td>Administrar imagenes</td>
 						<td class="text-right">Acciones</td>
 					</thead>
 					<tbody>
@@ -33,6 +34,7 @@
 						<tr>
 							<td>{!!$modelo->nombre!!}</td>
 							<td>{!!$modelo->producto->nombre!!}</td>
+							<td><a href="{{ route('imagenmod',$modelo->id)}}"><i class="material-icons">image</i></a></td>
 							<td class="text-right">
 								<a href="{{ route('modelos.edit',$modelo->id)}}"><i class="material-icons">create</i></a>
 								{!!Form::open(['class'=>'en-linea', 'route'=>['modelos.destroy', $modelo->id], 'method' => 'DELETE'])!!}

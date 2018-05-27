@@ -22,31 +22,13 @@
                 <div class="producto">
                   <div class="row" style="">
                       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 floatInherit slider-detalle">
-                        <div class="slider hide-on-med-and-down"  >
+                        <div class="slider hide-on-med-and-down" style="width: 480; height: 480;" >
                           <ul class="slides" style="background-color: white">
-                             <li>
-                                <img src="{{asset('img/producto/ventana1.png')}}" style="width: 380px; height: 380px">
-                                
-                              </li>
-                              <li>
-                                <img src="{{asset('img/producto/ventana2.png')}}" style="width: 380px; height: 380px">
-                                
-                              </li>
-                              <li>
-                                <img src="{{asset('img/producto/ventana1.png')}}" style="width: 380px; height: 380px">
-                                
-                                
-                              </li>
-                              <li>
-                                <img src="{{asset('img/producto/ventana2.png')}}" style="width: 380px; height: 380px">
-                                
-                                
-                              </li>
-                              <li>
-                                <img src="{{asset('img/producto/ventana1.png')}}" style="width: 380px; height: 380px">
-                                
-                                
-                              </li>
+                             @foreach($producto->imagenes as $img)
+                           <li>
+                              <img src="{{asset($img->ubicacion)}}" style="width: 380px; height: 380px">
+                           </li>
+                          @endforeach
                           </ul>
                        </div> 
 
@@ -59,7 +41,7 @@
                           <p style="font-family: 'Source Sans Pro', sans-serif!important;">{!! $producto->contenido1 !!}</p>
                           <p style="font-family: 'Source Sans Pro', sans-serif!important;">{!! $producto->titulo2 !!}</p>
                           <p style="font-family: 'Source Sans Pro', sans-serif!important;">{!! $producto->contenido2 !!}</p>
-                          <a class="waves-effect waves-light btn" href="{{ route('modelos', $producto->id)}}">Ver modelos</a>
+                          
                       </div>
 
                   </div>
@@ -76,7 +58,8 @@
 <script type="text/javascript">
     $('.slider').slider({
         indicators: true,
-        height: 334
+        height: 484;
+        
     });
   
 </script>

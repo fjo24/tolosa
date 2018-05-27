@@ -17,9 +17,9 @@ class ImgTipo extends Migration
             $table->increments('id');
             
             $table->string('ubicacion');
-            $table->integer('tipo_id')->unsigned();
+            $table->integer('tipos_ventana_id')->unsigned();
 
-            $table->foreign('tipo_id')->references('id')->on('tipos_ventana')->onDelete('cascade');
+            $table->foreign('tipos_ventana_id')->references('id')->on('tipos_ventana')->onDelete('cascade');
             $table->timestamps();
         });
     }

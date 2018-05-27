@@ -36,7 +36,7 @@ class TiposventanaController extends Controller
                 $file->move($path, $id.'_'.$file->getClientOriginalName());
                 $imagen = new Imgtipo;
                 $imagen->ubicacion='img/tiposventana/' . $id.'_'.$file->getClientOriginalName();
-                $imagen->tipo_id = $id;
+                $imagen->tipos_ventana_id = $id;
                 $imagen->save();
             }
         }
@@ -47,7 +47,8 @@ class TiposventanaController extends Controller
     public function edit($id)
     {
         $tipo = Tipoventana::find($id);
-        return view('adm.tiposventana.edit', compact('tipo'));
+        $imagen = Imgtipo::Where('tipos_ventana_id', $id)->first();
+        return view('adm.tiposventana.edit', compact('tipo', 'imagen'));
     }
 
     public function update(Request $request, $id)
@@ -57,6 +58,19 @@ class TiposventanaController extends Controller
         $tipo->info = $request->info;
         $tipo->orden = $request->orden;
         $tipo->save();
+        $id = $tipo->id;
+   
+        if ($request->HasFile('file')){
+            foreach($request->file as $file){
+                $filename = $file->getClientOriginalName();
+                $path = public_path('img/tiposventana/');
+                $file->move($path, $id.'_'.$file->getClientOriginalName());
+                $imagen = new Imgtipo;
+                $imagen->ubicacion='img/tiposventana/' . $id.'_'.$file->getClientOriginalName();
+                $imagen->tipos_ventana_id = $id;
+                $imagen->save();
+            }
+        }
         Flash::success("Se ha editado la obra de manera exitosa!")->important();        
         return redirect()->route('tiposventana.index');
     }

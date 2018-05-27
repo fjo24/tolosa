@@ -31,7 +31,17 @@
 						{!!Form::label('Orden:')!!}
 						{!!Form::text('orden', null , ['class'=>'', 'required'])!!}
 					</div>
+					<div class="col s6">
+						@if(isset($imagen->ubicacion))
+						<img src="{{asset($imagen->ubicacion)}}" style="width: 60%; height: 55%">
+						@endif
+					<div class="btn col s12">
+						<input type="file" name="file[]" multiple="true">
+						{!!Form::label('Cambie la imagen')!!}
+					</div>
+					</div>
 				</div>
+				<br><br>
 				<div class="row">
 				    <div class="col s12">
 				        <label for="info">Información</label>
@@ -41,7 +51,7 @@
 				    </div>
 				</div>
 				<div class="col s12 no-padding">
-					{!!Form::submit('Editar', ['class'=>'waves-effect waves-light btn right'])!!}
+					{!!Form::submit('Crear', ['class'=>'waves-effect waves-light btn right'])!!}
 				</div>
 			{!!Form::close()!!} 
 			</div>

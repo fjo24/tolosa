@@ -23,22 +23,7 @@
 			<div class="col s12">
 			{!!Form::open(['route'=>'modelos.store', 'method'=>'POST', 'files' => true])!!}
 				<div class="row">
-					<div class="row"><div class="form-group">
-                                            {!! Form::label('idmarca', 'MARCA') !!}
-                                            {!! Form::select('idmarca', $marcas, null, ['class' => 'form-control', 'aria-describedby'=>'buscador', 'placeholder' => ''])!!}
-                                        </div>
-                                        <div class="form-group">
-                                            {!! Form::label('idmodelo', 'MODELO')!!}
-                                            {!! Form::select('idmodelo', $modelos, null, ['class' => 'form-control', 'aria-describedby'=>'buscador', 'placeholder' => ''])!!}
-                                        </div>
-						<div class="form-group">
-                                            {!! Form::label('idmarca', 'MARCA') !!}
-                                            {!! Form::select('idmarca', $marcas, null, ['class' => 'form-control', 'aria-describedby'=>'buscador', 'placeholder' => ''])!!}
-                                        </div>
-                                        <div class="form-group">
-                                            {!! Form::label('idmodelo', 'MODELO')!!}
-                                            {!! Form::select('idmodelo', $modelos, null, ['class' => 'form-control', 'aria-describedby'=>'buscador', 'placeholder' => ''])!!}
-                                        </div>
+					<div class="row">
 						<div class="input-field col s6">
 							{!!Form::label('Nombre:')!!}
 							{!!Form::text('nombre', null , ['class'=>'', 'required'])!!}

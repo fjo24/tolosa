@@ -34,7 +34,7 @@
 							<td>{{ $tipo->nombre }}</td>
 							<td>{{ $tipo->orden }}</td>
 							<td class="text-right">
-								<a href="{{ route('tiposventana.edit',$tipo->id)}}"><i class="material-icons">create</i></a>
+								<a href="{{ route('tiposvidrio.edit',$tipo->id)}}"><i class="material-icons">create</i></a>
 							</td>
 						</tr>
 					@endforeach

@@ -8,6 +8,11 @@ class Imgtipo extends Model
 {
     protected $table = "img_tipo";
     protected $fillable = [
-        'ubicacion', 'tipo_id'
+        'ubicacion', 'tipos_ventana_id'
     ];
+
+    public function tipoventana()
+    {
+    return $this->belongsTo('App\Tipoventana');
+    }
 }

@@ -17,9 +17,9 @@ class ImgVidrio extends Migration
             $table->increments('id');
          
             $table->string('ubicacion');
-            $table->integer('vidrio_id')->unsigned();
+            $table->integer('tipos_vidrio_id')->unsigned();
 
-            $table->foreign('vidrio_id')->references('id')->on('tipos_vidrio')->onDelete('cascade');
+            $table->foreign('tipos_vidrio_id')->references('id')->on('tipos_vidrio')->onDelete('cascade');
             $table->timestamps();
         });
     }

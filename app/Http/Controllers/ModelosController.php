@@ -43,7 +43,6 @@ class ModelosController extends Controller
             }
 
         }
-
         Flash::success("Se ha registrado el modelo de manera exitosa!")->important();        
         return redirect()->route('modelos.index');
     }
@@ -55,7 +54,7 @@ class ModelosController extends Controller
 
     public function edit($id)
     {
-        $productos = Producto::orderBy('categoria_id', 'ASC')->pluck('nombre', 'id')->all();
+        $productos = Producto::orderBy('nombre', 'ASC')->pluck('nombre', 'id')->all();
         $modelo = Modelo::find($id);
         return view('adm.modelos.edit', compact('modelo', 'productos'));
     }
@@ -79,5 +78,44 @@ class ModelosController extends Controller
         $modelo -> delete();
         //flash('Se ha eliminado correctamente.')->success()->important();
         return redirect()->route('modelos.index');
+    }
+
+    public function imagenes($id)
+    {
+        $imagenes = Imgmodelo::orderBy('id', 'ASC')->Where('modelo_id', $id)->get();
+
+        $modelo=modelo::find($id);
+        return view('adm.modelos.imagenes')->with(compact('imagenes', 'modelo'));
+    }
+
+    public function nuevaimagen(Request $request, $id)
+    {
+        if ($request->HasFile('file')){
+            foreach($request->file as $file){
+                $filename = $file->getClientOriginalName();
+                $path = public_path('img/modelo/');
+                $file->move($path, $id.'_'.$file->getClientOriginalName());
+                $imagen = new Imgmodelo;
+                $imagen->ubicacion='img/modelo/' . $id.'_'.$file->getClientOriginalName();
+                $imagen->modelo_id = $id;
+                $imagen->save();
+            }
+
+        }
+        $imagenes = Imgmodelo::orderBy('id', 'ASC')->Where('modelo_id', $id)->get();
+
+        $modelo=modelo::find($id);
+        return view('adm.modelos.imagenes')->with(compact('imagenes', 'modelo'));
+    }
+
+    public function destroyimg($id)
+    {
+        $imagen = Imgmodelo::find($id);
+        $idmod=$imagen->modelo_id;
+        $imagen ->delete();
+        $imagenes = Imgmodelo::orderBy('id', 'ASC')->Where('modelo_id', $idmod)->get();
+
+        $modelo=modelo::find($idmod);
+        return view('adm.modelos.imagenes')->with(compact('imagenes', 'modelo'));
     }
 }
