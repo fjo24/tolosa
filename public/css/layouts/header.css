@@ -7,7 +7,7 @@ body {
 	background-color: white;
 	border: 0px;
 	position: relative;
-	height: 150%;
+	height: 65%;
 	padding-top: 0.2%;
 	color: red;
 	box-shadow: 0 0px 0px -0px rgba(0,0,0,.0);
@@ -17,24 +17,54 @@ body {
 }
 
 .header-nav{
-	height: 140%;
+	height: 120%;
 	background-color: white;
 	border: 0px;
 	box-shadow: 0 0px 0px -0px rgba(0,0,0,.0);
-	margin-bottom: 80px;
+	margin-bottom: 30px;
 }
 
 .logo-header{
 	position: absolute;
+	width: 302px;
+	height: 91px;
 	top:30%;
-	left: -10%;
+	left: -9%;
 	height: 100%;
+}
+
+.banda{
+	position: relative;
+	top: 27px;
+	left: 10px;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 17px;
+	word-spacing: 16px;
+}
+
+.linksheader a:hover{
+	color: #32398E;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.ic{
+	position: relative;
+	bottom: 40px;
+	left: 30px;
+}
+.linksheader a{
+	position: relative;
+	left: 695px!important;
+	top: 30px;
+	color: black;
+	margin-bottom: 50px;
 }
 
 .redes-header{
 	position: absolute;
-	top:40%;
-	right: -15%;
+	top:15%;
+	right: -10%;
 	background-color: #fff;
 }
 

@@ -1,29 +1,31 @@
       <footer class="footer-box">
          <div class="container-fluid">   
             <div class="row">
-               <div class="sitemap hide-on-med-and-down">
-                  <div class="col l6 s12">
-                     <div class="s6">
-                        <span style="padding-left: 12px">SITEMAP</span>
-                     </div>
-                     <div class="s6">
-                     </div>
-                  
-                     <div class="col 3 s4">
-                        <ul>
-                           <li><a href="/">Home</a></li>
-                           <li><a href="/empresa">Empresa</a></li>
-                           <li><a href="productos">Productos</a></li>
-                           <li><a href="/servicios">Servicios</a></li>
-                        </ul>
-                     </div>
-                     <div class="col 3 s6">
-                        <ul>
-                           <li><a href="/fabrica">Fábrica</a></li>
-                           <li><a href="/obra">Obras</a></li>
-                           <li style="line-height: 14px;"><a href="/presupuesto">Solicitud de presupuesto</a></li>
-                           <li><a href="/contacto">Contacto</a></li>
-                        </ul>
+               <div class="block1">   
+                  <div class="sitemap hide-on-med-and-down">
+                     <div class="col l6 s12">
+                        <div class="s6">
+                           <span style="padding-left: 12px;">SITEMAP</span>
+                        </div>
+                        <div class="s6">
+                        </div>
+                     
+                        <div class="col 3 s4">
+                           <ul>
+                              <li><a href="/">Home</a></li>
+                              <li><a href="/empresa">Empresa</a></li>
+                              <li><a href="productos">Productos</a></li>
+                              <li><a href="/servicios">Servicios</a></li>
+                           </ul>
+                        </div>
+                        <div class="col 3 s6">
+                           <ul>
+                              <li><a href="/fabrica">Fábrica</a></li>
+                              <li><a href="/obra">Obras</a></li>
+                              <li style="line-height: 0px!important;"><a href="/presupuesto" style="height: 10px!important;line-height: 16px;">Solicitud de presupuesto</a></li>
+                              <li><a href="/contacto">Contacto</a></li>
+                           </ul>
+                        </div>
                      </div>
                   </div>
                </div>

@@ -9,7 +9,7 @@
 .div-nombre{
 	background-color: rgba(51,51,51,0.86); 
 	height: 66px;
-	font-weight: 700;
+	font-weight: lighter;
 	font-family: 'Source Sans Pro', sans-serif;
 	display: flex;
 	justify-content: center;
@@ -20,16 +20,10 @@
     bottom: 0;
 
 }
-@media only screen and (max-width:600px){
-	.div-nombre{
-		font-size: 90%;
-	}
-}
 
 .home{
 	padding:5px 300px;
 	height: 110%;
-
 }
 
 .home div{
@@ -38,7 +32,7 @@
 
 .home hr{
 	position: relative;
-	bottom: 15px;
+	bottom: 0px;
 	width: 10%;
 	margin-top: 10px;
 	height: 4px;
@@ -48,5 +42,29 @@
 }
 
 .destacados{
-	padding-bottom: 10px;
+position: relative;
+top: -45px;
+}
+
+.lineasdecontenido{
+	position: relative;
+	bottom:40px;
+	font-family: 'Source Sans Pro', sans-serif;
+	background-color: #F6F6F6;
+	padding: 75px 0px 50px 0px;
+	width: 100%;
+}
+
+.lineasdecontenido .titulo{
+	font-size: 50px;
+	line-height: 40px;
+}
+
+.lineasdecontenido .contenido{
+	font-size: 18px;
+	font-family: 'Source Sans Pro', sans-serif;
+	width: 830px;
+	position: relative;
+	right: 40px;
+	line-height: 35px;
 }
