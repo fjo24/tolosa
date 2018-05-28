@@ -23,9 +23,11 @@
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cont-miga">
                <div class="miga">
                   <div style="margin-left: -115px;float: left;width: 130%;">
-                     <a href="aberturas.php?categoriaId=10" class="arrow">Ventanas</a>
-                     <a href="aberturas_productos.php?subcategoriaId=19" class="arrow">Aluminio</a>
-                     <a>At-Premium</a>
+                     <h7>
+                <a href="/categorias" style="color: gray";>productos • </a>
+                <a href="{{ route('productos', $categoria->id)}}" style= "color: gray;text-transform: lowercase">{!!$categoria->nombre !!} • </a>
+                <a href="" style= "color: gray;text-transform: lowercase">{!!$producto->nombre !!}</a>
+              </h7>
                   </div>
                </div>
             </div>
@@ -43,7 +45,8 @@
                         </ul>
                      </div>
                   </div>
-                  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 floatInherit main-desc">
+
+                  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 floatInherit main-desc" style="line-height: 15px!important;">
                      {!! $modelo->texto !!}
                      <div class="clear"></div>
                      <div class="cont-btns-catalogo">

@@ -36,10 +36,10 @@
                            <a href="" class="iconos-redes"><img src="{{asset('img/layouts/empresa1.png')}}"></a>
                         </div>
                         <div class="col l3 s12 center">
-                           <a href="" class="iconos-redes"><img src="{{asset('img/layouts/empresa2.png')}}"></a>
+                           <a href="" class="iconos-redes"><img src="{{asset('img/layouts/logo-hidro.png')}}""></a>
                         </div>
                         <div class="col l3 s12 center">
-                           <a href="" class="iconos-redes"><img src="{{asset('img/layouts/empresa3.png')}}"></a>
+                           <a href="" class="iconos-redes"><img src="{{asset('img/layouts/logo-2.png')}}"></a>
                         </div>
                         <div class="col l3 s12 center">
                            <a href="" class="iconos-redes"><img src="{{asset('img/layouts/empresa4.png')}}"></a>

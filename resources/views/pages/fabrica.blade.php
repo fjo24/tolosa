@@ -5,8 +5,6 @@
 <link rel="stylesheet" href="{{ asset('css/page/fabrica.css') }}">
 @endsection
 @section('contenido')
-<div class="container-fluid">
-
    <div class="slider hide-on-med-and-down" >
       <ul class="slides">
       @foreach($sliders as $slider)
@@ -31,7 +29,7 @@
         <div class="col l7 s12 hide-on-med-and-down" style="width: 52%">
             <img class="responsive-img" src="{!! $fabrica->imagen !!}">
         </div>
-        <div class="col l5 s12" style="width: 570px;padding-top: 15px;">
+        <div class="col l5 s12" style="width: 570px;padding-top: -25px; line-height: 23px;">
             <p>{!! $fabrica->titulo !!}</p>
             <p style="font-family: 'Source Sans Pro', sans-serif; ">{!! $fabrica->contenido !!}</p>
             <p>{!! $fabrica->titulo2 !!}</p>

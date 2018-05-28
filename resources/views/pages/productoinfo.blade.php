@@ -8,7 +8,7 @@
 <div class="container" style="width: 123%;">
   
     <div class="p_info">   
-        <div style="margin: 7% 55px 35px 60px;">
+        <div style="margin: 4% 55px 35px 60px;">
           <div class="row">
             <div class="links col l12 s12 m12">
               <h7>

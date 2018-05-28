@@ -21,12 +21,11 @@
       @endforeach
       </ul>
    </div>
-  <div class="container" style="width: 93%;">
-<div class="empresa">  
-
-  <div class="row" style="">
+<div class="container" style="width: 93%;">
+  <div class="empresa">  
+    <div class="row" style="">
       <div class="col l5 s12 hide-on-med-and-down" >
-          <img class="responsive-img" style="width: 470px; height: 419px" src="{!! $contenido->imagen !!}">
+        <img class="responsive-img" style="width: 470px; height: 419px" src="{!! $contenido->imagen !!}">
       </div>
       <br>
       <div class="col l7 s9">

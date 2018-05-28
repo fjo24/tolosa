@@ -37,7 +37,7 @@
                           <div class="card" style="justify-content: center;align-items: center;background-color: #32398E;">
                             <div class="card-panel"  style="border:0px;background-color: #32398E; height: 300px; margin: 20px 0px 0px 0px;">
                               <div class="center" style="align-items: center;margin: 20px 100px 0px 0px;">
-                              <span class="activator" style="position:relative;color: white; justify-content: center; align-items: center;width: 30%;"><img style="align-items: center; background-color: #32398E;margin: 0px 30px 0px -20px;" src="{{asset($servicio->imagen)}}" alt="">
+                              <span class="activator" style="padding-left: 37px;position:relative;color: white; justify-content: center; align-items: center;width: 30%;"><img style="align-items: center; background-color: #32398E;margin: 0px 30px 0px -20px;" src="{{asset($servicio->imagen)}}" alt="">
                               </span>
                                 
                               </div>
