@@ -93,7 +93,6 @@
             <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">check_box_outline_blank</i>Tipos de Vidrios</a>
               <div class="collapsible-body">
                 <ul>
-                  <li><a href="{{route('tiposvidrio.create')}}">Crear Tipo de vidrio</a></li>
                   <li><a href="{{route('tiposvidrio.index')}}">Editar Tipo de vidrio</a></li>
                 </ul>
               </div>

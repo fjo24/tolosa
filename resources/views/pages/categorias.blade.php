@@ -7,9 +7,9 @@
 @endsection
 @section('contenido')
 
-<div class="contenedor-flex-center">
-   <div class="categorias" style="align-items: center">   
-      <div style="margin: 7% 7%;">
+<div class="container" style="width: 123%;">
+   <div class="categorias" style="align-items: center;" >   
+      <div style="margin: 7% 7% 35px 27px;">
          <div class="row"  style="align-items: center">
             <span style ="">Productos</span>
             <div class="col l12 s12 m12">

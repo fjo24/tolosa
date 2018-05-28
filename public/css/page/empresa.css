@@ -2,6 +2,13 @@ img{
           
 } 
 
+.empresa{ 
+	font-family: 'Source Sans Pro', sans-serif!important;
+	position: relative;
+	top: -20px;
+	height: 500px;
+}
+
 .empresa hr{
 	border: solid 1px #32398E;
 }
@@ -9,6 +16,7 @@ img{
 .empresa div{
 	line-height: 26px;
 	padding :52px;
+	font-weight: lighter;
 }
 
 .empresa p{

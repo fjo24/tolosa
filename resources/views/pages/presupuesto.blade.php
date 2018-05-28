@@ -35,13 +35,13 @@
                         <img style="align-items: center;" src="{{asset('img/presupuesto/solicitud-datos.fw.png')}}">
                       <div class="paso datos active col-xs-12 col-sm-2 col-md-2 col-lg-2 col-md-offset-1" id="elDiv1">
                           <span></span>
-                          <p class="fuenteRC" style="position: absolute; right: 542px; top:150px; color: #32398E; font-weight: bold; width: 100px;">TUS DATOS</p>
+                          <p class="fuenteRC" style="position: absolute; left: 465px; top:-13px; color: #32398E; width: 100px;">TU OBRA</p>
                          
                       </div>
                       
                       <div class="paso obra col-xs-12 col-sm-4 col-md-4 col-lg-4" id="elDiv2">
                           <span></span>
-                          <p class="fuenteRC" style="width: 80px;color: #32398E; position: absolute; left: 499px; top: 14px;">TU OBRA</p>
+                          <p class="fuenteRC" style="width: 100px;color: #32398E; position: absolute; left: -150px; font-weight: bold; top: 8px;">TUS DATOS</p>
                           
                       </div>
                   </div>
@@ -81,7 +81,7 @@
                         
                       <div class="paso datos active col-xs-12 col-sm-2 col-md-2 col-lg-2 col-md-offset-1" id="elDiv1">
                           <span></span>
-                          <p class="fuenteRC" style="position: absolute; right:538px;top: 150px; color: #32398E; font-weight: lighter; width: 100px;">TUS DATOS</p>
+                          <p class="fuenteRC" style="position: absolute; right:30px;top: 150px; color: #32398E; font-weight: lighter; width: 100px;">TUS DATOS</p>
                         
                       </div>
                       <div class=" col-xs-12 col-sm-3 col-md-3 col-lg-3 re-padding">

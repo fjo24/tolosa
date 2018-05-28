@@ -58,12 +58,15 @@
 	font-family: 'Source Sans Pro', sans-serif;
 	color: #32398C; 
 	font-size: 47px;
-	padding-left: 37px;
+	padding-left: 45px;
 	padding-top: 20px;
 	position: relative;
-	top: 10px;
+	top: 20px;
 }
 
 .categorias{
-	
+	position: relative;
+	font-family: 'Source Sans Pro', sans-serif!important;
+	left: 10px!important;
+	margin-top: -43px!important;
 }

@@ -6,7 +6,6 @@
 <link rel="stylesheet" href="{{ asset('css/page/empresa.css') }}">
 @endsection
 @section('contenido')
-<div class="flex-containter">
   <div class="slider hide-on-med-and-down" >
       <ul class="slides">
       @foreach($sliders as $slider)
@@ -23,8 +22,9 @@
       @endforeach
       </ul>
    </div>
+<div class="container" style="width: 123%;">
    <div class="categorias" style="align-items: center">   
-      <div style="margin: 4% 7%;">
+      <div style="margin: -30px 73px 90px 34px;">
          <div class="row"  style="align-items: center">
             <div class="col l12 s12 m12">
                @foreach($obras as $obra)  
@@ -35,6 +35,8 @@
                                  <div class="div-nombre">
                                     {!!$obra->titulo !!}
                                  </div>
+
+                                 <hr style="position: relative;top: 34px;width: 18%;height: 1px;border: 1px;border-radius: 10px; background-color: #32398C">
                            </a>
                         </div>
                      </div>

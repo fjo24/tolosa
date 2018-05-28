@@ -7,9 +7,9 @@
 @endsection
 @section('contenido')
 
-<div class="flex-containter">
+<div class="container" style="width: 123%;">
    	<div class="categorias">   
-      	<div style="margin: 7% 7%;">
+      	<div style="margin: 7% 73px 35px 34px;">
          	<div class="row">
          		<h7>
             		<a href="/categorias" style="color: gray";>productos • </a>

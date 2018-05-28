@@ -6,7 +6,6 @@
 <link rel="stylesheet" href="{{ asset('css/page/empresa.css') }}">
 @endsection
 @section('contenido')
-<div class="flex-containter">
   <div class="slider hide-on-med-and-down" >
       <ul class="slides">
       @foreach($sliders as $slider)
@@ -26,22 +25,26 @@
       </ul>
    </div>
 
+<div class="container" style="width: 133%;">
    <div class="servicios" style="align-items: center">   
-      <div style="margin: 7% 7%;">
+            <span style ="position: relative;right: -25px;bottom: 18px;color: #32398C;font-family: 'Source Sans Pro', sans-serif;font-size: 47px;">Nuestros Servicios</span>
+      <div style="margin: 26px 54px 57px 54px;">
+            <br>
          <div class="row"  style="align-items: center;">
-            <span style ="position: relative;left: -25px;color: #32398C;font-family: 'Source Sans Pro', sans-serif;font-size: 47px;">Nuestros Servicios</span>
             <div class="col l12 s12 m12">
                @foreach($servicios as $servicio)  
-                     <div class="col l3 s12 m6" style="justify-content: center;align-items: center;margin:20px 0px;">
-                          <div class="card" style="justify-content: center;align-items: center;background-color: green;">
-                            <div class="card-panel"  style="border:0px;background-color: #32398E; height: 300px; padding: 20px 0px;">
-                              <span class="activator" style="position:relative;color: white; justify-content: center; align-items: center;width: 30%;"><img style="background-color: red;align-items: center;margin-left: auto;
-  margin-right: auto;" class="responsive-img" src="{{asset($servicio->imagen)}}" alt="">
+                     <div class="col l3 s12 m6" sty3e="justify-content: center;align-items: center;margin:20px 0px;">
+                          <div class="card" style="justify-content: center;align-items: center;background-color: #32398E;">
+                            <div class="card-panel"  style="border:0px;background-color: #32398E; height: 300px; margin: 20px 0px 0px 0px;">
+                              <div class="center" style="align-items: center;margin: 20px 100px 0px 0px;">
+                              <span class="activator" style="position:relative;color: white; justify-content: center; align-items: center;width: 30%;"><img style="align-items: center; background-color: #32398E;margin: 0px 30px 0px -20px;" src="{{asset($servicio->imagen)}}" alt="">
                               </span>
+                                
+                              </div>
                               <hr>
-                              <div class="titulo_servicio">
+                              <div class="titulo_servicio" style="position: relative;top: 27px;">
                               <p style="font-family: 'Source Sans Pro', sans-serif;text-align: center;line-height: 100%;font-weight: bold; font-size: 20px;background-color: #32398E;">{!! $servicio->titulo !!}</p>
-                              <p style="font-family: 'Source Sans Pro', sans-serif;text-align: center;line-height: 100%;font-weight: lighter; font-size: 20px;background-color: #32398E;">{!! $servicio->subtitulo !!}</p>
+                              <p style="width: 220px;font-family: 'Source Sans Pro', sans-serif;text-align: center;line-height: 100%;font-weight: lighter; font-size: 20px;background-color: #32398E;">{!! $servicio->subtitulo !!}</p>
                               </div>
                             </div>
                             <div class="card-content" style="background-color: #32398E; height: 50%; padding: 0px;">

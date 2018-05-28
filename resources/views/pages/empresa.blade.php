@@ -21,7 +21,7 @@
       @endforeach
       </ul>
    </div>
-  <div class="contenedor-flex-center">
+  <div class="container" style="width: 93%;">
 <div class="empresa">  
 
   <div class="row" style="">
