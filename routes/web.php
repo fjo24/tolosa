@@ -77,7 +77,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //<<<<<<<<<<<<<ADMINISTRADOR>>>>>>>>>>>>>>//middleware('auth')->
 Auth::routes(); 
-Route::prefix('adm')->group(function () {
+Route::prefix('adm')->middleware('auth')->group(function () {
 
 Route::get('/', function () {
     return view('/auth/login');

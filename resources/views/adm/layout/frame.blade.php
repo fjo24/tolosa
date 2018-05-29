@@ -130,7 +130,7 @@
               </div>
             </li>
 
-            <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">insert_photo</i>Logos</a>
+        {{--      <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">insert_photo</i>Logos</a>
               <div class="collapsible-body">
                 <ul>
                   <li><a href="{{route('logos.index')}}">Editar logos</a></li>
@@ -138,7 +138,7 @@
               </div>
             </li>
 
-
+--}}
 
             <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">info</i>Datos de la empresa</a>
               <div class="collapsible-body">
@@ -148,13 +148,13 @@
               </div>
             </li>
 
-            <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">pin_drop</i>Metadatos</a>
+         {{--    <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">pin_drop</i>Metadatos</a>
               <div class="collapsible-body">
                 <ul>
                   <li><a href="{{route('metadatos.index')}}">Editar Metadatos</a></li>
                 </ul>
               </div>
-            </li>
+            </li>--}}
             @if(Auth::user())
                 @if(Auth::user()->nivel === 'administrador')
               <li class="bold"><a class="collapsible-header waves-effect waves-admin"><i class="material-icons">account_circle</i>Usuarios</a>
