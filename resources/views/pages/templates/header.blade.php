@@ -16,11 +16,11 @@
         <div class="banda">
             <div class="linksheader" style="width: 1200px; color: black;">
                   <a href="/empresa" > EMPRESA     </a>
-                  <a href="" > |</a>
+                  <a> |</a>
                   <a href="/categorias" > PRODUCTOS      </a>
-                  <a href="" > |</a>
+                  <a> |</a>
                   <a href="/servicios" > SERVICIOS     </a>
-                  <a href="#" > |</a>
+                  <a> |</a>
                   <a href="/obra" > OBRA     </a>
                   <a> |</a>
                   <a href="/fabrica" > FÁBRICA      </a>

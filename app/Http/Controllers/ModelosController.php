@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\ModeloRequest;
 use App\Imgmodelo;
+use App\Tipoventana;
 use App\Modelo;
 use App\Producto;
 use Laracasts\Flash\Flash;
@@ -18,8 +19,11 @@ class ModelosController extends Controller
 
     public function create()
     {
+        $tipos = Tipoventana::OrderBy('id', 'ASC')->get();
+        $aux = Tipoventana::orderBy('nombre', 'ASC')->get();
+        $prod = $aux->toJson();
         $productos = Producto::orderBy('nombre', 'ASC')->pluck('nombre', 'id')->all();
-        return view('adm.modelos.create', compact('productos'));
+        return view('adm.modelos.create', compact('productos', 'tipos', 'prod'));
     }
 
     public function store(ModeloRequest $request)
@@ -43,6 +47,14 @@ class ModelosController extends Controller
             }
 
         }
+        if ($modelo->tipos_ventana()->count() > 0) {
+            $modelo->tipos_ventana()->detach();
+        }
+
+        for ($i = 0; $i < count($request->tipos); $i++) {
+            $modelo->tipos_ventana()->attach($request->tipos[$i]);
+        }
+
         Flash::success("Se ha registrado el modelo de manera exitosa!")->important();        
         return redirect()->route('modelos.index');
     }
@@ -56,7 +68,10 @@ class ModelosController extends Controller
     {
         $productos = Producto::orderBy('nombre', 'ASC')->pluck('nombre', 'id')->all();
         $modelo = Modelo::find($id);
-        return view('adm.modelos.edit', compact('modelo', 'productos'));
+        $tipos = Tipoventana::OrderBy('id', 'ASC')->get();
+       
+
+        return view('adm.modelos.edit', compact('modelo', 'productos', 'tipos'));
     }
 
     public function update(ModeloRequest $request, $id)
@@ -68,6 +83,14 @@ class ModelosController extends Controller
         $modelo->producto_id = $request->producto_id;
 
         $modelo->save();
+
+        if ($modelo->tipos_ventana()->count() > 0) {
+            $modelo->tipos_ventana()->detach();
+        }
+
+        for ($i = 0; $i < count($request->tipos); $i++) {
+            $modelo->tipos_ventana()->attach($request->tipos[$i]);
+        }
         Flash::success("Se ha registrado el modelo de manera exitosa!")->important();        
         return redirect()->route('modelos.index');
     }

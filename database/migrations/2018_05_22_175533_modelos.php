@@ -23,6 +23,17 @@ class Modelos extends Migration
             $table->foreign('producto_id')->references('id')->on('productos')->onDelete('cascade');
             $table->timestamps();
         });
+
+        Schema::create('tipoventana_modelo', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('modelo_id')->unsigned();
+            $table->integer('tiposventana_id')->unsigned();
+            $table->timestamps();
+            
+            $table->foreign('modelo_id')->references('id')->on('modelos')->onDelete('cascade');
+            $table->foreign('tiposventana_id')->references('id')->on('tipos_ventana')->onDelete('cascade');
+            
+        });
     }
 
     /**

@@ -34,6 +34,15 @@
 					<div class="input-field col s6">
 						{!!Form::select('producto_id', $productos, null, ['class' => 'form-control', 'placeholder' => 'Grupo']) !!}
 					</div>
+					<div class="input-field col s12">
+					    	<select multiple name="tipos[]">
+					      		<option value="" disabled selected>Seleccione</option>
+					      		@foreach($tipos as $tipo)
+					      			<option value={{ $tipo->id }}>{{ $tipo->nombre }}</option>
+					      		@endforeach
+					    	</select>
+					    	<label>Seleccione tipo de ventana soportado</label>
+				 		</div>
 				</div>
 				<div class="row">
 				    <div class="col s12">

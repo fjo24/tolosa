@@ -25,21 +25,30 @@
 				<div class="row">
 					<div class="row">
 						<div class="input-field col s6">
-							{!!Form::label('Nombre:')!!}
-							{!!Form::text('nombre', null , ['class'=>'', 'required'])!!}
+								{!!Form::label('Nombre:')!!}
+								{!!Form::text('nombre', null , ['class'=>'', 'required'])!!}
 						</div>
 						<div class="input-field col s6">
-						{!!Form::label('Orden:')!!}
-						{!!Form::text('orden', null , ['class'=>'', 'required'])!!}
-					</div>
+							{!!Form::label('Orden:')!!}
+							{!!Form::text('orden', null , ['class'=>'', 'required'])!!}
+						</div>
 						<div class="input-field col s6">
 							{!! Form::select('producto_id', $productos, null, ['class' => 'form-control', 'placeholder' => 'Grupo']) !!}
 						</div>
 						<div class="btn col s6">
 						<input type="file" name="file[]" multiple="true">
 						{!!Form::label('Agregue imagenes:')!!}
-					
-					</div>
+						</div>
+						<div class="input-field col s12">
+					    	<select multiple name="tipos[]">
+					      		<option value="" disabled selected>Seleccione</option>
+					      		@foreach($tipos as $tipo)
+					      			<option value={{ $tipo->id }}>{{ $tipo->nombre }}</option>
+					      		@endforeach
+					    	</select>
+					    	<label>Seleccione tipo de ventana soportado</label>
+				 		</div>
+
 					</div>
 					<div class="row">
 					    <div class="col s12">
@@ -50,6 +59,7 @@
 					    </div>
 					</div>
 				</div>
+
 				<div class="col s12 no-padding">
 					{!!Form::submit('Crear', ['class'=>'waves-effect waves-light btn right'])!!}
 				</div>

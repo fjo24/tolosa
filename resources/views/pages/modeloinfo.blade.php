@@ -67,7 +67,7 @@
                   <div class="tab-content">
                      <div id="tipos" class="tab-pane fade">
                         <div class="cont-item-tipos">
-                           @foreach($tipos_ventana as $tipo)
+                           @foreach($modelo->tipos_ventana as $tipo)
                            <div class="item-tipo">
                               <a href="javascript:openFicha('t', {{ $tipo->id }})" class="img anima2">
                                  <div class="overlay anima2">

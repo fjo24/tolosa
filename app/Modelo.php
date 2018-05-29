@@ -18,4 +18,9 @@ class Modelo extends Model
     {
     return $this->hasMany('App\Imgmodelo');
     }
+
+    public function tipos_ventana()
+    {
+        return $this->belongsToMany('App\Tipoventana', 'tipoventana_modelo', 'modelo_id', 'tiposventana_id');
+    }
 } 	

@@ -13,4 +13,10 @@ class Tipoventana extends Model
     {
     return $this->hasMany('App\Imgtipo');
     }
+
+    public function modelos()
+    {
+        return $this->belongsToMany('App\Modelo', 'tipoventana_modelo');
+    }
+    
 }
