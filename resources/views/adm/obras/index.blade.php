@@ -37,6 +37,11 @@
 							<td>{{ $obra->orden }}</td>
 							<td class="text-right">
 								<a href="{{ route('obras.edit',$obra->id)}}"><i class="material-icons">create</i></a>
+								{!!Form::open(['class'=>'en-linea', 'route'=>['obras.destroy', $obra->id], 'method' => 'DELETE'])!!}
+									<button onclick="return confirm('¿Realmente deseas borrar la obra?')" type="submit" class="submit-button">
+										<i class="material-icons red-text">cancel</i>
+									</button>
+								{!!Form::close()!!}
 							</td>
 						</tr>
 					@endforeach

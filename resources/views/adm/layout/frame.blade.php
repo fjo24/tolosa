@@ -29,10 +29,12 @@
             @yield('titulo')
           </a>
             <div class="right dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                     {{Auth::user()->username}} |  {{Auth::user()->email}}  |
                                     <a class="right" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('| Cerrar Sesión |') }}
+                                        {{ __('  Cerrar Sesión|') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

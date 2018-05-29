@@ -68,4 +68,12 @@ class ObrasController extends Controller
         return redirect()->route('obras.index');
     }
 
+    public function destroy($id)
+    {
+        $obra= Obra::find($id);
+        $obra -> delete();
+        //flash('Se ha eliminado correctamente.')->success()->important();
+        return redirect()->route('obras.index');
+    }
+
 }

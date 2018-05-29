@@ -15,17 +15,17 @@
             </div>  
         <div class="banda">
             <div class="linksheader" style="width: 1200px; color: black;">
-                  <a href="/empresa" > EMPRESA     </a>
+                  <a href="/tolosa/empresa" > EMPRESA     </a>
                   <a> |</a>
-                  <a href="/categorias" > PRODUCTOS      </a>
+                  <a href="/tolosa/categorias" > PRODUCTOS      </a>
                   <a> |</a>
-                  <a href="/servicios" > SERVICIOS     </a>
+                  <a href="/tolosa/servicios" > SERVICIOS     </a>
                   <a> |</a>
-                  <a href="/obra" > OBRA     </a>
+                  <a href="/tolosa/obra" > OBRA     </a>
                   <a> |</a>
-                  <a href="/fabrica" > FÁBRICA      </a>
+                  <a href="/tolosa/fabrica" > FÁBRICA      </a>
                   <a> |</a>
-                  <a href="/presupuesto" > SOLICITUD DE PRESUPUESTO</a> 
+                  <a href="/tolosa/presupuesto" > SOLICITUD DE PRESUPUESTO</a> 
             </div>
         </div>
           </div>
