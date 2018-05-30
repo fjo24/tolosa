@@ -26,8 +26,7 @@
       <nav class="top-nav">
         <div class="container">
           <div class="nav-wrapper">
-            <input type="checkbox" id="btn-menu" style="display: none!important;">
-      <label for="btn-menu"><i class="material-icons">menu</i></label>
+ 
 
       <a class="page-title">
             @yield('titulo')
@@ -53,6 +52,7 @@
 
       <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons">menu</i></a></div> -->
       
+
       <ul id="nav-mobile" class="side-nav fixed">
         <div class="logo"><a id="logo-container" href="" class="brand-logo">
           <img class="responsive-img" src="{{ asset('img/logo/logo-header.png') }}" alt="">
@@ -177,6 +177,7 @@
           </ul>
 
       </ul>
+      <a class="btn-mo" data-activates="nav-mobile"><i class="material-icons">menu</i></a>
     </header>  
     @yield('contenido')                                 
         </div>
@@ -201,6 +202,10 @@
   $(document).ready(function(){
     $('.collapsible').collapsible();
   });
+  $(document).ready(function(){
+    $('.btn-mo').sideNav();
+  });
+
         
     </script>
 
