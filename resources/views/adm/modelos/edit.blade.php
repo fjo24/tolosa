@@ -23,15 +23,15 @@
 			<div class="col s12">
 			{!!Form::model($modelo, ['route'=>['modelos.update',$modelo->id], 'method'=>'PUT', 'files' => true])!!}
 				<div class="row">
-					<div class="input-field col s6">
+					<div class="input-field col l6 s12">
 						{!!Form::label('Nombre:')!!}
 						{!!Form::text('nombre', null , ['class'=>'', 'required'])!!}
 					</div>
-					<div class="input-field col s6">
+					<div class="input-field col l6 s12">
 						{!!Form::label('Orden:')!!}
 						{!!Form::text('orden', null , ['class'=>'', 'required'])!!}
 					</div>
-					<div class="input-field col s6">
+					<div class="input-field col l6 s12">
 						{!!Form::select('producto_id', $productos, null, ['class' => 'form-control', 'placeholder' => 'Grupo']) !!}
 					</div>
 					<div class="input-field col s12">

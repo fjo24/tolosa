@@ -23,15 +23,15 @@
 			<div class="col s12">
 			{!!Form::open(['route'=>'obras.store', 'method'=>'POST', 'files' => true])!!}
 				<div class="row">
-					<div class="input-field col s5">
+					<div class="input-field col l5 s6">
 						{!!Form::label('Titulo:')!!}
 						{!!Form::text('titulo', null , ['class'=>'', 'required'])!!}
 					</div>
-					<div class="input-field col s2">
+					<div class="input-field l2 col s6">
 						{!!Form::label('Orden:')!!}
 						{!!Form::text('orden', null , ['class'=>'', 'required'])!!}
 					</div>
-					<div class="file-field input-field col s5">
+					<div class="file-field input-field col l5 s12">
 						<div class="btn">
 						    <span>Imagen</span>
 						    {!! Form::file('imagen') !!}

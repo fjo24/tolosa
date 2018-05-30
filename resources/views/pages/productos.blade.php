@@ -17,7 +17,7 @@
             	</h7>
 	            <div class="col l12 s12 m12">
 	               @foreach($productos as $producto)  
-	                    <div class="col l4 s4 m4">
+	                    <div class="col l4 s12 m4">
 	                        <div class="div-product">
 	                           	<a href="{{ route('productoinfo', $producto->id)}}">
 									@foreach($producto->imagenes as $imagen)

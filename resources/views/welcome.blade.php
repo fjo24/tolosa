@@ -5,8 +5,8 @@
 <link rel="stylesheet" href="{{ asset('css/page/home.css') }}">
 @endsection
 @section('contenido')
-   <div class="slider" >
-      <ul class="slides">
+   <div class="slider hide-on-med-and-down" >
+      <ul class="slides ">
       @foreach($sliders as $slider)
          <li>
             <img src="{{asset($slider->imagen)}}" style="width: 120%; height: 110%">
@@ -21,7 +21,7 @@
       @endforeach
       </ul>
    </div>
-  <div class="contenedor-flex-center">
+  <div class="contenedor-flex-center hide-on-med-and-down">
     <div class="lineasdecontenido">  
       <div class="home col s12">
         <div class="row titulo">
@@ -42,7 +42,7 @@
          <div class="row">
             <div class="col s12">
                @foreach($destacados as $destacado)
-                     <div class="col s6 m6" style="margin-top: 4%;">
+                     <div class="col s12 m6" style="margin-top: 4%;">
                         <div class="div-product">
                         <a href="{{$destacado->link}}">
                            <img style="width: 550px;height: 413px" class="responsive-img" src="{{asset($destacado->imagen)}}" alt="">

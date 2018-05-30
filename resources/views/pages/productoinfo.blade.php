@@ -20,7 +20,7 @@
               <div class="col l12 s12 m12">
                 <div class="producto">
                   <div class="row" style="">
-                      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 floatInherit slider-detalle">
+                      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 floatInherit slider-detalle">
                         <div class="slider hide-on-med-and-down" style="" >
                           <ul class="slides" style="background-color: white">
                              @foreach($producto->imagenes as $img)

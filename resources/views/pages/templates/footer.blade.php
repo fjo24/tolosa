@@ -55,7 +55,6 @@
                            <th style=" padding-right: 0px; margin-right: 0; width: 5%;"><span>VISITANOS TAMBIEN</span></th>
                            <th style="filter: invert(1); padding-left: -20px; padding-right: -20px; width: 1%"><img src="{{asset('img/layouts/barra.png')}}" ></th>
                            <th style="filter: invert(1); padding-left: -50px; margin-left: -20; padding-right: 0px; margin-right: 0; width: 1%;"><a href="https://www.facebook.com/tolosaaberturassanjusto/" class="iconos-redes"><img src="{{asset('img/layouts/facebook_footer.png')}}"></a></th>
-                           <th style="filter: invert(1); padding-left: 0px; margin-left: 0; width: 1%;"><a href="https://www.facebook.com/tolosaaberturassanjusto/" class="iconos-redes"><img src="{{asset('img/layouts/instagram_footer.png')}}"></a></th>
                            <th style="filter: invert(1); padding-right: 0px; margin-right: 0px;width: 1%"><img src="{{asset('img/layouts/ml_manos.png')}}"></th>
                            <th style="filter: invert(1); padding-left: 0px; margin-left: 0; padding-right: 0px; margin-right: 0; width: 3%;"> <img src="{{asset('img/layouts/ml.png')}}">
                            </th>
@@ -71,7 +70,8 @@
 Buenos Aires I Argentina</a></li>
                      <li class="item-footer"><i class="material-icons">phone_in_talk</i><a style="text-transform: none;" href="">(+54-011)  4691 4389 I 2087 8329
 </a></li>
-<li class="item-footer"><i class="material-icons">phone_android</i><a style="text-transform: none;" href="">545*4769</a></li>
+<li class="item-footer"><i class="material-icons">av_timer</i><a style="text-transform: none;" href="">L a V 8-13 / 15-18:30 y S 8-13
+</a></li>
                      <li class="item-footer"><i class="material-icons">email</i><a style="text-transform: none;" href="/contacto">tolosaaberturas@hotmail.com</a></li>
                   </ul>
                   </div>

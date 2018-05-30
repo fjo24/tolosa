@@ -25,11 +25,11 @@
 			<div class="col s12">
 			{!!Form::model($slider, ['route'=>['sliders.update',$slider->id], 'method'=>'PUT', 'files' => true])!!}
 				<div class="row">
-					<div class="input-field col s6">
+					<div class="input-field col l6 s12">
 						{!!Form::label('Link:')!!}
 						{!!Form::text('link', null , ['class'=>''])!!}
 					</div>
-					<div class="file-field input-field col s6">
+					<div class="file-field input-field col l6 s12">
 						<div class="btn">
 						    <span>Imagen</span>
 						    {!! Form::file('imagen') !!}
@@ -40,21 +40,21 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="input-field col s6">
+					<div class="input-field col l6 s12">
 						{!! Form::select('seccion', ['home' => 'home', 'empresa' => 'empresa', 'servicios' => 'servicios', 'obras' => 'obras', 'fabrica' => 'fabrica', 'presupuesto' => 'presupuesto'], null, ['class' => 'form-control', 'placeholder' => 'Seleccione sección']) !!}
 					</div>
-					<div class="input-field col s6">
+					<div class="input-field col l6 s12">
 						{!!Form::label('Orden:')!!}
 						{!!Form::text('orden', null , ['class'=>'', 'required'])!!}
 					</div>
 				</div>
 				<div class="row">
 					<div class="col s12">
-					     <div class="input-field col s6">
+					     <div class="input-field col l6 s12">
 							{!!Form::label('texto:')!!}
 							{!!Form::text('texto', null , ['class'=>''])!!}
 						</div>
-						<div class="input-field col s6">
+						<div class="input-field col l6 s12">
 							{!!Form::label('texto2:')!!}
 							{!!Form::text('texto2', null , ['class'=>''])!!}
 						</div>

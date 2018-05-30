@@ -1336,6 +1336,8 @@ footer .num-ref .input-group span button{
 /* MEDIA QUERIES / MEDIA QUERIES / MEDIA QUERIES / MEDIA QUERIES */
 
 /* Extra Small - XS */
+
+
 @media(max-width:767px){
 	.floatInherit{
 		float: left !important;
@@ -1430,8 +1432,11 @@ footer .num-ref .input-group span button{
 	}
 	section.aberturas,
 	section.productos{
-		padding: 15px 0;
+		    margin-left: 0%;
+    margin-right: 0%;
+    padding-left: 0%;
 	}
+
 	section.aberturas .cont-aberturas .item-aberturas {
 	    padding-left: 0;
 	    padding-right: 0;

@@ -28,7 +28,7 @@
          <div class="row"  style="align-items: center">
             <div class="col l12 s12 m12">
                @foreach($obras as $obra)  
-                     <div class="col l4 s4 m4">
+                     <div class="col l4 s12 m12">
                         <div class="div-product" style="height: 375px;">
                            <a href="{{ route('obrainfo', $obra->id)}}">
                               <img style="width: 100%;" class="responsive-img" src="{{asset($obra->imagen)}}" alt="">

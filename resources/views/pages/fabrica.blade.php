@@ -29,7 +29,7 @@
         <div class="col l7 s12 hide-on-med-and-down" style="width: 52%">
             <img class="responsive-img" src="{!! $fabrica->imagen !!}">
         </div>
-        <div class="col l5 s12" style="width: 570px;padding-top: -25px; line-height: 23px;">
+        <div id="infof" class="col l5 s12" style="line-height: 23px;">
             <p>{!! $fabrica->titulo !!}</p>
             <p style="font-family: 'Source Sans Pro', sans-serif; ">{!! $fabrica->contenido !!}</p>
             <p>{!! $fabrica->titulo2 !!}</p>

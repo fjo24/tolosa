@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 
-	<meta charset="UTF-8">
-	<title>@yield('titulo')</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>@yield('titulo')</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link rel="icon" type="image/png" href="{{asset('img/favicon.png')}}"/>
     
@@ -56,10 +56,27 @@
     @include('pages.templates.header')
         @yield('contenido')
     @include('pages.templates.footer')
-    <script src="{{ asset('plugins/jQuery/jquery.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
     <script src="{{ asset('plugins/materialize/js/materialize.min.js') }}"></script>
-    <script type="text/css" rel="stylesheet" href="{{asset('plugins/bootstrap/js/bootstrap.min.js')}}"  media="screen,projection"/></script>
+    {{-- <script type="text/css" rel="stylesheet" href="{{asset('plugins/bootstrap/js/bootstrap.min.js')}}"  media="screen,projection"/></script> --}}
         @yield('js')
+
+        <script type="text/javascript">
+
+
+  // Initialize collapsible (uncomment the lines below if you use the dropdown variation)
+  // var collapsibleElem = document.querySelector('.collapsible');
+  // var collapsibleInstance = M.Collapsible.init(collapsibleElem, options);
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.btnav').sidenav();
+  });
+        
+        </script>
 
 </body>
 </html>

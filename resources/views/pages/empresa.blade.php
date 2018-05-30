@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="{{ asset('css/page/empresa.css') }}">
 @endsection
 @section('contenido')
-   <div class="slider" >
+   <div class="slider hide-on-med-and-down" >
       <ul class="slides">
       @foreach($sliders as $slider)
          <li>
@@ -21,14 +21,14 @@
       @endforeach
       </ul>
    </div>
-<div class="container" style="width: 93%;">
+<div class="container" style="width: 100%;">
   <div class="empresa">  
     <div class="row" style="">
-      <div class="col l5 s12 hide-on-med-and-down" >
+      <div class="col l5 s12" >
         <img class="responsive-img" style="width: 470px; height: 419px" src="{!! $contenido->imagen !!}">
       </div>
       <br>
-      <div class="col l7 s9">
+      <div class="col l7 s12">
           <p>{!! $contenido->titulo !!}</p>
           <p style="padding:  5px">{!! $contenido->contenido !!}</p>
           <hr>

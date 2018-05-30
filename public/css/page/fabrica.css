@@ -38,3 +38,36 @@
 	font-size: 50px; 
 	font-family: 'Source Sans Pro', sans-serif;
 }
+
+#infof{
+   width: 570px;
+   padding-top: -25px;
+  }
+
+@media only screen and (max-width: 1003px){
+#infof{
+      width: 400px;
+      padding-left: 30px;
+          position: relative;
+    left: 50px;
+  }
+}
+
+@media only screen and (max-width: 769px){
+#infof{
+      width: 480px;
+      padding-left: 10px;
+          position: relative;
+    left: -30px;
+  }
+}
+
+@media only screen and (max-width: 415px){
+#infof{
+      width: 300px;
+      padding-left: 0px;
+          position: relative;
+    left: -10px;
+  }
+}
+

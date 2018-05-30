@@ -22,7 +22,7 @@
          <div class="container">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 cont-miga">
                <div class="miga">
-                  <div style="margin-left: -115px;float: left;width: 130%;">
+                  <div>
                      <h7>
                 <a href="/categorias" style="color: gray";>productos • </a>
                 <a href="{{ route('productos', $categoria->id)}}" style= "color: gray;text-transform: lowercase">{!!$categoria->nombre !!} • </a>
@@ -32,21 +32,21 @@
                </div>
             </div>
             <br><br><br>
-            <div class="cont-aberturas" style="margin-left: -125px;float: left;width: 130%;">
+            <div class="cont-aberturas">
                <div class="item-detalle table">
                   <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 floatInherit slider-detalle">
-                     <div class="slider hide-on-med-and-down"  >
+                     <div class="slider"  >
                         <ul class="slides" style="background-color: white">
                           @foreach($modelo->imagenes as $img)
                            <li>
-                              <img src="{{asset($img->ubicacion)}}" style="width: 380px; height: 380px">
+                              <img class="responsive-img" src="{{asset($img->ubicacion)}}">
                            </li>
                           @endforeach
                         </ul>
                      </div>
                   </div>
 
-                  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 floatInherit main-desc" style="line-height: 15px!important;">
+                  <div class="col s12 m6 floatInherit main-desc" style="line-height: 15px!important;">
                      {!! $modelo->texto !!}
                      <div class="clear"></div>
                      <div class="cont-btns-catalogo">

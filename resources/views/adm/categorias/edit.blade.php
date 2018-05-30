@@ -23,15 +23,15 @@
 			<div class="col s12">
 			{!!Form::model($categoria, ['route'=>['categorias.update',$categoria->id], 'method'=>'PUT', 'files' => true])!!}
 				<div class="row">
-					<div class="input-field col s4">
+					<div class="input-field col l4 s12">
 						{!!Form::label('Nombre:')!!}
 						{!!Form::text('nombre', null , ['class'=>'', 'required'])!!}
 					</div>
-					<div class="input-field col s4">
+					<div class="input-field col l4 s12">
 						{!!Form::label('orden:')!!}
 						{!!Form::text('orden', null , ['class'=>'', 'required'])!!}
 					</div>
-					<div class="file-field input-field col s4">
+					<div class="file-field input-field col l4 s12">
 						<div class="btn">
 						    <span>Imagen</span>
 						    {!! Form::file('imagen') !!}

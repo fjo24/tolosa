@@ -27,26 +27,26 @@
 <div class="container">
 <div class="flex-containter">
    <div class="row" style="height: 540px;">
-                <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 main-cont presupuesto center" style="float: initial">  
+                <div class="col-xs-9 col-sm-12 col-md-9 col-lg-9 main-cont presupuesto center" style="float: initial">  
                   <form action="{{route('enviarpresupuesto')}}" method="post" enctype="multipart/form-data">
                   {{ csrf_field() }}
             <div id="estado1">
-            <div class="cont-pasos table">
+            <div class="cont-pasos table hide-on-med-and-down">
                         <img style="align-items: center;" src="{{asset('img/presupuesto/solicitud-datos.fw.png')}}">
                       <div class="paso datos active col-xs-12 col-sm-2 col-md-2 col-lg-2 col-md-offset-1" id="elDiv1">
                           <span></span>
-                          <p class="fuenteRC" style="position: absolute; left: 465px; top:-13px; color: #32398E; width: 100px;">TU OBRA</p>
+                          <p class="fuenteRC hide-on-med-and-down" style="position: absolute; left: 465px; top:-13px; color: #32398E; width: 100px;">TU OBRA</p>
                          
                       </div>
                       
-                      <div class="paso obra col-xs-12 col-sm-4 col-md-4 col-lg-4" id="elDiv2">
+                      <div class="paso obra col-xs-12 col-sm-4 col-md-4 col-lg-4 hide-on-med-and-down" id="elDiv2">
                           <span></span>
                           <p class="fuenteRC" style="width: 100px;color: #32398E; position: absolute; left: -150px; font-weight: bold; top: 8px;">TUS DATOS</p>
                           
                       </div>
                   </div>
 <br><br><br><br>
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6  pasos paso-1">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6  pasos paso-1">
                     <p>
                         <input type="text" name="nombre" id="nombre" class="form-control" value="" placeholder="Nombre"  title="" required>
                     </p>
@@ -54,7 +54,7 @@
                         <input type="text" name="mail" id="mail" class="form-control" value="" placeholder="E-mail" title="" required>
                     </p>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pasos paso-1">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 pasos paso-1">
                     <p>
                         <input type="text" name="localidad" id="est" class="form-control" value="" placeholder="Localidad"  title="">
                     </p>
@@ -77,7 +77,7 @@
 
 
 
-            <div class="cont-pasos table">
+            <div class="cont-pasos table hide-on-med-and-down">
                         
                       <div class="paso datos active col-xs-12 col-sm-2 col-md-2 col-lg-2 col-md-offset-1" id="elDiv1">
                           <span></span>

@@ -33,7 +33,7 @@
          <div class="row"  style="align-items: center;">
             <div class="col l12 s12 m12">
                @foreach($servicios as $servicio)  
-                     <div class="col l3 s12 m6" sty3e="justify-content: center;align-items: center;margin:20px 0px;">
+                     <div class="col l3 s12 m12" sty3e="justify-content: center;align-items: center;margin:20px 0px;">
                           <div class="card" style="justify-content: center;align-items: center;background-color: #32398E;">
                             <div class="card-panel"  style="border:0px;background-color: #32398E; height: 300px; margin: 20px 0px 0px 0px;">
                               <div class="center" style="align-items: center;margin: 20px 100px 0px 0px;">

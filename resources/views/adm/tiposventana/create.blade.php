@@ -23,15 +23,15 @@
 			<div class="col s12">
 			{!!Form::open(['route'=>'tiposventana.store', 'method'=>'POST', 'files' => true])!!}
 				<div class="row">
-					<div class="input-field col s6">
+					<div class="input-field col l6 s12">
 						{!!Form::label('Nombre:')!!}
 						{!!Form::text('nombre', null , ['class'=>'', 'required'])!!}
 					</div>
-					<div class="input-field col s6">
+					<div class="input-field col l6 s12">
 						{!!Form::label('Orden:')!!}
 						{!!Form::text('orden', null , ['class'=>'', 'required'])!!}
 					</div>
-					<div class="btn col s6">
+					<div class="btn col l6 s12">
 						<input type="file" name="file[]" multiple="true">
 						{!!Form::label('Agregue imagenes:')!!}
 					</div>
