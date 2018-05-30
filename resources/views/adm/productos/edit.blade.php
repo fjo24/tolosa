@@ -23,21 +23,21 @@
 			<div class="col s12">
 			{!!Form::model($producto, ['route'=>['productos.update',$producto->id], 'method'=>'PUT', 'files' => true])!!}
 				<div class="row">
-					<div class="input-field col s6">
+					<div class="input-field col l6 s12">
 						{!!Form::label('Nombre:')!!}
 						{!!Form::text('nombre', null , ['class'=>'', 'required'])!!}
 					</div>
-					<div class="input-field col s6">
+					<div class="input-field col l6 s12">
 					
 						{!! Form::select('categoria_id', $categorias, null, ['class' => 'form-control', 'placeholder' => 'Categoria']) !!}
 					</div>
 				</div>
 				<div class="row">
-					<div class="input-field col s6">
+					<div class="input-field col l6 s12">
 						{!!Form::label('Orden:')!!}
 						{!!Form::text('orden', null , ['class'=>'', 'required'])!!}
 					</div>
-					<div class="file-field input-field col s6">
+					<div class="file-field input-field col l6 s12">
 						
 					</div>
 				</div>

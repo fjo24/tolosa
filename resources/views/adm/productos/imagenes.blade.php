@@ -24,7 +24,7 @@
             <div class="row">
                 {!!Form::open(['route'=>['nuevaimagen', $producto->id], 'method'=>'POST', 'files' => true])!!}
                 <div class="row">
-                    <div class="btn col s6">
+                    <div class="btn col l6 s12">
                         <input type="file" name="file[]" multiple="true">
                         {!!Form::label('Agregue imagenes:')!!}
                     </div>

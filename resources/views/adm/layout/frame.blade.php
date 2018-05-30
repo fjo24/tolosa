@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
+  
     <title>Panel de administración - @yield('titulo')</title>
 
     <link rel="icon" type="image/png" href="{{asset('img/favicon.png')}}"/>
@@ -25,12 +25,16 @@
       <header>
       <nav class="top-nav">
         <div class="container">
-          <div class="nav-wrapper"><a class="page-title">
+          <div class="nav-wrapper">
+            <input type="checkbox" id="btn-menu" style="display: none!important;">
+      <label for="btn-menu"><i class="material-icons">menu</i></label>
+
+      <a class="page-title">
             @yield('titulo')
           </a>
             <div class="right dropdown-menu" aria-labelledby="navbarDropdown">
 
-                                     {{Auth::user()->username}} |  {{Auth::user()->email}}  |
+                                  |
                                     <a class="right" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -45,9 +49,10 @@
         </div>
       </nav>
 
-      <!-- MENÚ -->
+      <!-- MENÚ
 
-      <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons">menu</i></a></div>
+      <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons">menu</i></a></div> -->
+      
       <ul id="nav-mobile" class="side-nav fixed">
         <div class="logo"><a id="logo-container" href="" class="brand-logo">
           <img class="responsive-img" src="{{ asset('img/logo/logo-header.png') }}" alt="">

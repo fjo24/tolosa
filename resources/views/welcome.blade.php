@@ -42,7 +42,7 @@
          <div class="row">
             <div class="col s12">
                @foreach($destacados as $destacado)
-                     <div class="col s6 m6" style="margin-top: 4%;">
+                     <div class="col s12 m6" style="margin-top: 4%;">
                         <div class="div-product">
                         <a href="{{$destacado->link}}">
                            <img style="width: 550px;height: 413px" class="responsive-img" src="{{asset($destacado->imagen)}}" alt="">

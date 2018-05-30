@@ -7,7 +7,13 @@
 }
 
 main, header, footer{
-	padding-left: 300px;
+	padding-left: 0%;
+}
+
+@media only screen and (min-width: 1003px){
+main, header, footer{
+      padding-left: 15%;
+  }
 }
 
 .text-left{
@@ -152,4 +158,16 @@ select option{
 	.container {
 	    width: 70%;
 	}
+}
+/*
+@media only screen and (min-width: 570px){
+.responsive-body {
+    font-size: 74px!important;
+    color: red!important;
+  }
+}
+*/
+#btn-menu{
+  display: none!important;
+  background-color: red;
 }

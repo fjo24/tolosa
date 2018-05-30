@@ -23,15 +23,15 @@
 			<div class="col s12">
 			{!!Form::open(['route'=>'categorias.store', 'method'=>'POST', 'files' => true])!!}
 				<div class="row">
-					<div class="input-field col s4">
+					<div class="input-field col l4 s12">
 						{!!Form::label('Nombre:')!!}
 						{!!Form::text('nombre', null , ['class'=>'', 'required'])!!}
 					</div>
-					<div class="input-field col s4">
+					<div class="input-field col l4 s12">
 						{!!Form::label('orden:')!!}
 						{!!Form::text('orden', null , ['class'=>'', 'required'])!!}
 					</div>
-					<div class="file-field input-field col s4">
+					<div class="file-field input-field col l4 s12">
 						<div class="btn">
 						    <span>Imagen</span>
 						    {!! Form::file('imagen') !!}
@@ -41,7 +41,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col s12 no-padding">
+				<div class="col l12 s12 no-padding">
 					{!!Form::submit('Crear', ['class'=>'waves-effect waves-light btn right'])!!}
 				</div>
 			{!!Form::close()!!} 
