@@ -177,7 +177,7 @@
           </ul>
 
       </ul>
-      <a class="btn-mo" data-activates="nav-mobile"><i class="material-icons">menu</i></a>
+      <a class="btn" data-activates="nav-mobile"><i class="material-icons">menu</i></a>
     </header>  
     @yield('contenido')                                 
         </div>
@@ -203,7 +203,7 @@
     $('.collapsible').collapsible();
   });
   $(document).ready(function(){
-    $('.btn-mo').sideNav();
+    $('.btn').sideNav();
   });
 
         
