@@ -12,7 +12,11 @@ main, header, footer{
 
 @media only screen and (min-width: 1003px){
 main, header, footer{
+<<<<<<< HEAD
       padding-left: 20%;
+=======
+      padding-left: 15%;
+>>>>>>> 1f17d3e98619f4342ea63a4a49764e2ba88df903
   }
 }
 
@@ -170,6 +174,7 @@ select option{
 #btn-menu{
   display: none!important;
   background-color: red;
+<<<<<<< HEAD
 }
 
 @media only screen and (min-width: 1003px){
@@ -178,4 +183,6 @@ select option{
   display: none!important;
   background-color: #32398E;
   }
+=======
+>>>>>>> 1f17d3e98619f4342ea63a4a49764e2ba88df903
 }
