@@ -47,7 +47,8 @@
 
       <!-- MENÚ -->
 
-      <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons">menu</i></a></div>
+
+
       <ul id="nav-mobile" class="side-nav fixed">
         <div class="logo"><a id="logo-container" href="" class="brand-logo">
           <img class="responsive-img" src="{{ asset('img/logo/logo-header.png') }}" alt="">
@@ -172,6 +173,7 @@
           </ul>
 
       </ul>
+      <a id="xx" class="btn" data-activates="nav-mobile"><i class="material-icons">menu</i></a>
     </header>  
     @yield('contenido')                                 
         </div>
@@ -196,6 +198,10 @@
   $(document).ready(function(){
     $('.collapsible').collapsible();
   });
+  $(document).ready(function(){
+    $('.btn').sideNav();
+  });
+
         
     </script>
 

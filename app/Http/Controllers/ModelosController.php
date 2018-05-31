@@ -47,13 +47,16 @@ class ModelosController extends Controller
             }
 
         }
+
         if ($modelo->tipos_ventana()->count() > 0) {
             $modelo->tipos_ventana()->detach();
-        }
-
+        }else{
+            
         for ($i = 0; $i < count($request->tipos); $i++) {
             $modelo->tipos_ventana()->attach($request->tipos[$i]);
         }
+        }
+
 
         Flash::success("Se ha registrado el modelo de manera exitosa!")->important();        
         return redirect()->route('modelos.index');

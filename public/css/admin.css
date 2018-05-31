@@ -171,3 +171,11 @@ select option{
   display: none!important;
   background-color: red;
 }
+
+@media only screen and (min-width: 1003px){
+#xx{
+    position: relative;
+  display: none!important;
+  background-color: #32398E;
+  }
+}

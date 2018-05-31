@@ -55,8 +55,8 @@
                            <th style=" padding-right: 0px; margin-right: 0; width: 5%;"><span>VISITANOS TAMBIEN</span></th>
                            <th style="filter: invert(1); padding-left: -20px; padding-right: -20px; width: 1%"><img src="{{asset('img/layouts/barra.png')}}" ></th>
                            <th style="filter: invert(1); padding-left: -50px; margin-left: -20; padding-right: 0px; margin-right: 0; width: 1%;"><a href="https://www.facebook.com/tolosaaberturassanjusto/" class="iconos-redes"><img src="{{asset('img/layouts/facebook_footer.png')}}"></a></th>
-                           <th style="filter: invert(1); padding-right: 0px; margin-right: 0px;width: 1%"><img src="{{asset('img/layouts/ml_manos.png')}}"></th>
-                           <th style="filter: invert(1); padding-left: 0px; margin-left: 0; padding-right: 0px; margin-right: 0; width: 3%;"> <img src="{{asset('img/layouts/ml.png')}}">
+                           <th style="filter: invert(1); padding-right: 0px; margin-right: 0px;width: 1%"><a href="https://listado.mercadolibre.com.ar/_CustId_61833305" class="iconos-redes"><img src="{{asset('img/layouts/ml_manos.png')}}"></a></th>
+                           <th style="filter: invert(1); padding-left: 0px; margin-left: 0; padding-right: 0px; margin-right: 0; width: 3%;"><a href="https://listado.mercadolibre.com.ar/_CustId_61833305" class="iconos-redes"> <img src="{{asset('img/layouts/ml.png')}}"></a>
                            </th>
                         </table>
                      </div>
